@@ -16,10 +16,10 @@ With Python available, Snowball invoked it on 177/1,630 examples (10.9%), versus
 
 For Easy/Python, 33 task types have at least two examples with a Python call and two without one. Averaging accuracy equally across these same task types gives 54.8% with calls versus 23.2% without (+31.6 percentage points). This compares different examples within each task and is observational, not a causal estimate of tool benefit. [Per-task breakdown](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#snowball-tools).
 
-The one-demonstration Snowball pilot used Python on 10/58 examples versus 5/58 originally. Correct answers: 12/58 (20.7%) versus 15/58 (25.9%). This small matched repeat does not show an accuracy benefit.
-
 <details>
 <summary>Snowball follow-up: one tool-use demonstration on the matched pilot</summary>
+
+The one-demonstration Snowball pilot used Python on 10/58 examples versus 5/58 originally. Correct answers: 12/58 (20.7%) versus 15/58 (25.9%). This small matched repeat does not show an accuracy benefit.
 
 Fresh attempts on the original 30 easy and 28 hard pilot questions. Each benchmark user message is unchanged byte for byte, but the full API message history differs: an arithmetic question, assistant Python call, tool result and assistant example answer are prepended before it. The demonstration shows both tool use and final-answer formatting. Baseline request transformation, response parser and scorer are unchanged. One draw per question; no causal isolation of formatting versus tool-selection effects.
 

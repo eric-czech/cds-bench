@@ -175,9 +175,9 @@ def one_shot_markdown(stats, base):
     pilot=stats.get('one_shot_pilot')
     if not pilot:
         return []
-    lines=['\n'+one_shot_text(pilot),
-           '\n<details>\n<summary>Snowball follow-up: one tool-use demonstration on the matched pilot</summary>\n',
-           pilot['interpretation'],
+    lines=['\n<details>\n<summary>Snowball follow-up: one tool-use demonstration on the matched pilot</summary>\n',
+           one_shot_text(pilot),
+           '\n'+pilot['interpretation'],
            '\n| Condition | Original correct | With demo | Original tool users | With demo |',
            '|---|---:|---:|---:|---:|']
     for condition,label in [('easy-tools','Easy, Python'),('hard-tools','Hard, Python')]:
