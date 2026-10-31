@@ -296,6 +296,16 @@ def pr_body(summary, config):
         "gemma": "Gemma 31B", "gemma-moe": "Gemma 26B A4B", "liquid": "LFM 24B A2B",
         "snowball": "Snowball RC (2026.09.21)", "snowball-v01": "Snowball v0.1",
     }
+    pilot = read(PILOT_OUTPUT / "summary.json")
+    pilot_intro = ""
+    if pilot:
+        model_count = len({c.get('full_name', c['model'])
+                           for c in pilot['configurations'].values()})
+        pilot_intro = (
+            f"The pilot tested **{model_count} models across {len(pilot['models'])} model/provider runs**, "
+            "including **DeepSeek V4.1 Flash 1017**, **Beam 1.0 501B A23B**, "
+            "**Gemma 4 31B** and **GPT-OSS 20B**. "
+        )
     completed = sum(summary["totals"][model]["attempted"] for model in MODELS)
     lines = [
         "Full CDS-bench baselines for **GPT-6 Luna (high)**, **Nemotron 3.5 Lightning**, **Qwen 3.7 Flash (high)** and **Snowball v0.1**, with and without offline Python.",
@@ -345,10 +355,9 @@ def pr_body(summary, config):
            *snowball_one_shot.markdown(summary['snowball_one_shot_tools'], base)]
           if summary.get('snowball_one_shot_tools') else []),
         "\n## 30-task pilot",
-        "\nOne judgment-selected instance per task, each in easy/hard form and with/without Python. Two duplicate hard variants are omitted, leaving **30 easy + 28 hard prompts and 116 attempts per complete model**. The pilot checks accuracy, cost, latency and tool compatibility. It is too small for a definitive model ranking.",
+        "\n" + pilot_intro + "One judgment-selected instance per task, each in easy/hard form and with/without Python. Two duplicate hard variants are omitted, leaving **30 easy + 28 hard prompts and 116 attempts per complete model**. The pilot checks accuracy, cost, latency and tool compatibility. It is too small for a definitive model ranking.",
         f"\n[Pilot report (HTML)]({pilot_base}/report.html) · [Pilot per-task results (CSV)]({pilot_base}/by-task.csv). The report covers provider behavior, tool compatibility, timing and failure categories. Partial runs and differences in token limits remain explicit.",
     ]
-    pilot = read(PILOT_OUTPUT / "summary.json")
     if pilot:
         PILOT_MODELS = pilot['models']
         if 'snowball' in pilot['configurations']:
