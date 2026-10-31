@@ -14,6 +14,8 @@ Checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1](https://huggingface.co/ope
 
 Accuracy by condition: [PNG](overall.png) · [SVG](overall.svg).
 
+Hatched bars show Snowball v0.1 (1-shot tools): 316/840 (37.6%) on Easy/Python and 254/790 (32.2%) on Hard/Python. The same weights receive one arithmetic tool-use demonstration plus instructions requiring a complete Python solution. Initial code generation is schema constrained with thinking disabled; thinking resumes after successful execution. The model writes execution-error repairs within the same eight-execution limit. Python was invoked on 1,563/1,630 examples (95.9%); the sandbox, 32,768-token budget and final scorer are unchanged. This is directed tool use, so the improvement cannot be attributed to the demonstration alone. No no-tools cases were run for this variant. It appears only in this chart; the tables, radars and scatter plots retain the four original baselines.
+
 [Pooled task radar](task-radar.svg) · [PNG](task-radar.png) · [Task order and scores](task-radar.json). The report selector also shows each of the four evaluation conditions. Task codes and group colors stay fixed across views, with links to the full-name/ID key and existing details.
 
 Nemotron versus Snowball, Easy conditions: [PNG](nemotron-snowball-easy.png) · [SVG](nemotron-snowball-easy.svg). The two panels share a legend and axes. Each point compares the same completed examples for one task; all failures count. The interactive report includes all five condition views and links points to task details.

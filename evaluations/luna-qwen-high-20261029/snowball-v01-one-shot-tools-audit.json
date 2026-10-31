@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "attempts": 1630,
+  "conditions": {
+    "easy-tools": 840,
+    "hard-tools": 790
+  },
+  "same_original_cases_answers_and_scorer": true,
+  "effective_prompt_and_demo_verified": true,
+  "frozen_sources_verified": true,
+  "verbatim_model_programs_verified": true,
+  "token_budgets_verified": true,
+  "no_pilot_or_historical_response_reuse": true,
+  "no_duplicate_response_ids": true,
+  "scored_retries": 0,
+  "prior_results_unchanged": true,
+  "no_no_tools_attempts": true,
+  "requests": 4200,
+  "programs": 2568,
+  "successful_programs": 1414,
+  "failed_programs": 1154,
+  "rejected_call_attempts": 3,
+  "eight_execution_limit_verified": true,
+  "schema_turns": 2734,
+  "model_written_repair_turns": 1104,
+  "schema_turns_truncated": 175,
+  "native_protocol_errors": 7,
+  "transport_errors": 0
+}

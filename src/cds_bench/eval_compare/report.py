@@ -24,7 +24,7 @@ from .deepinfra_run import RAW as DEEPINFRA_RAW
 from .lightning_supervise import latest_failure_was_rate_limit
 from .tables import HEADERS, cells, html_grouped_table, models_by_task_accuracy
 from . import radar, scatter
-from . import snowball_full, snowball_tools
+from . import snowball_full, snowball_tools, snowball_one_shot
 
 LABELS = ["Easy, no tools", "Hard, no tools", "Easy, Python", "Hard, Python"]
 MODELS = {"luna": "GPT-6 Luna (high)", "deepinfra": "Nemotron 3.5 Lightning",
@@ -181,6 +181,7 @@ def _build(raw, output, lightning_raw, deepinfra_raw):
                         request_metadata_recovered=bool(row.get('request_metadata_recovered')))
         public.append(snowball_full.public_row(exported) if row['model']=='snowball-v01' else exported)
     summary['snowball_tool_use'] = snowball_tools.build(output, all_rows, MODELS)
+    summary['snowball_one_shot_tools'] = snowball_one_shot.export(output, cases)
     save(output / "summary.json", summary)
     save(output / "results.json", public)
     save(output / "config.json", {"qwen": config, "luna_original": read(LUNA_RAW / "config.json"), "deepinfra": deepinfra_config, 'snowball-v01':snowball_config})
@@ -195,7 +196,7 @@ def _build(raw, output, lightning_raw, deepinfra_raw):
                     writer.writerow({"task_id": task, "family": TASKS[task].get("family", "composition"), "model": model,
                                      "condition": condition, "planned": planned,
                                      **{k: metric[k] for k in metric if k in writer.fieldnames}})
-    plot(output, summaries)
+    plot(output, summaries, summary['snowball_one_shot_tools'])
     radar_views = radar.plot(output, summary, MODELS)
     scatter.plot(output, public, radar_views['all'])
     render(output, summary, config, data, public)
@@ -208,6 +209,8 @@ def _build(raw, output, lightning_raw, deepinfra_raw):
         "Snowball v0.1 is a 67B MoE model with 2B active parameters per token. The full run uses 32,768 aggregate generated tokens, a 1,800-second API request deadline, temperature 0.7 and concurrency 60. Its native thinking/tool transport and private access configuration match the validated pilot. No per-request monetary price is exposed.\n\n"
         "Checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1](https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3), revision `adc0078a19a4383bc998fcdb43867b3360baf5f3`.\n\n"
         "Accuracy by condition: [PNG](overall.png) · [SVG](overall.svg).\n\n"
+        + (snowball_one_shot.description(summary['snowball_one_shot_tools']) + "\n\n"
+           if summary['snowball_one_shot_tools'] else "") +
         "[Pooled task radar](task-radar.svg) · [PNG](task-radar.png) · [Task order and scores](task-radar.json). The report selector also shows each of the four evaluation conditions. Task codes and group colors stay fixed across views, with links to the full-name/ID key and existing details.\n\n"
         "Nemotron versus Snowball, Easy conditions: [PNG](nemotron-snowball-easy.png) · [SVG](nemotron-snowball-easy.svg). The two panels share a legend and axes. Each point compares the same completed examples for one task; all failures count. The interactive report includes all five condition views and links points to task details.\n\n"
         "[30-task model/provider pilot](../model-pilot-20261029/README.md). Sanitized requests, reasoning and Python traces are in the [public HF trace archive](https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces); originals remain untracked locally. The original Luna evaluation is preserved in `../luna-high-20261029/`.\n\n"
@@ -217,7 +220,7 @@ def _build(raw, output, lightning_raw, deepinfra_raw):
     return summary
 
 
-def plot(output, summaries):
+def plot(output, summaries, one_shot=None):
     cache = ROOT / "build/eval-comparison-cache"
     cache.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("MPLCONFIGDIR", str(cache / "matplotlib"))
@@ -225,13 +228,22 @@ def plot(output, summaries):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
     import numpy as np
-    fig, ax = plt.subplots(figsize=(11.2, 4.2), layout="constrained")
-    for offset, (model, name) in zip([-0.30, -0.10, 0.10, 0.30], MODELS.items(), strict=True):
-        values = [100 * (summaries[model][c]["accuracy"] or 0) for c in PLANNED]
-        bars = ax.bar(np.arange(4) + offset, values, width=0.18, label=name, color=MODEL_COLORS[model])
-        for bar, c in zip(bars, PLANNED):
-            r = summaries[model][c]
+    fig, ax = plt.subplots(figsize=(12, 4.8 if one_shot else 4.2), layout="constrained")
+    for index, condition in enumerate(PLANNED):
+        entries = [(summaries[model][condition], MODEL_COLORS[model], None)
+                   for model in MODELS]
+        if one_shot and condition in one_shot['conditions']:
+            follow_up = one_shot['conditions'][condition]
+            entries.append((dict(follow_up, attempted=follow_up['n']),
+                            MODEL_COLORS['snowball-v01'], '///'))
+        offsets = (np.arange(len(entries)) - (len(entries)-1)/2) * 0.17
+        for offset, (r, color, hatch) in zip(offsets, entries, strict=True):
+            bar = ax.bar(index + offset, 100 * (r['accuracy'] or 0), width=0.15,
+                         color=color, hatch=hatch,
+                         edgecolor='#684732' if hatch else color,
+                         linewidth=0.5 if hatch else 0)[0]
             percent = f"{100 * r['accuracy']:.1f}%" if r['attempted'] else "n/a"
             ax.annotate(
                 f"{percent}\n{r['correct']}/{r['attempted']}",
@@ -242,7 +254,14 @@ def plot(output, summaries):
     ax.set_xticks(range(4), LABELS)
     ax.set_ylim(0, 108)
     ax.set_ylabel("Correct answers (%) among finished attempts")
-    fig.legend(frameon=False, loc="outside upper center", ncol=4, columnspacing=1.5, handlelength=1.8)
+    handles = [Patch(facecolor=MODEL_COLORS[model], label=name) for model, name in MODELS.items()]
+    if one_shot:
+        handles.append(Patch(facecolor=MODEL_COLORS['snowball-v01'], edgecolor='#684732',
+                             linewidth=0.5, hatch='///', label=snowball_one_shot.NAME))
+        # Matplotlib fills legend columns; reorder to read left to right by row.
+        handles = [handles[i] for i in [0, 3, 1, 4, 2]]
+    fig.legend(handles=handles, frameon=False, loc="outside upper center",
+               ncol=3 if one_shot else 4, columnspacing=1.5, handlelength=1.8)
     ax.grid(axis="y", color="#e1e5e8")
     ax.set_axisbelow(True)
     ax.spines[["top", "right"]].set_visible(False)
@@ -279,8 +298,10 @@ def pr_body(summary, config):
     }
     completed = sum(summary["totals"][model]["attempted"] for model in MODELS)
     lines = [
-        "Full CDS-bench baselines for **GPT-6 Luna (high)**, **Nemotron 3.5 Lightning**, **Qwen 3.7 Flash (high)** and **Snowball v0.1**, with and without offline Python. The dataset has ten examples per task: 84 easy task types and 79 hard task types, or 3,260 planned attempts per model. Retained prompts and reference answers are identical across models.",
-        f"\n**Snowball v0.1: {summary['snowball_completed']:,}/3,260 finished ({summary['state']}).** The other three models each have 3,260 completed matching attempts. **{completed:,} scored attempts** in total; pilot responses are not reused.",
+        "Full CDS-bench baselines for **GPT-6 Luna (high)**, **Nemotron 3.5 Lightning**, **Qwen 3.7 Flash (high)** and **Snowball v0.1**, with and without offline Python. The dataset has ten examples per task: 84 easy task types and 79 hard task types, or 3,260 planned attempts per model. Retained prompts and reference answers are identical across these four original baselines.",
+        f"\n**Snowball v0.1: {summary['snowball_completed']:,}/3,260 finished ({summary['state']}).** The other three models each have 3,260 completed matching attempts. **{completed:,} original baseline attempts**; pilot responses are not reused."
+        + (" The main chart also includes a separate 1,630-attempt Snowball tools-only follow-up with modified prompting and execution control."
+           if summary.get('snowball_one_shot_tools') else ""),
         "\nEvaluation-only PR. **Do not merge.**",
         f"\n[Full report (HTML)]({base}/report.html) · [Per-task results (CSV)]({base}/by-task.csv) · [Final predictions (JSON)]({base}/results.json)",
         "\n[Public request, reasoning and tool traces (HF)](https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces) cover full runs, pilots, retries, interrupted attempts and provider diagnostics. Credentials and private endpoints are redacted.",
@@ -291,6 +312,7 @@ def pr_body(summary, config):
         *snowball_tools.one_shot_markdown(summary['snowball_tool_use'], base),
         "\n**Accuracy by condition**",
         *figure("overall", "CDS-bench accuracy by model and evaluation condition"),
+        *snowball_one_shot.markdown(summary.get('snowball_one_shot_tools'), base),
         "\n<details>\n<summary>Full results: accuracy, median time, cost and truncation</summary>\n",
         "\n" + markdown_results([
             ((full_names[model], label), summary["conditions"][model][c], 32768)
@@ -382,7 +404,7 @@ body{font:15px/1.5 system-ui,sans-serif;color:#25313c;margin:0;background:white}
 .radar-control select{margin-left:8px}
 </style><main><h1>CDS-bench: full model evaluation</h1><nav><a href="#overview">Overview</a> · <a href="#snowball-tools">Snowball tools</a> · <a href="#families">By family</a> · <a href="#task-radar">Task radars</a> · <a href="#task-scatter">Task comparison</a> · <a href="#tasks">By task</a> · <a href="#settings">Settings and data</a></nav>"""]
     q, deepinfra = (summary["totals"][m] for m in ["qwen", "deepinfra"])
-    parts.append(f"<p>Full evaluation: <b>Snowball v0.1 {summary['snowball_completed']:,}/3,260 ({esc(summary['state'])})</b>. GPT-6 Luna, Nemotron 3.5 Lightning and Qwen 3.7 Flash each have 3,260 matching completed attempts. Each condition includes ten examples per task: 84 easy task types and 79 hard task types. Retained prompts and reference answers match byte for byte. Pilot responses are excluded.</p>")
+    parts.append(f"<p>Full evaluation: <b>Snowball v0.1 {summary['snowball_completed']:,}/3,260 ({esc(summary['state'])})</b>. GPT-6 Luna, Nemotron 3.5 Lightning and Qwen 3.7 Flash each have 3,260 matching completed attempts. Each condition includes ten examples per task: 84 easy task types and 79 hard task types. Retained prompts and reference answers match byte for byte across these four original baselines. Pilot responses are excluded.</p>")
     parts.append('<p class="muted">Snowball uses 32,768 aggregate generated tokens, a 1,800-second API wall deadline, temperature 0.7 and concurrency 60. The OpenRouter models use a 300-second deadline and concurrency 10. Snowball’s native thinking/tool transport matches its validated pilot; no per-request monetary price is exposed.</p>')
     parts.append('<p><a href="https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces">Public request, reasoning and tool traces</a> cover the saved full runs, pilots, retries, interrupted attempts and provider diagnostics. Credentials and private endpoints are redacted.</p>')
     if summary['state'] == 'complete':
@@ -404,11 +426,12 @@ body{font:15px/1.5 system-ui,sans-serif;color:#25313c;margin:0;background:white}
                 for c, label in zip(PLANNED, LABELS)])
         for model, name in MODELS.items()
     ]))
-    parts.append('<p class="muted">Models are ordered by pooled mean task accuracy, giving each task equal weight. The same order is used in all condition views, tables and radar panels.</p>')
+    parts.append('<p class="muted">The four original baselines are ordered by pooled mean task accuracy, giving each task equal weight. The same order is used in all condition views, tables and radar panels. In the main chart, the tools-only follow-up is placed beside the original Snowball bars.</p>')
     parts.append('<p class="muted">All failures remain in the denominator. Original Luna artifacts are preserved separately. The <a href="../model-pilot-20261029/report.html">30-task model/provider pilot</a> is a separate report; its responses are not reused here.</p>')
     parts.append(f"<p class=muted>Billing is incomplete for {deepinfra['unreconciled_examples']} Nemotron 3.5 Lightning, {q['unreconciled_examples']} Qwen and {summary['totals']['luna']['unreconciled_examples']} retained Luna attempts. Charges are provisional where only streaming usage is available; unknown charges are not assumed to be zero.</p>")
     image = base64.b64encode((output / "overall.png").read_bytes()).decode()
     parts.append(f'<img alt="Accuracy by model and condition" src="data:image/png;base64,{image}">')
+    parts.append(snowball_one_shot.html_description(summary.get('snowball_one_shot_tools')))
     parts.append('<details><summary>Failure categories, token usage, and costs</summary><div class="scroll"><table><tr><th>Model / condition</th><th>Incorrect</th><th>Format</th><th>Timeout</th><th>Token cap</th><th>API error</th><th>Used Python</th><th>Reported generated tokens</th></tr>')
     for m, name in MODELS.items():
         for c, label in zip(PLANNED, LABELS):

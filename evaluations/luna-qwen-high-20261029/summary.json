@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:01:14.754374+00:00",
+  "generated_at": "2026-10-31T20:20:33.085653+00:00",
   "state": "complete",
   "qwen_completed": 3260,
   "qwen_planned": 3260,
@@ -34169,5 +34169,241 @@
       },
       "interpretation": "Fresh attempts on the original 30 easy and 28 hard pilot questions. Each benchmark user message is unchanged byte for byte, but the full API message history differs: an arithmetic question, assistant Python call, tool result and assistant example answer are prepended before it. The demonstration shows both tool use and final-answer formatting. Baseline request transformation, response parser and scorer are unchanged. One draw per question; no causal isolation of formatting versus tool-selection effects."
     }
+  },
+  "snowball_one_shot_tools": {
+    "name": "Snowball v0.1 (1-shot tools)",
+    "display_scope": "Overview bar chart only; no no-tools observations or pooled ranking.",
+    "provenance": {
+      "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+      "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3",
+      "url": "https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3"
+    },
+    "total_parameters": 67000000000,
+    "active_parameters_per_token": 2000000000,
+    "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+    "conditions": {
+      "easy-tools": {
+        "n": 840,
+        "correct": 316,
+        "accuracy": 0.3761904761904762,
+        "tool_users": 811,
+        "tool_use_rate": 0.9654761904761905,
+        "successful_execution_examples": 738,
+        "tool_calls": 1293,
+        "tool_failures": 553,
+        "outcomes": {
+          "format": 243,
+          "correct": 316,
+          "wrong": 141,
+          "token_cap": 55,
+          "error": 85
+        },
+        "median_seconds": 115.89582447899738,
+        "completion_tokens": 11124943,
+        "cost_usd": null
+      },
+      "hard-tools": {
+        "n": 790,
+        "correct": 254,
+        "accuracy": 0.32151898734177214,
+        "tool_users": 752,
+        "tool_use_rate": 0.9518987341772152,
+        "successful_execution_examples": 668,
+        "tool_calls": 1278,
+        "tool_failures": 604,
+        "outcomes": {
+          "correct": 254,
+          "format": 247,
+          "wrong": 145,
+          "error": 98,
+          "token_cap": 46
+        },
+        "median_seconds": 134.17885316652246,
+        "completion_tokens": 11075398,
+        "cost_usd": null
+      }
+    },
+    "totals": {
+      "n": 1630,
+      "correct": 570,
+      "accuracy": 0.3496932515337423,
+      "tool_users": 1563,
+      "tool_use_rate": 0.9588957055214724,
+      "successful_execution_examples": 1406,
+      "tool_calls": 2571,
+      "tool_failures": 1157,
+      "outcomes": {
+        "format": 490,
+        "correct": 570,
+        "wrong": 286,
+        "error": 183,
+        "token_cap": 101
+      },
+      "median_seconds": 123.86142877099337,
+      "completion_tokens": 22200341,
+      "cost_usd": null
+    },
+    "failure_categories": {
+      "easy-tools": {
+        "format": 243,
+        "correct": 316,
+        "wrong": 141,
+        "truncated": 136,
+        "schema_or_native_protocol": 4
+      },
+      "hard-tools": {
+        "correct": 254,
+        "format": 248,
+        "wrong": 145,
+        "truncated": 140,
+        "schema_or_native_protocol": 3
+      }
+    },
+    "failure_category_note": "Primary pass/fail scores are unchanged. A response ending length is classified as truncated even when the legacy trial recorded the resulting incomplete-JSON error as an API error. Rejected extra calls are retained separately from actual Python executions; at most eight programs execute per example.",
+    "method": "One arithmetic demonstration; explicit complete-program instructions. Initial code arguments are schema constrained, with native thinking disabled for code generation. Failed executions get model-written repair programs within eight calls. Native thinking and optional XML calls resume after execution. Same offline Python and final scorer. Directed tool use; not spontaneous tool selection.",
+    "selection": "Selected using predeclared tool-invocation and successful-execution thresholds on fresh 30 easy / 28 hard calibration attempts, not classification accuracy. Calibration responses are excluded from the full evaluation.",
+    "prompt_profile": {
+      "name": "mandatory-complete-code-v6",
+      "system_instruction": "Solve each new benchmark question by executing a complete Python solution on its current inputs. Before execution, return a JSON object with exactly one code string field. Write a complete self-contained executable Python solution for the whole question. Put any brief algorithm notes in Python comments; implement all required checks and tie-breaks in the code. Include every needed import and input value. Print the computed final answer in the question's requested type and precision; use json.dumps for JSON answers.\nMerely printing or inspecting the input is not a solution. Perform the sequence transformation, calculation, finite search or validation required by the whole question in Python. The program must compute the answer from the current inputs. Put the actual work in executable code. The controller executes the program verbatim and returns stdout/stderr and exit status. If it fails, use the error to produce a complete corrected program for another execution. A fresh interpreter is used each time, so include all definitions and imports again. You have at most eight Python calls.\nAfter successful execution, use the computed result to answer, or make any additional needed Python calls in the demonstrated tool-call format. Finish with Final answer: on its own line, followed by only the answer required by the current question. The earlier arithmetic demonstration is finished; its inputs and output belong only to that example. All new computation and final output must use the current benchmark question.",
+      "question_prefix": "NEW BENCHMARK QUESTION\nSolve the complete question below using the Python execution tool.\n\n",
+      "question_suffix": "\n\nREQUIRED EXECUTION\nReturn a JSON object with exactly one code string containing the complete self-contained Python solution. Compute the required answer, not just an inspection or echo of the input. The controller will run your code and return the actual result before you give your final answer. If execution fails, correct and rerun the complete program within the available call limit.",
+      "notes": "Mandatory complete code-first tool use with the original one-field code argument schema. One arithmetic demonstration is retained. Model-generated code is executed verbatim. Failed executions require model-written complete repair programs within the original eight-call cap. Native thinking is disabled for schema turns and resumes after execution. No answer grammar, task-specific hints, model code repair by the controller, or correctness feedback is added. Separate plan field removed because it caused long JSON whitespace/transition loops in calibration."
+    },
+    "demonstration_messages": [
+      {
+        "role": "user",
+        "content": "Calculate 123456789 * 987654321. You may explain your work. End with Final answer: on its own line, followed by the integer result on the next line."
+      },
+      {
+        "role": "assistant",
+        "content": null,
+        "reasoning_content": "Use Python to calculate the exact product.",
+        "tool_calls": [
+          {
+            "id": "demo_python_01",
+            "type": "function",
+            "function": {
+              "name": "python",
+              "arguments": "{\"code\": \"print(123456789 * 987654321)\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "demo_python_01",
+        "content": "{\"stdout\": \"121932631112635269\\n\", \"stderr\": \"\", \"exit_code\": 0, \"timed_out\": false, \"output_truncated\": false}"
+      },
+      {
+        "role": "assistant",
+        "content": "Final answer:\n121932631112635269"
+      }
+    ],
+    "first_request_fields": {
+      "chat_template_kwargs": {
+        "custom_instructions": "Solve each new benchmark question by executing a complete Python solution on its current inputs. Before execution, return a JSON object with exactly one code string field. Write a complete self-contained executable Python solution for the whole question. Put any brief algorithm notes in Python comments; implement all required checks and tie-breaks in the code. Include every needed import and input value. Print the computed final answer in the question's requested type and precision; use json.dumps for JSON answers.\nMerely printing or inspecting the input is not a solution. Perform the sequence transformation, calculation, finite search or validation required by the whole question in Python. The program must compute the answer from the current inputs. Put the actual work in executable code. The controller executes the program verbatim and returns stdout/stderr and exit status. If it fails, use the error to produce a complete corrected program for another execution. A fresh interpreter is used each time, so include all definitions and imports again. You have at most eight Python calls.\nAfter successful execution, use the computed result to answer, or make any additional needed Python calls in the demonstrated tool-call format. Finish with Final answer: on its own line, followed by only the answer required by the current question. The earlier arithmetic demonstration is finished; its inputs and output belong only to that example. All new computation and final output must use the current benchmark question.",
+        "enable_thinking": false,
+        "xml_tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "python",
+              "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+              "strict": true,
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "description": "Python code to execute."
+                  }
+                },
+                "required": [
+                  "code"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "name": "python_tool_arguments",
+          "strict": true,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Python code to execute."
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "settings": {
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 1800,
+      "connection_timeout_seconds": 15,
+      "max_tool_calls": 8,
+      "concurrency": 60,
+      "sampling": "Fresh requests, one attempt per question. Pilot and full attempts are separate. No scored reruns or controller repair of code/answers. Model-written execution-error repairs are tool rounds within the eight-call cap. No no-tools conditions.",
+      "scoring": "Original expected answers and scorer. First response returns complete Python code under the original one-field code-argument JSON schema, with native thinking disabled for structured code generation. Code is executed verbatim in the same sandbox. Execution errors trigger structured model-written repair programs within the existing eight-call cap. After successful execution, native thinking and optional XML calls resume. Final-answer format and scorer are unchanged.",
+      "cost_note": "API exposes tokens but no per-request monetary price; cost is unavailable, not zero."
+    },
+    "sampling_parameters": {
+      "temperature": 0.7,
+      "seed": 20261029
+    },
+    "audit": {
+      "passed": true,
+      "attempts": 1630,
+      "conditions": {
+        "easy-tools": 840,
+        "hard-tools": 790
+      },
+      "same_original_cases_answers_and_scorer": true,
+      "effective_prompt_and_demo_verified": true,
+      "frozen_sources_verified": true,
+      "verbatim_model_programs_verified": true,
+      "token_budgets_verified": true,
+      "no_pilot_or_historical_response_reuse": true,
+      "no_duplicate_response_ids": true,
+      "scored_retries": 0,
+      "prior_results_unchanged": true,
+      "no_no_tools_attempts": true,
+      "requests": 4200,
+      "programs": 2568,
+      "successful_programs": 1414,
+      "failed_programs": 1154,
+      "rejected_call_attempts": 3,
+      "eight_execution_limit_verified": true,
+      "schema_turns": 2734,
+      "model_written_repair_turns": 1104,
+      "schema_turns_truncated": 175,
+      "native_protocol_errors": 7,
+      "transport_errors": 0
+    },
+    "raw_audit_sha256": "9213f76c700a9e65f3cb89c5b5c2e21480c427722ef0d5815995fbe3600021df",
+    "raw_results_sha256": "0d9fac076abaeb62f29472e7a0d207ee8de7ffed4d168e2f6f2e3b8520b7b119",
+    "source_sha256": {
+      "scratch/snowball-tools-aggressive-20261031-01/full_driver.py": "f572776dde88bda46d68495d5f91455db0b45c82c9ba4f2e0c46f737d97f09ca",
+      "scratch/snowball-tools-aggressive-20261031-01/complete_code_client.py": "c653fef58daa931233fb0b0e341358e1ac546c1a5da9f9bdeb5bdefddadb571c",
+      "scratch/snowball-tools-aggressive-20261031-01/mandatory-complete-code-v6.json": "e18ff7048435bf3e267b6ac2732c08a4dd57154b14c7d5038d6b3cab50adf5c7",
+      "src/cds_bench/eval_compare/snowball_client.py": "e335bdf3fb9a48b064a33f61b7115642c6649d700f9aa68a6dd10f372696ee61",
+      "src/cds_bench/eval_compare/snowball_run.py": "f9450670f15e6ef48a4a2607aac60f8f3afa28670fed2d6f3746b7ff93272082",
+      "src/cds_bench/eval_luna/trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+      "src/cds_bench/eval_luna/sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+      "src/cds_bench/eval_luna/score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+      "src/cds_bench/eval_luna/settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3"
+    },
+    "raw_traces": "Saved locally; this follow-up is not yet in the linked HF archive."
   }
 }

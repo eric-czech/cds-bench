@@ -1,0 +1,95 @@
+Actual first request: Hard, Python; cds.translate/01
+
+Custom instructions (chat_template_kwargs.custom_instructions)
+
+Solve each new benchmark question by executing a complete Python solution on its current inputs. Before execution, return a JSON object with exactly one code string field. Write a complete self-contained executable Python solution for the whole question. Put any brief algorithm notes in Python comments; implement all required checks and tie-breaks in the code. Include every needed import and input value. Print the computed final answer in the question's requested type and precision; use json.dumps for JSON answers.
+Merely printing or inspecting the input is not a solution. Perform the sequence transformation, calculation, finite search or validation required by the whole question in Python. The program must compute the answer from the current inputs. Put the actual work in executable code. The controller executes the program verbatim and returns stdout/stderr and exit status. If it fails, use the error to produce a complete corrected program for another execution. A fresh interpreter is used each time, so include all definitions and imports again. You have at most eight Python calls.
+After successful execution, use the computed result to answer, or make any additional needed Python calls in the demonstrated tool-call format. Finish with Final answer: on its own line, followed by only the answer required by the current question. The earlier arithmetic demonstration is finished; its inputs and output belong only to that example. All new computation and final output must use the current benchmark question.
+
+Tool definition (chat_template_kwargs.xml_tools)
+
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "python",
+      "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Python code to execute."
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+]
+
+Conversation messages
+
+[
+  {
+    "role": "user",
+    "content": "Calculate 123456789 * 987654321. You may explain your work. End with Final answer: on its own line, followed by the integer result on the next line."
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "reasoning_content": "Use Python to calculate the exact product.",
+    "tool_calls": [
+      {
+        "id": "demo_python_01",
+        "type": "function",
+        "function": {
+          "name": "python",
+          "arguments": "{\"code\": \"print(123456789 * 987654321)\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "demo_python_01",
+    "content": "{\"stdout\": \"121932631112635269\\n\", \"stderr\": \"\", \"exit_code\": 0, \"timed_out\": false, \"output_truncated\": false}"
+  },
+  {
+    "role": "assistant",
+    "content": "Final answer:\n121932631112635269"
+  },
+  {
+    "role": "user",
+    "content": "NEW BENCHMARK QUESTION\nSolve the complete question below using the Python execution tool.\n\n## Task\n\nTranslate this CDS using NCBI genetic code 11.\n\n## Inputs\n\nDNA inputs are 5′→3′ coding strands. Ignore whitespace between bases.\n\n```json\n{\n  \"cds\": \"ATGGAACTGGAACCGCTGGAAGAAGGCAGCGGCGAAAGCACCGAAGCAGCCCAATGGCAGGTTGACTGA\"\n}\n```\n\n## Rules\n\n- Use the annotated first codon as the initiator. Stop at the first in-frame stop and omit its symbol.\n\n## Answer\n\n- Return one continuous uppercase one-letter amino-acid sequence, ending before the first in-frame stop.\n- An empty sequence is the token EMPTY_SEQUENCE.\n\nAfter any explanation, write `Final answer:` on its own line. Put the required value or list on the next line to finish your response.\n\nREQUIRED EXECUTION\nReturn a JSON object with exactly one code string containing the complete self-contained Python solution. Compute the required answer, not just an inspection or echo of the input. The controller will run your code and return the actual result before you give your final answer. If execution fails, correct and rerun the complete program within the available call limit."
+  }
+]
+
+Initial response format
+
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "python_tool_arguments",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Python code to execute."
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
+
+Initial enable_thinking: false. Native thinking resumes after successful execution.
