@@ -123,7 +123,9 @@ Uses the full-run client with the identical native request transformation and re
 
 ### Required Python execution follow-up
 
-Hatched bars show Snowball v0.1 (1-shot tools): 316/840 (37.6%) on Easy/Python and 254/790 (32.2%) on Hard/Python. The same weights receive one arithmetic tool-use demonstration plus instructions requiring a complete Python solution. Initial code generation is schema constrained with thinking disabled; thinking resumes after successful execution. The model writes execution-error repairs within the same eight-execution limit. Python was invoked on 1,563/1,630 examples (95.9%); the sandbox, 32,768-token budget and final scorer are unchanged. This is directed tool use, so the improvement cannot be attributed to the demonstration alone. No no-tools cases were run for this variant. It appears only in this chart; the tables, radars and scatter plots retain the four original baselines.
+With the same Snowball weights, the required-execution variant improves accuracy from 26.3% to 37.6% on Easy/Python and 22.8% to 32.2% on Hard/Python. Python invocation rises from 10.9% to 95.9%.
+
+This changes the tool-use protocol, combining a demonstration with mandatory execution and constrained code generation with thinking disabled. The gain is not an isolated one-shot prompting effect.
 
 <details>
 <summary>Snowball v0.1 (1-shot tools): prompt and execution changes</summary>
@@ -131,7 +133,9 @@ Hatched bars show Snowball v0.1 (1-shot tools): 316/840 (37.6%) on Easy/Python a
 
 [Exact example request](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-example.txt) · [Aggregates, prompt instructions and schema](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools.json) · [Completion audit](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-audit.json)
 
-An arithmetic question, assistant Python call, tool result and assistant answer precede each current question. Generic instructions are added before and after the original benchmark prompt. The original sequence inputs, references, answer and scoring rules are unchanged. The first response must contain exactly one `code` string; the controller executes it verbatim and returns the result. Failed executions prompt model-written complete repair programs; no gold-answer feedback or controller repair is supplied. After successful execution, native thinking and optional XML Python calls resume. The final answer has no decoding grammar and is scored as originally specified.
+An arithmetic question, assistant Python call, tool result and assistant answer precede each current question. Generic instructions are added before and after the original benchmark prompt. The original sequence inputs, references, answer and scoring rules are unchanged. The first response must contain exactly one `code` string; the controller executes it verbatim and returns the result. Failed executions prompt model-written complete repair programs; no gold-answer feedback or controller repair is supplied. Thinking is disabled for constrained code generation. After successful execution, native thinking and optional XML Python calls resume. The final answer has no decoding grammar and is scored as originally specified.
+
+The sandbox, 32,768 aggregate generated-token budget and eight-execution limit are unchanged. No no-tools cases were run for this variant; the task tables, radars and scatter plots retain the original baselines.
 
 The full run contains 1,630 fresh attempts, separate from calibration, with no scored retries. Temperature 0.7, seed 20261029, concurrency 60 and a 1,800-second request deadline match the original Snowball setup. Only the main chart includes this follow-up. Its raw traces remain local and are not yet in the linked HF archive.
 

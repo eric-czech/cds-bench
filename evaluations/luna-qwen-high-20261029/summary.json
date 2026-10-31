@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T20:20:33.085653+00:00",
+  "generated_at": "2026-10-31T20:34:26.070564+00:00",
   "state": "complete",
   "qwen_completed": 3260,
   "qwen_planned": 3260,
@@ -34242,6 +34242,22 @@
       "median_seconds": 123.86142877099337,
       "completion_tokens": 22200341,
       "cost_usd": null
+    },
+    "original_baseline": {
+      "easy-tools": {
+        "n": 840,
+        "correct": 221,
+        "accuracy": 0.2630952380952381,
+        "tool_users": 119,
+        "tool_use_rate": 0.14166666666666666
+      },
+      "hard-tools": {
+        "n": 790,
+        "correct": 180,
+        "accuracy": 0.22784810126582278,
+        "tool_users": 58,
+        "tool_use_rate": 0.07341772151898734
+      }
     },
     "failure_categories": {
       "easy-tools": {

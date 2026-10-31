@@ -62,6 +62,11 @@ def export(output, cases):
         "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
         "conditions": comparison["conditions"],
         "totals": comparison["totals"],
+        "original_baseline": {
+            condition: {key: metrics[key] for key in
+                        ["n", "correct", "accuracy", "tool_users", "tool_use_rate"]}
+            for condition, metrics in comparison["matched_baselines"]["original_snowball"].items()
+        },
         "failure_categories": comparison["failure_categories_from_raw_metadata"],
         "failure_category_note": comparison["failure_category_note"],
         "method": comparison["method"],
@@ -112,19 +117,17 @@ def export(output, cases):
 
 def description(stats):
     a, b = (stats["conditions"][c] for c in ["easy-tools", "hard-tools"])
+    original = stats['original_baseline']
+    old_rate = sum(r['tool_users'] for r in original.values()) / sum(r['n'] for r in original.values())
     total = stats["totals"]
     return (
-        f"Hatched bars show {NAME}: {a['correct']}/{a['n']} ({a['accuracy']:.1%}) "
-        f"on Easy/Python and {b['correct']}/{b['n']} ({b['accuracy']:.1%}) on Hard/Python. "
-        "The same weights receive one arithmetic tool-use demonstration plus instructions "
-        "requiring a complete Python solution. Initial code generation is schema constrained "
-        "with thinking disabled; thinking resumes after successful execution. The model writes "
-        "execution-error repairs within the same eight-execution limit. "
-        f"Python was invoked on {total['tool_users']:,}/{total['n']:,} examples "
-        f"({total['tool_use_rate']:.1%}); the sandbox, 32,768-token budget and final scorer are unchanged. "
-        "This is directed tool use, so the improvement cannot be attributed to the demonstration alone. "
-        "No no-tools cases were run for this variant. It appears only in this chart; the tables, "
-        "radars and scatter plots retain the four original baselines."
+        "With the same Snowball weights, the required-execution variant improves accuracy "
+        f"from {original['easy-tools']['accuracy']:.1%} to {a['accuracy']:.1%} on Easy/Python "
+        f"and {original['hard-tools']['accuracy']:.1%} to {b['accuracy']:.1%} on Hard/Python. "
+        f"Python invocation rises from {old_rate:.1%} to {total['tool_use_rate']:.1%}.\n\n"
+        "This changes the tool-use protocol, combining a demonstration with mandatory execution "
+        "and constrained code generation with thinking disabled. The gain is not an isolated "
+        "one-shot prompting effect."
     )
 
 
@@ -143,8 +146,12 @@ def markdown(stats, base):
         "are unchanged. The first response must contain exactly one `code` string; the controller "
         "executes it verbatim and returns the result. Failed executions prompt model-written "
         "complete repair programs; no gold-answer feedback or controller repair is supplied. "
-        "After successful execution, native thinking and optional XML Python calls resume. "
+        "Thinking is disabled for constrained code generation. After successful execution, "
+        "native thinking and optional XML Python calls resume. "
         "The final answer has no decoding grammar and is scored as originally specified.",
+        "\nThe sandbox, 32,768 aggregate generated-token budget and eight-execution limit "
+        "are unchanged. No no-tools cases were run for this variant; the task tables, radars "
+        "and scatter plots retain the original baselines.",
         "\nThe full run contains 1,630 fresh attempts, separate from calibration, with no scored "
         "retries. Temperature 0.7, seed 20261029, concurrency 60 and a 1,800-second request deadline "
         "match the original Snowball setup. Only the main chart includes this follow-up. "
@@ -160,7 +167,9 @@ def html_description(stats):
     if not stats:
         return ""
     return (
-        '<p id="snowball-one-shot-tools">' + html.escape(description(stats)) + '</p>'
+        '<div id="snowball-one-shot-tools">'
+        + ''.join('<p>' + html.escape(p) + '</p>' for p in description(stats).split('\n\n'))
+        + '</div>'
         '<details><summary>Snowball v0.1 (1-shot tools): exact prompt and execution settings</summary>'
         f'<p><a href="{EXAMPLE_FILE}">Exact example request</a> · '
         f'<a href="{DATA_FILE}">Aggregates, instructions and schema</a> · '
@@ -170,6 +179,10 @@ def html_description(stats):
         'are prepended. Model programs execute verbatim. There is no final-answer grammar or '
         'gold-answer feedback. All 1,630 attempts are fresh; calibration attempts are excluded. '
         'This follow-up’s raw traces remain local and are not yet in the linked HF archive.</p>'
+        '<p>Thinking is disabled for constrained code generation and resumes after successful '
+        'execution. The model writes execution-error repairs within the same eight-execution '
+        'limit. The offline sandbox, 32,768 aggregate generated-token budget and final scorer '
+        'are unchanged. No no-tools cases were run; only the main chart includes this variant.</p>'
         '<p>Added instructions before the question:</p><pre>'
         + html.escape(stats['prompt_profile']['question_prefix'].strip())
         + '</pre><p>Added instructions after the question:</p><pre>'
