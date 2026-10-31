@@ -1,0 +1,827 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="748.8pt" height="482.4pt" viewBox="0 0 748.8 482.4" version="1.1" class="task-scatter-svg" role="group" aria-label="Easy, Python: Nemotron versus Snowball task accuracy">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="comparison-easy-tools-figure_1">
+  <g id="comparison-easy-tools-patch_1">
+   <path d="M 0 482.4  L 748.8 482.4  L 748.8 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="comparison-easy-tools-axes_1">
+   <g id="comparison-easy-tools-patch_2">
+    <path d="M 96.66 419.688  L 487.404 419.688  L 487.404 28.944  L 96.66 28.944  z " style="fill: #ffffff" />
+   </g>
+   <g id="comparison-easy-tools-matplotlib.axis_1">
+    <g id="comparison-easy-tools-xtick_1">
+     <g id="comparison-easy-tools-line2d_1">
+      <path d="M 111.132 419.688  L 111.132 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_2">
+      <defs>
+       <path id="comparison-easy-tools-ma30d808a19" d="M 0 0  L 0 3.5  " style="stroke: #000000; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="111.132" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="111.132" y="434.285656" transform="rotate(-0 111.132 434.285656)">0</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-xtick_2">
+     <g id="comparison-easy-tools-line2d_3">
+      <path d="M 183.492 419.688  L 183.492 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_4">
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="183.492" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="183.492" y="434.285656" transform="rotate(-0 183.492 434.285656)">20</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-xtick_3">
+     <g id="comparison-easy-tools-line2d_5">
+      <path d="M 255.852 419.688  L 255.852 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_6">
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="255.852" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="255.852" y="434.285656" transform="rotate(-0 255.852 434.285656)">40</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-xtick_4">
+     <g id="comparison-easy-tools-line2d_7">
+      <path d="M 328.212 419.688  L 328.212 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_8">
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="328.212" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="328.212" y="434.285656" transform="rotate(-0 328.212 434.285656)">60</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-xtick_5">
+     <g id="comparison-easy-tools-line2d_9">
+      <path d="M 400.572 419.688  L 400.572 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_10">
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="400.572" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="400.572" y="434.285656" transform="rotate(-0 400.572 434.285656)">80</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-xtick_6">
+     <g id="comparison-easy-tools-line2d_11">
+      <path d="M 472.932 419.688  L 472.932 28.944  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_12">
+      <g>
+       <use xlink:href="#comparison-easy-tools-ma30d808a19" x="472.932" y="419.688" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="472.932" y="434.285656" transform="rotate(-0 472.932 434.285656)">100</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="292.032" y="454.286438" transform="rotate(-0 292.032 454.286438)">Nemotron 3.5 Lightning · task accuracy (%)</text>
+    </g>
+   </g>
+   <g id="comparison-easy-tools-matplotlib.axis_2">
+    <g id="comparison-easy-tools-ytick_1">
+     <g id="comparison-easy-tools-line2d_13">
+      <path d="M 96.66 405.216  L 487.404 405.216  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_14">
+      <defs>
+       <path id="comparison-easy-tools-mb614830749" d="M 0 0  L -3.5 0  " style="stroke: #000000; stroke-width: 0.8" />
+      </defs>
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="405.216" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="409.014828" transform="rotate(-0 89.66 409.014828)">0</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-ytick_2">
+     <g id="comparison-easy-tools-line2d_15">
+      <path d="M 96.66 332.856  L 487.404 332.856  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_16">
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="332.856" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="336.654828" transform="rotate(-0 89.66 336.654828)">20</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-ytick_3">
+     <g id="comparison-easy-tools-line2d_17">
+      <path d="M 96.66 260.496  L 487.404 260.496  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_18">
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="260.496" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_10">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="264.294828" transform="rotate(-0 89.66 264.294828)">40</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-ytick_4">
+     <g id="comparison-easy-tools-line2d_19">
+      <path d="M 96.66 188.136  L 487.404 188.136  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_20">
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="188.136" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_11">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="191.934828" transform="rotate(-0 89.66 191.934828)">60</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-ytick_5">
+     <g id="comparison-easy-tools-line2d_21">
+      <path d="M 96.66 115.776  L 487.404 115.776  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_22">
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="115.776" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_12">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="119.574828" transform="rotate(-0 89.66 119.574828)">80</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-ytick_6">
+     <g id="comparison-easy-tools-line2d_23">
+      <path d="M 96.66 43.416  L 487.404 43.416  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke: #e1e5e9; stroke-width: 0.7; stroke-linecap: square" />
+     </g>
+     <g id="comparison-easy-tools-line2d_24">
+      <g>
+       <use xlink:href="#comparison-easy-tools-mb614830749" x="96.66" y="43.416" style="stroke: #000000; stroke-width: 0.8" />
+      </g>
+     </g>
+     <g id="comparison-easy-tools-text_13">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end" x="89.66" y="47.214828" transform="rotate(-0 89.66 47.214828)">100</text>
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_14">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="58.170156" y="224.316" transform="rotate(-90 58.170156 224.316)">Snowball v0.1 · task accuracy (%)</text>
+    </g>
+   </g>
+   <g id="comparison-easy-tools-line2d_25">
+    <path d="M 111.132 405.216  L 472.932 43.416  " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #94a3ad" />
+   </g>
+   <g id="comparison-easy-tools-patch_3">
+    <path d="M 96.66 419.688  L 96.66 28.944  " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="comparison-easy-tools-patch_4">
+    <path d="M 96.66 419.688  L 487.404 419.688  " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="comparison-easy-tools-patch_5">
+    <path d="M 115.6545 405.216  C 115.6545 404.622111 115.537517 404.033996 115.310245 403.485314  C 115.082974 402.936632 114.749834 402.438053 114.32989 402.01811  C 113.909947 401.598166 113.411368 401.265026 112.862686 401.037755  C 112.314004 400.810483 111.725889 400.6935 111.132 400.6935  C 110.538111 400.6935 109.949996 400.810483 109.401314 401.037755  C 108.852632 401.265026 108.354053 401.598166 107.93411 402.01811  C 107.514166 402.438053 107.181026 402.936632 106.953755 403.485314  C 106.726483 404.033996 106.6095 404.622111 106.6095 405.216  C 106.6095 405.809889 106.726483 406.398004 106.953755 406.946686  C 107.181026 407.495368 107.514166 407.993947 107.93411 408.41389  C 108.354053 408.833834 108.852632 409.166974 109.401314 409.394245  C 109.949996 409.621517 110.538111 409.7385 111.132 409.7385  C 111.725889 409.7385 112.314004 409.621517 112.862686 409.394245  C 113.411368 409.166974 113.909947 408.833834 114.32989 408.41389  C 114.749834 407.993947 115.082974 407.495368 115.310245 406.946686  C 115.537517 406.398004 115.6545 405.809889 115.6545 405.216  M 111.132 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_6">
+    <path d="M 154.3671 405.216  C 154.3671 404.289533 154.184606 403.372074 153.830062 402.51613  C 153.475519 401.660186 152.95582 400.882402 152.300709 400.227291  C 151.645598 399.57218 150.867814 399.052481 150.01187 398.697938  C 149.155926 398.343394 148.238467 398.1609 147.312 398.1609  C 146.385533 398.1609 145.468074 398.343394 144.61213 398.697938  C 143.756186 399.052481 142.978402 399.57218 142.323291 400.227291  C 141.66818 400.882402 141.148481 401.660186 140.793938 402.51613  C 140.439394 403.372074 140.2569 404.289533 140.2569 405.216  C 140.2569 406.142467 140.439394 407.059926 140.793938 407.91587  C 141.148481 408.771814 141.66818 409.549598 142.323291 410.204709  C 142.978402 410.85982 143.756186 411.379519 144.61213 411.734062  C 145.468074 412.088606 146.385533 412.2711 147.312 412.2711  C 148.238467 412.2711 149.155926 412.088606 150.01187 411.734062  C 150.867814 411.379519 151.645598 410.85982 152.300709 410.204709  C 152.95582 409.549598 153.475519 408.771814 153.830062 407.91587  C 154.184606 407.059926 154.3671 406.142467 154.3671 405.216  M 147.312 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_7">
+    <path d="M 151.8345 332.856  C 151.8345 332.262111 151.717517 331.673996 151.490245 331.125314  C 151.262974 330.576632 150.929834 330.078053 150.50989 329.65811  C 150.089947 329.238166 149.591368 328.905026 149.042686 328.677755  C 148.494004 328.450483 147.905889 328.3335 147.312 328.3335  C 146.718111 328.3335 146.129996 328.450483 145.581314 328.677755  C 145.032632 328.905026 144.534053 329.238166 144.11411 329.65811  C 143.694166 330.078053 143.361026 330.576632 143.133755 331.125314  C 142.906483 331.673996 142.7895 332.262111 142.7895 332.856  C 142.7895 333.449889 142.906483 334.038004 143.133755 334.586686  C 143.361026 335.135368 143.694166 335.633947 144.11411 336.05389  C 144.534053 336.473834 145.032632 336.806974 145.581314 337.034245  C 146.129996 337.261517 146.718111 337.3785 147.312 337.3785  C 147.905889 337.3785 148.494004 337.261517 149.042686 337.034245  C 149.591368 336.806974 150.089947 336.473834 150.50989 336.05389  C 150.929834 335.633947 151.262974 335.135368 151.490245 334.586686  C 151.717517 334.038004 151.8345 333.449889 151.8345 332.856  M 147.312 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_8">
+    <path d="M 188.0145 405.216  C 188.0145 404.622111 187.897517 404.033996 187.670245 403.485314  C 187.442974 402.936632 187.109834 402.438053 186.68989 402.01811  C 186.269947 401.598166 185.771368 401.265026 185.222686 401.037755  C 184.674004 400.810483 184.085889 400.6935 183.492 400.6935  C 182.898111 400.6935 182.309996 400.810483 181.761314 401.037755  C 181.212632 401.265026 180.714053 401.598166 180.29411 402.01811  C 179.874166 402.438053 179.541026 402.936632 179.313755 403.485314  C 179.086483 404.033996 178.9695 404.622111 178.9695 405.216  C 178.9695 405.809889 179.086483 406.398004 179.313755 406.946686  C 179.541026 407.495368 179.874166 407.993947 180.29411 408.41389  C 180.714053 408.833834 181.212632 409.166974 181.761314 409.394245  C 182.309996 409.621517 182.898111 409.7385 183.492 409.7385  C 184.085889 409.7385 184.674004 409.621517 185.222686 409.394245  C 185.771368 409.166974 186.269947 408.833834 186.68989 408.41389  C 187.109834 407.993947 187.442974 407.495368 187.670245 406.946686  C 187.897517 406.398004 188.0145 405.809889 188.0145 405.216  M 183.492 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_9">
+    <path d="M 188.0145 369.036  C 188.0145 368.442111 187.897517 367.853996 187.670245 367.305314  C 187.442974 366.756632 187.109834 366.258053 186.68989 365.83811  C 186.269947 365.418166 185.771368 365.085026 185.222686 364.857755  C 184.674004 364.630483 184.085889 364.5135 183.492 364.5135  C 182.898111 364.5135 182.309996 364.630483 181.761314 364.857755  C 181.212632 365.085026 180.714053 365.418166 180.29411 365.83811  C 179.874166 366.258053 179.541026 366.756632 179.313755 367.305314  C 179.086483 367.853996 178.9695 368.442111 178.9695 369.036  C 178.9695 369.629889 179.086483 370.218004 179.313755 370.766686  C 179.541026 371.315368 179.874166 371.813947 180.29411 372.23389  C 180.714053 372.653834 181.212632 372.986974 181.761314 373.214245  C 182.309996 373.441517 182.898111 373.5585 183.492 373.5585  C 184.085889 373.5585 184.674004 373.441517 185.222686 373.214245  C 185.771368 372.986974 186.269947 372.653834 186.68989 372.23389  C 187.109834 371.813947 187.442974 371.315368 187.670245 370.766686  C 187.897517 370.218004 188.0145 369.629889 188.0145 369.036  M 183.492 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_10">
+    <path d="M 188.0145 332.856  C 188.0145 332.262111 187.897517 331.673996 187.670245 331.125314  C 187.442974 330.576632 187.109834 330.078053 186.68989 329.65811  C 186.269947 329.238166 185.771368 328.905026 185.222686 328.677755  C 184.674004 328.450483 184.085889 328.3335 183.492 328.3335  C 182.898111 328.3335 182.309996 328.450483 181.761314 328.677755  C 181.212632 328.905026 180.714053 329.238166 180.29411 329.65811  C 179.874166 330.078053 179.541026 330.576632 179.313755 331.125314  C 179.086483 331.673996 178.9695 332.262111 178.9695 332.856  C 178.9695 333.449889 179.086483 334.038004 179.313755 334.586686  C 179.541026 335.135368 179.874166 335.633947 180.29411 336.05389  C 180.714053 336.473834 181.212632 336.806974 181.761314 337.034245  C 182.309996 337.261517 182.898111 337.3785 183.492 337.3785  C 184.085889 337.3785 184.674004 337.261517 185.222686 337.034245  C 185.771368 336.806974 186.269947 336.473834 186.68989 336.05389  C 187.109834 335.633947 187.442974 335.135368 187.670245 334.586686  C 187.897517 334.038004 188.0145 333.449889 188.0145 332.856  M 183.492 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_11">
+    <path d="M 188.0145 296.676  C 188.0145 296.082111 187.897517 295.493996 187.670245 294.945314  C 187.442974 294.396632 187.109834 293.898053 186.68989 293.47811  C 186.269947 293.058166 185.771368 292.725026 185.222686 292.497755  C 184.674004 292.270483 184.085889 292.1535 183.492 292.1535  C 182.898111 292.1535 182.309996 292.270483 181.761314 292.497755  C 181.212632 292.725026 180.714053 293.058166 180.29411 293.47811  C 179.874166 293.898053 179.541026 294.396632 179.313755 294.945314  C 179.086483 295.493996 178.9695 296.082111 178.9695 296.676  C 178.9695 297.269889 179.086483 297.858004 179.313755 298.406686  C 179.541026 298.955368 179.874166 299.453947 180.29411 299.87389  C 180.714053 300.293834 181.212632 300.626974 181.761314 300.854245  C 182.309996 301.081517 182.898111 301.1985 183.492 301.1985  C 184.085889 301.1985 184.674004 301.081517 185.222686 300.854245  C 185.771368 300.626974 186.269947 300.293834 186.68989 299.87389  C 187.109834 299.453947 187.442974 298.955368 187.670245 298.406686  C 187.897517 297.858004 188.0145 297.269889 188.0145 296.676  M 183.492 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_12">
+    <path d="M 219.672 398.1609  C 217.801589 398.1609 216.005871 398.90471 214.683291 400.227291  C 213.36071 401.549871 212.6169 403.345589 212.6169 405.216  C 212.6169 407.086411 213.36071 408.882129 214.683291 410.204709  C 216.005871 411.52729 217.801589 412.2711 219.672 412.2711  L 219.672 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_13">
+    <path d="M 219.672 412.2711  C 221.542411 412.2711 223.338129 411.52729 224.660709 410.204709  C 225.98329 408.882129 226.7271 407.086411 226.7271 405.216  C 226.7271 403.345589 225.98329 401.549871 224.660709 400.227291  C 223.338129 398.90471 221.542411 398.1609 219.672 398.1609  L 219.672 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_14">
+    <path d="M 219.672 361.0764  C 217.561792 361.0764 215.535855 361.915571 214.043713 363.407713  C 212.551571 364.899855 211.7124 366.925792 211.7124 369.036  C 211.7124 371.146208 212.551571 373.172145 214.043713 374.664287  C 215.535855 376.156429 217.561792 376.9956 219.672 376.9956  L 219.672 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_15">
+    <path d="M 219.672 376.9956  C 221.782208 376.9956 223.808145 376.156429 225.300287 374.664287  C 226.792429 373.172145 227.6316 371.146208 227.6316 369.036  L 219.672 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_16">
+    <path d="M 227.6316 369.036  C 227.6316 366.925792 226.792429 364.899855 225.300287 363.407713  C 223.808145 361.915571 221.782208 361.0764 219.672 361.0764  L 219.672 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #009988; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_17">
+    <path d="M 255.852 397.631801  C 254.520794 397.631801 253.212759 397.982288 252.059901 398.647891  C 250.907043 399.313494 249.949494 400.271043 249.283891 401.423901  C 248.618288 402.576759 248.267801 403.884794 248.267801 405.216  C 248.267801 406.547206 248.618288 407.855241 249.283891 409.008099  L 255.852 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_18">
+    <path d="M 249.283891 409.008099  C 249.949494 410.160957 250.907043 411.118506 252.059901 411.784109  C 253.212759 412.449712 254.520794 412.800199 255.852 412.800199  C 257.183206 412.800199 258.491241 412.449712 259.644099 411.784109  C 260.796957 411.118506 261.754506 410.160957 262.420109 409.008099  C 263.085712 407.855241 263.436199 406.547206 263.436199 405.216  C 263.436199 403.884794 263.085712 402.576759 262.420109 401.423901  C 261.754506 400.271043 260.796957 399.313494 259.644099 398.647891  C 258.491241 397.982288 257.183206 397.631801 255.852 397.631801  L 255.852 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_19">
+    <path d="M 260.3745 369.036  C 260.3745 368.442111 260.257517 367.853996 260.030245 367.305314  C 259.802974 366.756632 259.469834 366.258053 259.04989 365.83811  C 258.629947 365.418166 258.131368 365.085026 257.582686 364.857755  C 257.034004 364.630483 256.445889 364.5135 255.852 364.5135  C 255.258111 364.5135 254.669996 364.630483 254.121314 364.857755  C 253.572632 365.085026 253.074053 365.418166 252.65411 365.83811  C 252.234166 366.258053 251.901026 366.756632 251.673755 367.305314  C 251.446483 367.853996 251.3295 368.442111 251.3295 369.036  C 251.3295 369.629889 251.446483 370.218004 251.673755 370.766686  C 251.901026 371.315368 252.234166 371.813947 252.65411 372.23389  C 253.074053 372.653834 253.572632 372.986974 254.121314 373.214245  C 254.669996 373.441517 255.258111 373.5585 255.852 373.5585  C 256.445889 373.5585 257.034004 373.441517 257.582686 373.214245  C 258.131368 372.986974 258.629947 372.653834 259.04989 372.23389  C 259.469834 371.813947 259.802974 371.315368 260.030245 370.766686  C 260.257517 370.218004 260.3745 369.629889 260.3745 369.036  M 255.852 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_20">
+    <path d="M 260.3745 296.676  C 260.3745 296.082111 260.257517 295.493996 260.030245 294.945314  C 259.802974 294.396632 259.469834 293.898053 259.04989 293.47811  C 258.629947 293.058166 258.131368 292.725026 257.582686 292.497755  C 257.034004 292.270483 256.445889 292.1535 255.852 292.1535  C 255.258111 292.1535 254.669996 292.270483 254.121314 292.497755  C 253.572632 292.725026 253.074053 293.058166 252.65411 293.47811  C 252.234166 293.898053 251.901026 294.396632 251.673755 294.945314  C 251.446483 295.493996 251.3295 296.082111 251.3295 296.676  C 251.3295 297.269889 251.446483 297.858004 251.673755 298.406686  C 251.901026 298.955368 252.234166 299.453947 252.65411 299.87389  C 253.074053 300.293834 253.572632 300.626974 254.121314 300.854245  C 254.669996 301.081517 255.258111 301.1985 255.852 301.1985  C 256.445889 301.1985 257.034004 301.081517 257.582686 300.854245  C 258.131368 300.626974 258.629947 300.293834 259.04989 299.87389  C 259.469834 299.453947 259.802974 298.955368 260.030245 298.406686  C 260.257517 297.858004 260.3745 297.269889 260.3745 296.676  M 255.852 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_21">
+    <path d="M 292.032 397.631801  C 290.700794 397.631801 289.392759 397.982288 288.239901 398.647891  C 287.087043 399.313494 286.129494 400.271043 285.463891 401.423901  C 284.798288 402.576759 284.447801 403.884794 284.447801 405.216  C 284.447801 406.547206 284.798288 407.855241 285.463891 409.008099  L 292.032 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #009988; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_22">
+    <path d="M 285.463891 409.008099  C 286.129494 410.160957 287.087043 411.118506 288.239901 411.784109  C 289.392759 412.449712 290.700794 412.800199 292.032 412.800199  C 293.363206 412.800199 294.671241 412.449712 295.824099 411.784109  C 296.976957 411.118506 297.934506 410.160957 298.600109 409.008099  C 299.265712 407.855241 299.616199 406.547206 299.616199 405.216  C 299.616199 403.884794 299.265712 402.576759 298.600109 401.423901  C 297.934506 400.271043 296.976957 399.313494 295.824099 398.647891  C 294.671241 397.982288 293.363206 397.631801 292.032 397.631801  L 292.032 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_23">
+    <path d="M 292.032 361.9809  C 290.161589 361.9809 288.365871 362.72471 287.043291 364.047291  C 285.72071 365.369871 284.9769 367.165589 284.9769 369.036  C 284.9769 370.906411 285.72071 372.702129 287.043291 374.024709  C 288.365871 375.34729 290.161589 376.0911 292.032 376.0911  L 292.032 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_24">
+    <path d="M 292.032 376.0911  C 293.902411 376.0911 295.698129 375.34729 297.020709 374.024709  C 298.34329 372.702129 299.0871 370.906411 299.0871 369.036  C 299.0871 367.165589 298.34329 365.369871 297.020709 364.047291  C 295.698129 362.72471 293.902411 361.9809 292.032 361.9809  L 292.032 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_25">
+    <path d="M 292.032 324.8964  C 289.921792 324.8964 287.895855 325.735571 286.403713 327.227713  C 284.911571 328.719855 284.0724 330.745792 284.0724 332.856  L 292.032 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #4477aa; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_26">
+    <path d="M 284.0724 332.856  C 284.0724 334.966208 284.911571 336.992145 286.403713 338.484287  C 287.895855 339.976429 289.921792 340.8156 292.032 340.8156  L 292.032 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_27">
+    <path d="M 292.032 340.8156  C 294.142208 340.8156 296.168145 339.976429 297.660287 338.484287  C 299.152429 336.992145 299.9916 334.966208 299.9916 332.856  L 292.032 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_28">
+    <path d="M 299.9916 332.856  C 299.9916 330.745792 299.152429 328.719855 297.660287 327.227713  C 296.168145 325.735571 294.142208 324.8964 292.032 324.8964  L 292.032 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_29">
+    <path d="M 335.2671 405.216  C 335.2671 404.289533 335.084606 403.372074 334.730062 402.51613  C 334.375519 401.660186 333.85582 400.882402 333.200709 400.227291  C 332.545598 399.57218 331.767814 399.052481 330.91187 398.697938  C 330.055926 398.343394 329.138467 398.1609 328.212 398.1609  C 327.285533 398.1609 326.368074 398.343394 325.51213 398.697938  C 324.656186 399.052481 323.878402 399.57218 323.223291 400.227291  C 322.56818 400.882402 322.048481 401.660186 321.693938 402.51613  C 321.339394 403.372074 321.1569 404.289533 321.1569 405.216  C 321.1569 406.142467 321.339394 407.059926 321.693938 407.91587  C 322.048481 408.771814 322.56818 409.549598 323.223291 410.204709  C 323.878402 410.85982 324.656186 411.379519 325.51213 411.734062  C 326.368074 412.088606 327.285533 412.2711 328.212 412.2711  C 329.138467 412.2711 330.055926 412.088606 330.91187 411.734062  C 331.767814 411.379519 332.545598 410.85982 333.200709 410.204709  C 333.85582 409.549598 334.375519 408.771814 334.730062 407.91587  C 335.084606 407.059926 335.2671 406.142467 335.2671 405.216  M 328.212 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_30">
+    <path d="M 328.212 361.0764  C 326.101792 361.0764 324.075855 361.915571 322.583713 363.407713  C 321.091571 364.899855 320.2524 366.925792 320.2524 369.036  L 328.212 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_31">
+    <path d="M 320.2524 369.036  C 320.2524 370.610072 320.719327 372.149324 321.593834 373.458117  C 322.468342 374.76691 323.71174 375.78734 325.165993 376.389712  C 326.620246 376.992083 328.221015 377.149745 329.764841 376.842659  C 331.308667 376.535572 332.72725 375.777324 333.840287 374.664287  C 334.953324 373.55125 335.711572 372.132667 336.018659 370.588841  C 336.325745 369.045015 336.168083 367.444246 335.565712 365.989993  C 334.96334 364.53574 333.94291 363.292342 332.634117 362.417834  C 331.325324 361.543327 329.786072 361.0764 328.212 361.0764  L 328.212 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_32">
+    <path d="M 328.212 325.271801  C 326.880794 325.271801 325.572759 325.622288 324.419901 326.287891  C 323.267043 326.953494 322.309494 327.911043 321.643891 329.063901  C 320.978288 330.216759 320.627801 331.524794 320.627801 332.856  C 320.627801 334.187206 320.978288 335.495241 321.643891 336.648099  L 328.212 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_33">
+    <path d="M 321.643891 336.648099  C 322.309494 337.800957 323.267043 338.758506 324.419901 339.424109  C 325.572759 340.089712 326.880794 340.440199 328.212 340.440199  C 329.543206 340.440199 330.851241 340.089712 332.004099 339.424109  C 333.156957 338.758506 334.114506 337.800957 334.780109 336.648099  L 328.212 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_34">
+    <path d="M 334.780109 336.648099  C 335.445712 335.495241 335.796199 334.187206 335.796199 332.856  C 335.796199 331.524794 335.445712 330.216759 334.780109 329.063901  C 334.114506 327.911043 333.156957 326.953494 332.004099 326.287891  C 330.851241 325.622288 329.543206 325.271801 328.212 325.271801  L 328.212 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #009988; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_35">
+    <path d="M 332.7345 296.676  C 332.7345 296.082111 332.617517 295.493996 332.390245 294.945314  C 332.162974 294.396632 331.829834 293.898053 331.40989 293.47811  C 330.989947 293.058166 330.491368 292.725026 329.942686 292.497755  C 329.394004 292.270483 328.805889 292.1535 328.212 292.1535  C 327.618111 292.1535 327.029996 292.270483 326.481314 292.497755  C 325.932632 292.725026 325.434053 293.058166 325.01411 293.47811  C 324.594166 293.898053 324.261026 294.396632 324.033755 294.945314  C 323.806483 295.493996 323.6895 296.082111 323.6895 296.676  C 323.6895 297.269889 323.806483 297.858004 324.033755 298.406686  C 324.261026 298.955368 324.594166 299.453947 325.01411 299.87389  C 325.434053 300.293834 325.932632 300.626974 326.481314 300.854245  C 327.029996 301.081517 327.618111 301.1985 328.212 301.1985  C 328.805889 301.1985 329.394004 301.081517 329.942686 300.854245  C 330.491368 300.626974 330.989947 300.293834 331.40989 299.87389  C 331.829834 299.453947 332.162974 298.955368 332.390245 298.406686  C 332.617517 297.858004 332.7345 297.269889 332.7345 296.676  M 328.212 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_36">
+    <path d="M 332.7345 224.316  C 332.7345 223.722111 332.617517 223.133996 332.390245 222.585314  C 332.162974 222.036632 331.829834 221.538053 331.40989 221.11811  C 330.989947 220.698166 330.491368 220.365026 329.942686 220.137755  C 329.394004 219.910483 328.805889 219.7935 328.212 219.7935  C 327.618111 219.7935 327.029996 219.910483 326.481314 220.137755  C 325.932632 220.365026 325.434053 220.698166 325.01411 221.11811  C 324.594166 221.538053 324.261026 222.036632 324.033755 222.585314  C 323.806483 223.133996 323.6895 223.722111 323.6895 224.316  C 323.6895 224.909889 323.806483 225.498004 324.033755 226.046686  C 324.261026 226.595368 324.594166 227.093947 325.01411 227.51389  C 325.434053 227.933834 325.932632 228.266974 326.481314 228.494245  C 327.029996 228.721517 327.618111 228.8385 328.212 228.8385  C 328.805889 228.8385 329.394004 228.721517 329.942686 228.494245  C 330.491368 228.266974 330.989947 227.933834 331.40989 227.51389  C 331.829834 227.093947 332.162974 226.595368 332.390245 226.046686  C 332.617517 225.498004 332.7345 224.909889 332.7345 224.316  M 328.212 224.316  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #777777; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_37">
+    <path d="M 328.212 181.0809  C 326.341589 181.0809 324.545871 181.82471 323.223291 183.147291  C 321.90071 184.469871 321.1569 186.265589 321.1569 188.136  C 321.1569 190.006411 321.90071 191.802129 323.223291 193.124709  C 324.545871 194.44729 326.341589 195.1911 328.212 195.1911  L 328.212 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #4477aa; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_38">
+    <path d="M 328.212 195.1911  C 330.082411 195.1911 331.878129 194.44729 333.200709 193.124709  C 334.52329 191.802129 335.2671 190.006411 335.2671 188.136  C 335.2671 186.265589 334.52329 184.469871 333.200709 183.147291  C 331.878129 181.82471 330.082411 181.0809 328.212 181.0809  L 328.212 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_39">
+    <path d="M 332.7345 115.776  C 332.7345 115.182111 332.617517 114.593996 332.390245 114.045314  C 332.162974 113.496632 331.829834 112.998053 331.40989 112.57811  C 330.989947 112.158166 330.491368 111.825026 329.942686 111.597755  C 329.394004 111.370483 328.805889 111.2535 328.212 111.2535  C 327.618111 111.2535 327.029996 111.370483 326.481314 111.597755  C 325.932632 111.825026 325.434053 112.158166 325.01411 112.57811  C 324.594166 112.998053 324.261026 113.496632 324.033755 114.045314  C 323.806483 114.593996 323.6895 115.182111 323.6895 115.776  C 323.6895 116.369889 323.806483 116.958004 324.033755 117.506686  C 324.261026 118.055368 324.594166 118.553947 325.01411 118.97389  C 325.434053 119.393834 325.932632 119.726974 326.481314 119.954245  C 327.029996 120.181517 327.618111 120.2985 328.212 120.2985  C 328.805889 120.2985 329.394004 120.181517 329.942686 119.954245  C 330.491368 119.726974 330.989947 119.393834 331.40989 118.97389  C 331.829834 118.553947 332.162974 118.055368 332.390245 117.506686  C 332.617517 116.958004 332.7345 116.369889 332.7345 115.776  M 328.212 115.776  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_40">
+    <path d="M 368.9145 369.036  C 368.9145 368.442111 368.797517 367.853996 368.570245 367.305314  C 368.342974 366.756632 368.009834 366.258053 367.58989 365.83811  C 367.169947 365.418166 366.671368 365.085026 366.122686 364.857755  C 365.574004 364.630483 364.985889 364.5135 364.392 364.5135  C 363.798111 364.5135 363.209996 364.630483 362.661314 364.857755  C 362.112632 365.085026 361.614053 365.418166 361.19411 365.83811  C 360.774166 366.258053 360.441026 366.756632 360.213755 367.305314  C 359.986483 367.853996 359.8695 368.442111 359.8695 369.036  C 359.8695 369.629889 359.986483 370.218004 360.213755 370.766686  C 360.441026 371.315368 360.774166 371.813947 361.19411 372.23389  C 361.614053 372.653834 362.112632 372.986974 362.661314 373.214245  C 363.209996 373.441517 363.798111 373.5585 364.392 373.5585  C 364.985889 373.5585 365.574004 373.441517 366.122686 373.214245  C 366.671368 372.986974 367.169947 372.653834 367.58989 372.23389  C 368.009834 371.813947 368.342974 371.315368 368.570245 370.766686  C 368.797517 370.218004 368.9145 369.629889 368.9145 369.036  M 364.392 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_41">
+    <path d="M 364.392 325.8009  C 362.521589 325.8009 360.725871 326.54471 359.403291 327.867291  C 358.08071 329.189871 357.3369 330.985589 357.3369 332.856  C 357.3369 334.726411 358.08071 336.522129 359.403291 337.844709  C 360.725871 339.16729 362.521589 339.9111 364.392 339.9111  L 364.392 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_42">
+    <path d="M 364.392 339.9111  C 366.262411 339.9111 368.058129 339.16729 369.380709 337.844709  C 370.70329 336.522129 371.4471 334.726411 371.4471 332.856  C 371.4471 330.985589 370.70329 329.189871 369.380709 327.867291  C 368.058129 326.54471 366.262411 325.8009 364.392 325.8009  L 364.392 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_43">
+    <path d="M 364.392 289.6209  C 362.521589 289.6209 360.725871 290.36471 359.403291 291.687291  C 358.08071 293.009871 357.3369 294.805589 357.3369 296.676  C 357.3369 298.546411 358.08071 300.342129 359.403291 301.664709  C 360.725871 302.98729 362.521589 303.7311 364.392 303.7311  L 364.392 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_44">
+    <path d="M 364.392 303.7311  C 366.262411 303.7311 368.058129 302.98729 369.380709 301.664709  C 370.70329 300.342129 371.4471 298.546411 371.4471 296.676  C 371.4471 294.805589 370.70329 293.009871 369.380709 291.687291  C 368.058129 290.36471 366.262411 289.6209 364.392 289.6209  L 364.392 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_45">
+    <path d="M 364.392 253.4409  C 362.521589 253.4409 360.725871 254.18471 359.403291 255.507291  C 358.08071 256.829871 357.3369 258.625589 357.3369 260.496  C 357.3369 262.366411 358.08071 264.162129 359.403291 265.484709  C 360.725871 266.80729 362.521589 267.5511 364.392 267.5511  L 364.392 260.496  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_46">
+    <path d="M 364.392 267.5511  C 366.262411 267.5511 368.058129 266.80729 369.380709 265.484709  C 370.70329 264.162129 371.4471 262.366411 371.4471 260.496  C 371.4471 258.625589 370.70329 256.829871 369.380709 255.507291  C 368.058129 254.18471 366.262411 253.4409 364.392 253.4409  L 364.392 260.496  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_47">
+    <path d="M 400.572 361.451801  C 399.240794 361.451801 397.932759 361.802288 396.779901 362.467891  C 395.627043 363.133494 394.669494 364.091043 394.003891 365.243901  C 393.338288 366.396759 392.987801 367.704794 392.987801 369.036  C 392.987801 370.367206 393.338288 371.675241 394.003891 372.828099  L 400.572 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_48">
+    <path d="M 394.003891 372.828099  C 394.669494 373.980957 395.627043 374.938506 396.779901 375.604109  C 397.932759 376.269712 399.240794 376.620199 400.572 376.620199  C 401.903206 376.620199 403.211241 376.269712 404.364099 375.604109  C 405.516957 374.938506 406.474506 373.980957 407.140109 372.828099  C 407.805712 371.675241 408.156199 370.367206 408.156199 369.036  C 408.156199 367.704794 407.805712 366.396759 407.140109 365.243901  C 406.474506 364.091043 405.516957 363.133494 404.364099 362.467891  C 403.211241 361.802288 401.903206 361.451801 400.572 361.451801  L 400.572 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_49">
+    <path d="M 400.572 325.8009  C 398.701589 325.8009 396.905871 326.54471 395.583291 327.867291  C 394.26071 329.189871 393.5169 330.985589 393.5169 332.856  C 393.5169 334.726411 394.26071 336.522129 395.583291 337.844709  C 396.905871 339.16729 398.701589 339.9111 400.572 339.9111  L 400.572 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_50">
+    <path d="M 400.572 339.9111  C 402.442411 339.9111 404.238129 339.16729 405.560709 337.844709  C 406.88329 336.522129 407.6271 334.726411 407.6271 332.856  C 407.6271 330.985589 406.88329 329.189871 405.560709 327.867291  C 404.238129 326.54471 402.442411 325.8009 400.572 325.8009  L 400.572 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_51">
+    <path d="M 400.572 289.091801  C 399.240794 289.091801 397.932759 289.442288 396.779901 290.107891  C 395.627043 290.773494 394.669494 291.731043 394.003891 292.883901  C 393.338288 294.036759 392.987801 295.344794 392.987801 296.676  C 392.987801 298.007206 393.338288 299.315241 394.003891 300.468099  L 400.572 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_52">
+    <path d="M 394.003891 300.468099  C 394.669494 301.620957 395.627043 302.578506 396.779901 303.244109  C 397.932759 303.909712 399.240794 304.260199 400.572 304.260199  C 401.903206 304.260199 403.211241 303.909712 404.364099 303.244109  C 405.516957 302.578506 406.474506 301.620957 407.140109 300.468099  L 400.572 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_53">
+    <path d="M 407.140109 300.468099  C 407.805712 299.315241 408.156199 298.007206 408.156199 296.676  C 408.156199 295.344794 407.805712 294.036759 407.140109 292.883901  C 406.474506 291.731043 405.516957 290.773494 404.364099 290.107891  C 403.211241 289.442288 401.903206 289.091801 400.572 289.091801  L 400.572 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_54">
+    <path d="M 405.0945 260.496  C 405.0945 259.902111 404.977517 259.313996 404.750245 258.765314  C 404.522974 258.216632 404.189834 257.718053 403.76989 257.29811  C 403.349947 256.878166 402.851368 256.545026 402.302686 256.317755  C 401.754004 256.090483 401.165889 255.9735 400.572 255.9735  C 399.978111 255.9735 399.389996 256.090483 398.841314 256.317755  C 398.292632 256.545026 397.794053 256.878166 397.37411 257.29811  C 396.954166 257.718053 396.621026 258.216632 396.393755 258.765314  C 396.166483 259.313996 396.0495 259.902111 396.0495 260.496  C 396.0495 261.089889 396.166483 261.678004 396.393755 262.226686  C 396.621026 262.775368 396.954166 263.273947 397.37411 263.69389  C 397.794053 264.113834 398.292632 264.446974 398.841314 264.674245  C 399.389996 264.901517 399.978111 265.0185 400.572 265.0185  C 401.165889 265.0185 401.754004 264.901517 402.302686 264.674245  C 402.851368 264.446974 403.349947 264.113834 403.76989 263.69389  C 404.189834 263.273947 404.522974 262.775368 404.750245 262.226686  C 404.977517 261.678004 405.0945 261.089889 405.0945 260.496  M 400.572 260.496  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_55">
+    <path d="M 400.572 217.2609  C 398.701589 217.2609 396.905871 218.00471 395.583291 219.327291  C 394.26071 220.649871 393.5169 222.445589 393.5169 224.316  C 393.5169 226.186411 394.26071 227.982129 395.583291 229.304709  C 396.905871 230.62729 398.701589 231.3711 400.572 231.3711  L 400.572 224.316  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_56">
+    <path d="M 400.572 231.3711  C 402.442411 231.3711 404.238129 230.62729 405.560709 229.304709  C 406.88329 227.982129 407.6271 226.186411 407.6271 224.316  C 407.6271 222.445589 406.88329 220.649871 405.560709 219.327291  C 404.238129 218.00471 402.442411 217.2609 400.572 217.2609  L 400.572 224.316  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #777777; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_57">
+    <path d="M 400.572 181.0809  C 398.701589 181.0809 396.905871 181.82471 395.583291 183.147291  C 394.26071 184.469871 393.5169 186.265589 393.5169 188.136  C 393.5169 190.006411 394.26071 191.802129 395.583291 193.124709  C 396.905871 194.44729 398.701589 195.1911 400.572 195.1911  L 400.572 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_58">
+    <path d="M 400.572 195.1911  C 402.442411 195.1911 404.238129 194.44729 405.560709 193.124709  C 406.88329 191.802129 407.6271 190.006411 407.6271 188.136  C 407.6271 186.265589 406.88329 184.469871 405.560709 183.147291  C 404.238129 181.82471 402.442411 181.0809 400.572 181.0809  L 400.572 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_59">
+    <path d="M 407.6271 151.956  C 407.6271 151.029533 407.444606 150.112074 407.090062 149.25613  C 406.735519 148.400186 406.21582 147.622402 405.560709 146.967291  C 404.905598 146.31218 404.127814 145.792481 403.27187 145.437938  C 402.415926 145.083394 401.498467 144.9009 400.572 144.9009  C 399.645533 144.9009 398.728074 145.083394 397.87213 145.437938  C 397.016186 145.792481 396.238402 146.31218 395.583291 146.967291  C 394.92818 147.622402 394.408481 148.400186 394.053938 149.25613  C 393.699394 150.112074 393.5169 151.029533 393.5169 151.956  C 393.5169 152.882467 393.699394 153.799926 394.053938 154.65587  C 394.408481 155.511814 394.92818 156.289598 395.583291 156.944709  C 396.238402 157.59982 397.016186 158.119519 397.87213 158.474062  C 398.728074 158.828606 399.645533 159.0111 400.572 159.0111  C 401.498467 159.0111 402.415926 158.828606 403.27187 158.474062  C 404.127814 158.119519 404.905598 157.59982 405.560709 156.944709  C 406.21582 156.289598 406.735519 155.511814 407.090062 154.65587  C 407.444606 153.799926 407.6271 152.882467 407.6271 151.956  M 400.572 151.956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_60">
+    <path d="M 405.0945 115.776  C 405.0945 115.182111 404.977517 114.593996 404.750245 114.045314  C 404.522974 113.496632 404.189834 112.998053 403.76989 112.57811  C 403.349947 112.158166 402.851368 111.825026 402.302686 111.597755  C 401.754004 111.370483 401.165889 111.2535 400.572 111.2535  C 399.978111 111.2535 399.389996 111.370483 398.841314 111.597755  C 398.292632 111.825026 397.794053 112.158166 397.37411 112.57811  C 396.954166 112.998053 396.621026 113.496632 396.393755 114.045314  C 396.166483 114.593996 396.0495 115.182111 396.0495 115.776  C 396.0495 116.369889 396.166483 116.958004 396.393755 117.506686  C 396.621026 118.055368 396.954166 118.553947 397.37411 118.97389  C 397.794053 119.393834 398.292632 119.726974 398.841314 119.954245  C 399.389996 120.181517 399.978111 120.2985 400.572 120.2985  C 401.165889 120.2985 401.754004 120.181517 402.302686 119.954245  C 402.851368 119.726974 403.349947 119.393834 403.76989 118.97389  C 404.189834 118.553947 404.522974 118.055368 404.750245 117.506686  C 404.977517 116.958004 405.0945 116.369889 405.0945 115.776  M 400.572 115.776  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_61">
+    <path d="M 405.0945 79.596  C 405.0945 79.002111 404.977517 78.413996 404.750245 77.865314  C 404.522974 77.316632 404.189834 76.818053 403.76989 76.39811  C 403.349947 75.978166 402.851368 75.645026 402.302686 75.417755  C 401.754004 75.190483 401.165889 75.0735 400.572 75.0735  C 399.978111 75.0735 399.389996 75.190483 398.841314 75.417755  C 398.292632 75.645026 397.794053 75.978166 397.37411 76.39811  C 396.954166 76.818053 396.621026 77.316632 396.393755 77.865314  C 396.166483 78.413996 396.0495 79.002111 396.0495 79.596  C 396.0495 80.189889 396.166483 80.778004 396.393755 81.326686  C 396.621026 81.875368 396.954166 82.373947 397.37411 82.79389  C 397.794053 83.213834 398.292632 83.546974 398.841314 83.774245  C 399.389996 84.001517 399.978111 84.1185 400.572 84.1185  C 401.165889 84.1185 401.754004 84.001517 402.302686 83.774245  C 402.851368 83.546974 403.349947 83.213834 403.76989 82.79389  C 404.189834 82.373947 404.522974 81.875368 404.750245 81.326686  C 404.977517 80.778004 405.0945 80.189889 405.0945 79.596  M 400.572 79.596  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #aa3377; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_62">
+    <path d="M 441.2745 405.216  C 441.2745 404.622111 441.157517 404.033996 440.930245 403.485314  C 440.702974 402.936632 440.369834 402.438053 439.94989 402.01811  C 439.529947 401.598166 439.031368 401.265026 438.482686 401.037755  C 437.934004 400.810483 437.345889 400.6935 436.752 400.6935  C 436.158111 400.6935 435.569996 400.810483 435.021314 401.037755  C 434.472632 401.265026 433.974053 401.598166 433.55411 402.01811  C 433.134166 402.438053 432.801026 402.936632 432.573755 403.485314  C 432.346483 404.033996 432.2295 404.622111 432.2295 405.216  C 432.2295 405.809889 432.346483 406.398004 432.573755 406.946686  C 432.801026 407.495368 433.134166 407.993947 433.55411 408.41389  C 433.974053 408.833834 434.472632 409.166974 435.021314 409.394245  C 435.569996 409.621517 436.158111 409.7385 436.752 409.7385  C 437.345889 409.7385 437.934004 409.621517 438.482686 409.394245  C 439.031368 409.166974 439.529947 408.833834 439.94989 408.41389  C 440.369834 407.993947 440.702974 407.495368 440.930245 406.946686  C 441.157517 406.398004 441.2745 405.809889 441.2745 405.216  M 436.752 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #332288; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_63">
+    <path d="M 436.752 361.9809  C 434.881589 361.9809 433.085871 362.72471 431.763291 364.047291  C 430.44071 365.369871 429.6969 367.165589 429.6969 369.036  C 429.6969 370.906411 430.44071 372.702129 431.763291 374.024709  C 433.085871 375.34729 434.881589 376.0911 436.752 376.0911  L 436.752 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_64">
+    <path d="M 436.752 376.0911  C 438.622411 376.0911 440.418129 375.34729 441.740709 374.024709  C 443.06329 372.702129 443.8071 370.906411 443.8071 369.036  C 443.8071 367.165589 443.06329 365.369871 441.740709 364.047291  C 440.418129 362.72471 438.622411 361.9809 436.752 361.9809  L 436.752 369.036  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_65">
+    <path d="M 436.752 289.6209  C 434.881589 289.6209 433.085871 290.36471 431.763291 291.687291  C 430.44071 293.009871 429.6969 294.805589 429.6969 296.676  C 429.6969 298.546411 430.44071 300.342129 431.763291 301.664709  C 433.085871 302.98729 434.881589 303.7311 436.752 303.7311  L 436.752 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_66">
+    <path d="M 436.752 303.7311  C 438.622411 303.7311 440.418129 302.98729 441.740709 301.664709  C 443.06329 300.342129 443.8071 298.546411 443.8071 296.676  C 443.8071 294.805589 443.06329 293.009871 441.740709 291.687291  C 440.418129 290.36471 438.622411 289.6209 436.752 289.6209  L 436.752 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_67">
+    <path d="M 441.2745 115.776  C 441.2745 115.182111 441.157517 114.593996 440.930245 114.045314  C 440.702974 113.496632 440.369834 112.998053 439.94989 112.57811  C 439.529947 112.158166 439.031368 111.825026 438.482686 111.597755  C 437.934004 111.370483 437.345889 111.2535 436.752 111.2535  C 436.158111 111.2535 435.569996 111.370483 435.021314 111.597755  C 434.472632 111.825026 433.974053 112.158166 433.55411 112.57811  C 433.134166 112.998053 432.801026 113.496632 432.573755 114.045314  C 432.346483 114.593996 432.2295 115.182111 432.2295 115.776  C 432.2295 116.369889 432.346483 116.958004 432.573755 117.506686  C 432.801026 118.055368 433.134166 118.553947 433.55411 118.97389  C 433.974053 119.393834 434.472632 119.726974 435.021314 119.954245  C 435.569996 120.181517 436.158111 120.2985 436.752 120.2985  C 437.345889 120.2985 437.934004 120.181517 438.482686 119.954245  C 439.031368 119.726974 439.529947 119.393834 439.94989 118.97389  C 440.369834 118.553947 440.702974 118.055368 440.930245 117.506686  C 441.157517 116.958004 441.2745 116.369889 441.2745 115.776  M 436.752 115.776  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_68">
+    <path d="M 477.4545 405.216  C 477.4545 404.622111 477.337517 404.033996 477.110245 403.485314  C 476.882974 402.936632 476.549834 402.438053 476.12989 402.01811  C 475.709947 401.598166 475.211368 401.265026 474.662686 401.037755  C 474.114004 400.810483 473.525889 400.6935 472.932 400.6935  C 472.338111 400.6935 471.749996 400.810483 471.201314 401.037755  C 470.652632 401.265026 470.154053 401.598166 469.73411 402.01811  C 469.314166 402.438053 468.981026 402.936632 468.753755 403.485314  C 468.526483 404.033996 468.4095 404.622111 468.4095 405.216  C 468.4095 405.809889 468.526483 406.398004 468.753755 406.946686  C 468.981026 407.495368 469.314166 407.993947 469.73411 408.41389  C 470.154053 408.833834 470.652632 409.166974 471.201314 409.394245  C 471.749996 409.621517 472.338111 409.7385 472.932 409.7385  C 473.525889 409.7385 474.114004 409.621517 474.662686 409.394245  C 475.211368 409.166974 475.709947 408.833834 476.12989 408.41389  C 476.549834 407.993947 476.882974 407.495368 477.110245 406.946686  C 477.337517 406.398004 477.4545 405.809889 477.4545 405.216  M 472.932 405.216  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_69">
+    <path d="M 472.932 325.8009  C 471.061589 325.8009 469.265871 326.54471 467.943291 327.867291  C 466.62071 329.189871 465.8769 330.985589 465.8769 332.856  C 465.8769 334.726411 466.62071 336.522129 467.943291 337.844709  C 469.265871 339.16729 471.061589 339.9111 472.932 339.9111  L 472.932 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ee6677; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_70">
+    <path d="M 472.932 339.9111  C 474.802411 339.9111 476.598129 339.16729 477.920709 337.844709  C 479.24329 336.522129 479.9871 334.726411 479.9871 332.856  C 479.9871 330.985589 479.24329 329.189871 477.920709 327.867291  C 476.598129 326.54471 474.802411 325.8009 472.932 325.8009  L 472.932 332.856  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #4477aa; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_71">
+    <path d="M 477.4545 296.676  C 477.4545 296.082111 477.337517 295.493996 477.110245 294.945314  C 476.882974 294.396632 476.549834 293.898053 476.12989 293.47811  C 475.709947 293.058166 475.211368 292.725026 474.662686 292.497755  C 474.114004 292.270483 473.525889 292.1535 472.932 292.1535  C 472.338111 292.1535 471.749996 292.270483 471.201314 292.497755  C 470.652632 292.725026 470.154053 293.058166 469.73411 293.47811  C 469.314166 293.898053 468.981026 294.396632 468.753755 294.945314  C 468.526483 295.493996 468.4095 296.082111 468.4095 296.676  C 468.4095 297.269889 468.526483 297.858004 468.753755 298.406686  C 468.981026 298.955368 469.314166 299.453947 469.73411 299.87389  C 470.154053 300.293834 470.652632 300.626974 471.201314 300.854245  C 471.749996 301.081517 472.338111 301.1985 472.932 301.1985  C 473.525889 301.1985 474.114004 301.081517 474.662686 300.854245  C 475.211368 300.626974 475.709947 300.293834 476.12989 299.87389  C 476.549834 299.453947 476.882974 298.955368 477.110245 298.406686  C 477.337517 297.858004 477.4545 297.269889 477.4545 296.676  M 472.932 296.676  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #4477aa; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_72">
+    <path d="M 472.932 252.911801  C 471.600794 252.911801 470.292759 253.262288 469.139901 253.927891  C 467.987043 254.593494 467.029494 255.551043 466.363891 256.703901  C 465.698288 257.856759 465.347801 259.164794 465.347801 260.496  C 465.347801 261.827206 465.698288 263.135241 466.363891 264.288099  L 472.932 260.496  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_73">
+    <path d="M 466.363891 264.288099  C 467.029494 265.440957 467.987043 266.398506 469.139901 267.064109  C 470.292759 267.729712 471.600794 268.080199 472.932 268.080199  C 474.263206 268.080199 475.571241 267.729712 476.724099 267.064109  C 477.876957 266.398506 478.834506 265.440957 479.500109 264.288099  C 480.165712 263.135241 480.516199 261.827206 480.516199 260.496  C 480.516199 259.164794 480.165712 257.856759 479.500109 256.703901  C 478.834506 255.551043 477.876957 254.593494 476.724099 253.927891  C 475.571241 253.262288 474.263206 252.911801 472.932 252.911801  L 472.932 260.496  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #dd7733; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_74">
+    <path d="M 472.932 179.885216  C 471.189876 179.885216 469.491719 180.436981 468.082311 181.460976  C 466.672903 182.48497 465.623384 183.929509 465.085038 185.586368  C 464.546692 187.243226 464.546692 189.028774 465.085038 190.685632  C 465.623384 192.342491 466.672903 193.78703 468.082311 194.811024  L 472.932 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #4477aa; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_75">
+    <path d="M 468.082311 194.811024  C 469.491719 195.835019 471.189876 196.386784 472.932 196.386784  C 474.674124 196.386784 476.372281 195.835019 477.781689 194.811024  L 472.932 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #228833; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_76">
+    <path d="M 477.781689 194.811024  C 479.191097 193.78703 480.240616 192.342491 480.778962 190.685632  C 481.317308 189.028774 481.317308 187.243226 480.778962 185.586368  L 472.932 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #55aacc; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_77">
+    <path d="M 480.778962 185.586368  C 480.240616 183.929509 479.191097 182.48497 477.781689 181.460976  C 476.372281 180.436981 474.674124 179.885216 472.932 179.885216  L 472.932 188.136  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #b49b30; stroke: #ffffff; stroke-width: 0.55; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_78">
+    <path d="M 147.312 409.237407  C 148.37849 409.237407 149.401442 408.813686 150.155564 408.059564  C 150.909686 407.305442 151.333407 406.28249 151.333407 405.216  C 151.333407 404.14951 150.909686 403.126558 150.155564 402.372436  C 149.401442 401.618314 148.37849 401.194593 147.312 401.194593  C 146.24551 401.194593 145.222558 401.618314 144.468436 402.372436  C 143.714314 403.126558 143.290593 404.14951 143.290593 405.216  C 143.290593 406.28249 143.714314 407.305442 144.468436 408.059564  C 145.222558 408.813686 146.24551 409.237407 147.312 409.237407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_79">
+    <path d="M 219.672 409.237407  C 220.73849 409.237407 221.761442 408.813686 222.515564 408.059564  C 223.269686 407.305442 223.693407 406.28249 223.693407 405.216  C 223.693407 404.14951 223.269686 403.126558 222.515564 402.372436  C 221.761442 401.618314 220.73849 401.194593 219.672 401.194593  C 218.60551 401.194593 217.582558 401.618314 216.828436 402.372436  C 216.074314 403.126558 215.650593 404.14951 215.650593 405.216  C 215.650593 406.28249 216.074314 407.305442 216.828436 408.059564  C 217.582558 408.813686 218.60551 409.237407 219.672 409.237407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_80">
+    <path d="M 219.672 373.572972  C 220.875219 373.572972 222.029319 373.094928 222.880124 372.244124  C 223.730928 371.393319 224.208972 370.239219 224.208972 369.036  C 224.208972 367.832781 223.730928 366.678681 222.880124 365.827876  C 222.029319 364.977072 220.875219 364.499028 219.672 364.499028  C 218.468781 364.499028 217.314681 364.977072 216.463876 365.827876  C 215.613072 366.678681 215.135028 367.832781 215.135028 369.036  C 215.135028 370.239219 215.613072 371.393319 216.463876 372.244124  C 217.314681 373.094928 218.468781 373.572972 219.672 373.572972  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_81">
+    <path d="M 255.852 409.538993  C 256.998471 409.538993 258.09814 409.083495 258.908818 408.272818  C 259.719495 407.46214 260.174993 406.362471 260.174993 405.216  C 260.174993 404.069529 259.719495 402.96986 258.908818 402.159182  C 258.09814 401.348505 256.998471 400.893007 255.852 400.893007  C 254.705529 400.893007 253.60586 401.348505 252.795182 402.159182  C 251.984505 402.96986 251.529007 404.069529 251.529007 405.216  C 251.529007 406.362471 251.984505 407.46214 252.795182 408.272818  C 253.60586 409.083495 254.705529 409.538993 255.852 409.538993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_82">
+    <path d="M 292.032 409.538993  C 293.178471 409.538993 294.27814 409.083495 295.088818 408.272818  C 295.899495 407.46214 296.354993 406.362471 296.354993 405.216  C 296.354993 404.069529 295.899495 402.96986 295.088818 402.159182  C 294.27814 401.348505 293.178471 400.893007 292.032 400.893007  C 290.885529 400.893007 289.78586 401.348505 288.975182 402.159182  C 288.164505 402.96986 287.709007 404.069529 287.709007 405.216  C 287.709007 406.362471 288.164505 407.46214 288.975182 408.272818  C 289.78586 409.083495 290.885529 409.538993 292.032 409.538993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_83">
+    <path d="M 292.032 373.057407  C 293.09849 373.057407 294.121442 372.633686 294.875564 371.879564  C 295.629686 371.125442 296.053407 370.10249 296.053407 369.036  C 296.053407 367.96951 295.629686 366.946558 294.875564 366.192436  C 294.121442 365.438314 293.09849 365.014593 292.032 365.014593  C 290.96551 365.014593 289.942558 365.438314 289.188436 366.192436  C 288.434314 366.946558 288.010593 367.96951 288.010593 369.036  C 288.010593 370.10249 288.434314 371.125442 289.188436 371.879564  C 289.942558 372.633686 290.96551 373.057407 292.032 373.057407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_84">
+    <path d="M 292.032 337.392972  C 293.235219 337.392972 294.389319 336.914928 295.240124 336.064124  C 296.090928 335.213319 296.568972 334.059219 296.568972 332.856  C 296.568972 331.652781 296.090928 330.498681 295.240124 329.647876  C 294.389319 328.797072 293.235219 328.319028 292.032 328.319028  C 290.828781 328.319028 289.674681 328.797072 288.823876 329.647876  C 287.973072 330.498681 287.495028 331.652781 287.495028 332.856  C 287.495028 334.059219 287.973072 335.213319 288.823876 336.064124  C 289.674681 336.914928 290.828781 337.392972 292.032 337.392972  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_85">
+    <path d="M 328.212 409.237407  C 329.27849 409.237407 330.301442 408.813686 331.055564 408.059564  C 331.809686 407.305442 332.233407 406.28249 332.233407 405.216  C 332.233407 404.14951 331.809686 403.126558 331.055564 402.372436  C 330.301442 401.618314 329.27849 401.194593 328.212 401.194593  C 327.14551 401.194593 326.122558 401.618314 325.368436 402.372436  C 324.614314 403.126558 324.190593 404.14951 324.190593 405.216  C 324.190593 406.28249 324.614314 407.305442 325.368436 408.059564  C 326.122558 408.813686 327.14551 409.237407 328.212 409.237407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_86">
+    <path d="M 328.212 373.572972  C 329.415219 373.572972 330.569319 373.094928 331.420124 372.244124  C 332.270928 371.393319 332.748972 370.239219 332.748972 369.036  C 332.748972 367.832781 332.270928 366.678681 331.420124 365.827876  C 330.569319 364.977072 329.415219 364.499028 328.212 364.499028  C 327.008781 364.499028 325.854681 364.977072 325.003876 365.827876  C 324.153072 366.678681 323.675028 367.832781 323.675028 369.036  C 323.675028 370.239219 324.153072 371.393319 325.003876 372.244124  C 325.854681 373.094928 327.008781 373.572972 328.212 373.572972  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_87">
+    <path d="M 328.212 337.178993  C 329.358471 337.178993 330.45814 336.723495 331.268818 335.912818  C 332.079495 335.10214 332.534993 334.002471 332.534993 332.856  C 332.534993 331.709529 332.079495 330.60986 331.268818 329.799182  C 330.45814 328.988505 329.358471 328.533007 328.212 328.533007  C 327.065529 328.533007 325.96586 328.988505 325.155182 329.799182  C 324.344505 330.60986 323.889007 331.709529 323.889007 332.856  C 323.889007 334.002471 324.344505 335.10214 325.155182 335.912818  C 325.96586 336.723495 327.065529 337.178993 328.212 337.178993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_88">
+    <path d="M 328.212 192.157407  C 329.27849 192.157407 330.301442 191.733686 331.055564 190.979564  C 331.809686 190.225442 332.233407 189.20249 332.233407 188.136  C 332.233407 187.06951 331.809686 186.046558 331.055564 185.292436  C 330.301442 184.538314 329.27849 184.114593 328.212 184.114593  C 327.14551 184.114593 326.122558 184.538314 325.368436 185.292436  C 324.614314 186.046558 324.190593 187.06951 324.190593 188.136  C 324.190593 189.20249 324.614314 190.225442 325.368436 190.979564  C 326.122558 191.733686 327.14551 192.157407 328.212 192.157407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_89">
+    <path d="M 364.392 336.877407  C 365.45849 336.877407 366.481442 336.453686 367.235564 335.699564  C 367.989686 334.945442 368.413407 333.92249 368.413407 332.856  C 368.413407 331.78951 367.989686 330.766558 367.235564 330.012436  C 366.481442 329.258314 365.45849 328.834593 364.392 328.834593  C 363.32551 328.834593 362.302558 329.258314 361.548436 330.012436  C 360.794314 330.766558 360.370593 331.78951 360.370593 332.856  C 360.370593 333.92249 360.794314 334.945442 361.548436 335.699564  C 362.302558 336.453686 363.32551 336.877407 364.392 336.877407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_90">
+    <path d="M 364.392 300.697407  C 365.45849 300.697407 366.481442 300.273686 367.235564 299.519564  C 367.989686 298.765442 368.413407 297.74249 368.413407 296.676  C 368.413407 295.60951 367.989686 294.586558 367.235564 293.832436  C 366.481442 293.078314 365.45849 292.654593 364.392 292.654593  C 363.32551 292.654593 362.302558 293.078314 361.548436 293.832436  C 360.794314 294.586558 360.370593 295.60951 360.370593 296.676  C 360.370593 297.74249 360.794314 298.765442 361.548436 299.519564  C 362.302558 300.273686 363.32551 300.697407 364.392 300.697407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_91">
+    <path d="M 364.392 264.517407  C 365.45849 264.517407 366.481442 264.093686 367.235564 263.339564  C 367.989686 262.585442 368.413407 261.56249 368.413407 260.496  C 368.413407 259.42951 367.989686 258.406558 367.235564 257.652436  C 366.481442 256.898314 365.45849 256.474593 364.392 256.474593  C 363.32551 256.474593 362.302558 256.898314 361.548436 257.652436  C 360.794314 258.406558 360.370593 259.42951 360.370593 260.496  C 360.370593 261.56249 360.794314 262.585442 361.548436 263.339564  C 362.302558 264.093686 363.32551 264.517407 364.392 264.517407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_92">
+    <path d="M 400.572 373.358993  C 401.718471 373.358993 402.81814 372.903495 403.628818 372.092818  C 404.439495 371.28214 404.894993 370.182471 404.894993 369.036  C 404.894993 367.889529 404.439495 366.78986 403.628818 365.979182  C 402.81814 365.168505 401.718471 364.713007 400.572 364.713007  C 399.425529 364.713007 398.32586 365.168505 397.515182 365.979182  C 396.704505 366.78986 396.249007 367.889529 396.249007 369.036  C 396.249007 370.182471 396.704505 371.28214 397.515182 372.092818  C 398.32586 372.903495 399.425529 373.358993 400.572 373.358993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_93">
+    <path d="M 400.572 336.877407  C 401.63849 336.877407 402.661442 336.453686 403.415564 335.699564  C 404.169686 334.945442 404.593407 333.92249 404.593407 332.856  C 404.593407 331.78951 404.169686 330.766558 403.415564 330.012436  C 402.661442 329.258314 401.63849 328.834593 400.572 328.834593  C 399.50551 328.834593 398.482558 329.258314 397.728436 330.012436  C 396.974314 330.766558 396.550593 331.78951 396.550593 332.856  C 396.550593 333.92249 396.974314 334.945442 397.728436 335.699564  C 398.482558 336.453686 399.50551 336.877407 400.572 336.877407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_94">
+    <path d="M 400.572 300.998993  C 401.718471 300.998993 402.81814 300.543495 403.628818 299.732818  C 404.439495 298.92214 404.894993 297.822471 404.894993 296.676  C 404.894993 295.529529 404.439495 294.42986 403.628818 293.619182  C 402.81814 292.808505 401.718471 292.353007 400.572 292.353007  C 399.425529 292.353007 398.32586 292.808505 397.515182 293.619182  C 396.704505 294.42986 396.249007 295.529529 396.249007 296.676  C 396.249007 297.822471 396.704505 298.92214 397.515182 299.732818  C 398.32586 300.543495 399.425529 300.998993 400.572 300.998993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_95">
+    <path d="M 400.572 228.337407  C 401.63849 228.337407 402.661442 227.913686 403.415564 227.159564  C 404.169686 226.405442 404.593407 225.38249 404.593407 224.316  C 404.593407 223.24951 404.169686 222.226558 403.415564 221.472436  C 402.661442 220.718314 401.63849 220.294593 400.572 220.294593  C 399.50551 220.294593 398.482558 220.718314 397.728436 221.472436  C 396.974314 222.226558 396.550593 223.24951 396.550593 224.316  C 396.550593 225.38249 396.974314 226.405442 397.728436 227.159564  C 398.482558 227.913686 399.50551 228.337407 400.572 228.337407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_96">
+    <path d="M 400.572 192.157407  C 401.63849 192.157407 402.661442 191.733686 403.415564 190.979564  C 404.169686 190.225442 404.593407 189.20249 404.593407 188.136  C 404.593407 187.06951 404.169686 186.046558 403.415564 185.292436  C 402.661442 184.538314 401.63849 184.114593 400.572 184.114593  C 399.50551 184.114593 398.482558 184.538314 397.728436 185.292436  C 396.974314 186.046558 396.550593 187.06951 396.550593 188.136  C 396.550593 189.20249 396.974314 190.225442 397.728436 190.979564  C 398.482558 191.733686 399.50551 192.157407 400.572 192.157407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_97">
+    <path d="M 400.572 155.977407  C 401.63849 155.977407 402.661442 155.553686 403.415564 154.799564  C 404.169686 154.045442 404.593407 153.02249 404.593407 151.956  C 404.593407 150.88951 404.169686 149.866558 403.415564 149.112436  C 402.661442 148.358314 401.63849 147.934593 400.572 147.934593  C 399.50551 147.934593 398.482558 148.358314 397.728436 149.112436  C 396.974314 149.866558 396.550593 150.88951 396.550593 151.956  C 396.550593 153.02249 396.974314 154.045442 397.728436 154.799564  C 398.482558 155.553686 399.50551 155.977407 400.572 155.977407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_98">
+    <path d="M 436.752 373.057407  C 437.81849 373.057407 438.841442 372.633686 439.595564 371.879564  C 440.349686 371.125442 440.773407 370.10249 440.773407 369.036  C 440.773407 367.96951 440.349686 366.946558 439.595564 366.192436  C 438.841442 365.438314 437.81849 365.014593 436.752 365.014593  C 435.68551 365.014593 434.662558 365.438314 433.908436 366.192436  C 433.154314 366.946558 432.730593 367.96951 432.730593 369.036  C 432.730593 370.10249 433.154314 371.125442 433.908436 371.879564  C 434.662558 372.633686 435.68551 373.057407 436.752 373.057407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_99">
+    <path d="M 436.752 300.697407  C 437.81849 300.697407 438.841442 300.273686 439.595564 299.519564  C 440.349686 298.765442 440.773407 297.74249 440.773407 296.676  C 440.773407 295.60951 440.349686 294.586558 439.595564 293.832436  C 438.841442 293.078314 437.81849 292.654593 436.752 292.654593  C 435.68551 292.654593 434.662558 293.078314 433.908436 293.832436  C 433.154314 294.586558 432.730593 295.60951 432.730593 296.676  C 432.730593 297.74249 433.154314 298.765442 433.908436 299.519564  C 434.662558 300.273686 435.68551 300.697407 436.752 300.697407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_100">
+    <path d="M 472.932 336.877407  C 473.99849 336.877407 475.021442 336.453686 475.775564 335.699564  C 476.529686 334.945442 476.953407 333.92249 476.953407 332.856  C 476.953407 331.78951 476.529686 330.766558 475.775564 330.012436  C 475.021442 329.258314 473.99849 328.834593 472.932 328.834593  C 471.86551 328.834593 470.842558 329.258314 470.088436 330.012436  C 469.334314 330.766558 468.910593 331.78951 468.910593 332.856  C 468.910593 333.92249 469.334314 334.945442 470.088436 335.699564  C 470.842558 336.453686 471.86551 336.877407 472.932 336.877407  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_101">
+    <path d="M 472.932 264.818993  C 474.078471 264.818993 475.17814 264.363495 475.988818 263.552818  C 476.799495 262.74214 477.254993 261.642471 477.254993 260.496  C 477.254993 259.349529 476.799495 258.24986 475.988818 257.439182  C 475.17814 256.628505 474.078471 256.173007 472.932 256.173007  C 471.785529 256.173007 470.68586 256.628505 469.875182 257.439182  C 469.064505 258.24986 468.609007 259.349529 468.609007 260.496  C 468.609007 261.642471 469.064505 262.74214 469.875182 263.552818  C 470.68586 264.363495 471.785529 264.818993 472.932 264.818993  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-patch_102">
+    <path d="M 472.932 192.838947  C 474.179236 192.838947 475.375557 192.343415 476.257486 191.461486  C 477.139415 190.579557 477.634947 189.383236 477.634947 188.136  C 477.634947 186.888764 477.139415 185.692443 476.257486 184.810514  C 475.375557 183.928585 474.179236 183.433053 472.932 183.433053  C 471.684764 183.433053 470.488443 183.928585 469.606514 184.810514  C 468.724585 185.692443 468.229053 186.888764 468.229053 188.136  C 468.229053 189.383236 468.724585 190.579557 469.606514 191.461486  C 470.488443 192.343415 471.684764 192.838947 472.932 192.838947  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter" />
+   </g>
+   <g id="comparison-easy-tools-text_15">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="147.312" y="407.164242" transform="rotate(-0 147.312 407.164242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_16">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="219.672" y="407.164242" transform="rotate(-0 219.672 407.164242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_17">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="219.672" y="370.984242" transform="rotate(-0 219.672 370.984242)">4</text>
+   </g>
+   <g id="comparison-easy-tools-text_18">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="255.852" y="407.164242" transform="rotate(-0 255.852 407.164242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_19">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="292.032" y="407.164242" transform="rotate(-0 292.032 407.164242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_20">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="292.032" y="370.984242" transform="rotate(-0 292.032 370.984242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_21">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="292.032" y="334.804242" transform="rotate(-0 292.032 334.804242)">4</text>
+   </g>
+   <g id="comparison-easy-tools-text_22">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="328.212" y="407.164242" transform="rotate(-0 328.212 407.164242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_23">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="328.212" y="370.984242" transform="rotate(-0 328.212 370.984242)">4</text>
+   </g>
+   <g id="comparison-easy-tools-text_24">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="328.212" y="334.804242" transform="rotate(-0 328.212 334.804242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_25">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="328.212" y="190.084242" transform="rotate(-0 328.212 190.084242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_26">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="364.392" y="334.804242" transform="rotate(-0 364.392 334.804242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_27">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="364.392" y="298.624242" transform="rotate(-0 364.392 298.624242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_28">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="364.392" y="262.444242" transform="rotate(-0 364.392 262.444242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_29">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="370.984242" transform="rotate(-0 400.572 370.984242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_30">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="334.804242" transform="rotate(-0 400.572 334.804242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_31">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="298.624242" transform="rotate(-0 400.572 298.624242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_32">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="226.264242" transform="rotate(-0 400.572 226.264242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_33">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="190.084242" transform="rotate(-0 400.572 190.084242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_34">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="400.572" y="153.904242" transform="rotate(-0 400.572 153.904242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_35">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="436.752" y="370.984242" transform="rotate(-0 436.752 370.984242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_36">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="436.752" y="298.624242" transform="rotate(-0 436.752 298.624242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_37">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="472.932" y="334.804242" transform="rotate(-0 472.932 334.804242)">2</text>
+   </g>
+   <g id="comparison-easy-tools-text_38">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="472.932" y="262.444242" transform="rotate(-0 472.932 262.444242)">3</text>
+   </g>
+   <g id="comparison-easy-tools-text_39">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26313b" x="472.932" y="190.084242" transform="rotate(-0 472.932 190.084242)">5</text>
+   </g>
+   <g id="comparison-easy-tools-legend_1">
+    <g id="comparison-easy-tools-line2d_26">
+     <defs>
+      <path id="comparison-easy-tools-me1af5acd54" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #ee6677" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-me1af5acd54" x="521.08376" y="133.680805" style="fill: #ee6677; stroke: #ee6677" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_40">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="137.005805" transform="rotate(-0 536.28376 137.005805)">A  Variant effects</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_27">
+     <defs>
+      <path id="comparison-easy-tools-m4ce342e201" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #4477aa" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m4ce342e201" x="521.08376" y="153.631547" style="fill: #4477aa; stroke: #4477aa" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_41">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="156.956547" transform="rotate(-0 536.28376 156.956547)">B  Sequence operations</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_28">
+     <defs>
+      <path id="comparison-easy-tools-m8b3761c52f" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #228833" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m8b3761c52f" x="521.08376" y="173.582289" style="fill: #228833; stroke: #228833" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_42">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="176.907289" transform="rotate(-0 536.28376 176.907289)">C  Sequence statistics</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_29">
+     <defs>
+      <path id="comparison-easy-tools-m91d1dd23e7" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #777777" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m91d1dd23e7" x="521.08376" y="193.533031" style="fill: #777777; stroke: #777777" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_43">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="196.858031" transform="rotate(-0 536.28376 196.858031)">D  Overlapping frames</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_30">
+     <defs>
+      <path id="comparison-easy-tools-m8b64453575" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #55aacc" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m8b64453575" x="521.08376" y="213.483773" style="fill: #55aacc; stroke: #55aacc" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_44">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="216.808773" transform="rotate(-0 536.28376 216.808773)">E  RNA operations</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_31">
+     <defs>
+      <path id="comparison-easy-tools-mf8790e5752" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #b49b30" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-mf8790e5752" x="521.08376" y="233.434516" style="fill: #b49b30; stroke: #b49b30" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_45">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="236.759516" transform="rotate(-0 536.28376 236.759516)">F  Protein operations</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_32">
+     <defs>
+      <path id="comparison-easy-tools-mb367952b09" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #dd7733" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-mb367952b09" x="521.08376" y="253.385258" style="fill: #dd7733; stroke: #dd7733" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_46">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="256.710258" transform="rotate(-0 536.28376 256.710258)">G  Construct design</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_33">
+     <defs>
+      <path id="comparison-easy-tools-m98ae9748bc" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #aa3377" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m98ae9748bc" x="521.08376" y="273.336" style="fill: #aa3377; stroke: #aa3377" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_47">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="276.661" transform="rotate(-0 536.28376 276.661)">H  Synonymous design</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_34">
+     <defs>
+      <path id="comparison-easy-tools-m1574e51924" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #009988" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m1574e51924" x="521.08376" y="293.286742" style="fill: #009988; stroke: #009988" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_48">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="296.611742" transform="rotate(-0 536.28376 296.611742)">I  Assay design</text>
+    </g>
+    <g id="comparison-easy-tools-line2d_35">
+     <defs>
+      <path id="comparison-easy-tools-m1ece91404c" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #332288" />
+     </defs>
+     <g>
+      <use xlink:href="#comparison-easy-tools-m1ece91404c" x="521.08376" y="313.237484" style="fill: #332288; stroke: #332288" />
+     </g>
+    </g>
+    <g id="comparison-easy-tools-text_49">
+     <text style="font-size: 9.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="536.28376" y="316.562484" transform="rotate(-0 536.28376 316.562484)">J  Composition tasks</text>
+    </g>
+   </g>
+   <g id="comparison-easy-tools-scatter-easy-tools-0" data-scatter-point="scatter-easy-tools-0" tabindex="0" role="button" aria-label="G09: Remove a protein motif (construct.remove_peptide_motif); Nemotron 0/10, Snowball 0/10" pointer-events="all">
+    <path d="M 111.132 413.1756  C 113.242911 413.1756 115.267648 412.336926 116.760287 410.844287  C 118.252926 409.351648 119.0916 407.326911 119.0916 405.216  C 119.0916 403.105089 118.252926 401.080352 116.760287 399.587713  C 115.267648 398.095074 113.242911 397.2564 111.132 397.2564  C 109.021089 397.2564 106.996352 398.095074 105.503713 399.587713  C 104.011074 401.080352 103.1724 403.105089 103.1724 405.216  C 103.1724 407.326911 104.011074 409.351648 105.503713 410.844287  C 106.996352 412.336926 109.021089 413.1756 111.132 413.1756  L 111.132 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>G09: Remove a protein motif (construct.remove_peptide_motif); Nemotron 0/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-1" data-scatter-point="scatter-easy-tools-1" tabindex="0" role="button" aria-label="J16: Choose an RNA probe and a matched escape control (pipeline.target_and_escape); Nemotron 1/10, Snowball 0/10; J19: Build and audit a controlled synonymous panel (pipeline.controlled_panel); Nemotron 1/10, Snowball 0/10" pointer-events="all">
+    <path d="M 147.312 413.1756  C 149.422911 413.1756 151.447648 412.336926 152.940287 410.844287  C 154.432926 409.351648 155.2716 407.326911 155.2716 405.216  C 155.2716 403.105089 154.432926 401.080352 152.940287 399.587713  C 151.447648 398.095074 149.422911 397.2564 147.312 397.2564  C 145.201089 397.2564 143.176352 398.095074 141.683713 399.587713  C 140.191074 401.080352 139.3524 403.105089 139.3524 405.216  C 139.3524 407.326911 140.191074 409.351648 141.683713 410.844287  C 143.176352 412.336926 145.201089 413.1756 147.312 413.1756  L 147.312 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J16: Choose an RNA probe and a matched escape control (pipeline.target_and_escape); Nemotron 1/10, Snowball 0/10; J19: Build and audit a controlled synonymous panel (pipeline.controlled_panel); Nemotron 1/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-2" data-scatter-point="scatter-easy-tools-2" tabindex="0" role="button" aria-label="C06: Find nucleotide patterns (dna.motif_positions); Nemotron 1/10, Snowball 2/10" pointer-events="all">
+    <path d="M 147.312 340.8156  C 149.422911 340.8156 151.447648 339.976926 152.940287 338.484287  C 154.432926 336.991648 155.2716 334.966911 155.2716 332.856  C 155.2716 330.745089 154.432926 328.720352 152.940287 327.227713  C 151.447648 325.735074 149.422911 324.8964 147.312 324.8964  C 145.201089 324.8964 143.176352 325.735074 141.683713 327.227713  C 140.191074 328.720352 139.3524 330.745089 139.3524 332.856  C 139.3524 334.966911 140.191074 336.991648 141.683713 338.484287  C 143.176352 339.976926 145.201089 340.8156 147.312 340.8156  L 147.312 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>C06: Find nucleotide patterns (dna.motif_positions); Nemotron 1/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-3" data-scatter-point="scatter-easy-tools-3" tabindex="0" role="button" aria-label="E09: Find a maximum-pair RNA fold (rna.max_pair_fold); Nemotron 2/10, Snowball 0/10" pointer-events="all">
+    <path d="M 183.492 413.1756  C 185.602911 413.1756 187.627648 412.336926 189.120287 410.844287  C 190.612926 409.351648 191.4516 407.326911 191.4516 405.216  C 191.4516 403.105089 190.612926 401.080352 189.120287 399.587713  C 187.627648 398.095074 185.602911 397.2564 183.492 397.2564  C 181.381089 397.2564 179.356352 398.095074 177.863713 399.587713  C 176.371074 401.080352 175.5324 403.105089 175.5324 405.216  C 175.5324 407.326911 176.371074 409.351648 177.863713 410.844287  C 179.356352 412.336926 181.381089 413.1756 183.492 413.1756  L 183.492 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E09: Find a maximum-pair RNA fold (rna.max_pair_fold); Nemotron 2/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-4" data-scatter-point="scatter-easy-tools-4" tabindex="0" role="button" aria-label="J12: From specified RNA edits to RNA fragments (pipeline.rna_edit_digest); Nemotron 2/10, Snowball 1/10" pointer-events="all">
+    <path d="M 183.492 376.9956  C 185.602911 376.9956 187.627648 376.156926 189.120287 374.664287  C 190.612926 373.171648 191.4516 371.146911 191.4516 369.036  C 191.4516 366.925089 190.612926 364.900352 189.120287 363.407713  C 187.627648 361.915074 185.602911 361.0764 183.492 361.0764  C 181.381089 361.0764 179.356352 361.915074 177.863713 363.407713  C 176.371074 364.900352 175.5324 366.925089 175.5324 369.036  C 175.5324 371.146911 176.371074 373.171648 177.863713 374.664287  C 179.356352 376.156926 181.381089 376.9956 183.492 376.9956  L 183.492 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J12: From specified RNA edits to RNA fragments (pipeline.rna_edit_digest); Nemotron 2/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-5" data-scatter-point="scatter-easy-tools-5" tabindex="0" role="button" aria-label="H11: Remove specified DNA motifs (design.remove_dna_motifs); Nemotron 2/10, Snowball 2/10" pointer-events="all">
+    <path d="M 183.492 340.8156  C 185.602911 340.8156 187.627648 339.976926 189.120287 338.484287  C 190.612926 336.991648 191.4516 334.966911 191.4516 332.856  C 191.4516 330.745089 190.612926 328.720352 189.120287 327.227713  C 187.627648 325.735074 185.602911 324.8964 183.492 324.8964  C 181.381089 324.8964 179.356352 325.735074 177.863713 327.227713  C 176.371074 328.720352 175.5324 330.745089 175.5324 332.856  C 175.5324 334.966911 176.371074 336.991648 177.863713 338.484287  C 179.356352 339.976926 181.381089 340.8156 183.492 340.8156  L 183.492 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H11: Remove specified DNA motifs (design.remove_dna_motifs); Nemotron 2/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-6" data-scatter-point="scatter-easy-tools-6" tabindex="0" role="button" aria-label="J08: From a pairing annotation to eligible cuts (pipeline.structure_gated_digest); Nemotron 2/10, Snowball 3/10" pointer-events="all">
+    <path d="M 183.492 304.6356  C 185.602911 304.6356 187.627648 303.796926 189.120287 302.304287  C 190.612926 300.811648 191.4516 298.786911 191.4516 296.676  C 191.4516 294.565089 190.612926 292.540352 189.120287 291.047713  C 187.627648 289.555074 185.602911 288.7164 183.492 288.7164  C 181.381089 288.7164 179.356352 289.555074 177.863713 291.047713  C 176.371074 292.540352 175.5324 294.565089 175.5324 296.676  C 175.5324 298.786911 176.371074 300.811648 177.863713 302.304287  C 179.356352 303.796926 181.381089 304.6356 183.492 304.6356  L 183.492 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J08: From a pairing annotation to eligible cuts (pipeline.structure_gated_digest); Nemotron 2/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-7" data-scatter-point="scatter-easy-tools-7" tabindex="0" role="button" aria-label="H12: Control RNA dinucleotide counts (design.dinucleotide_counts); Nemotron 3/10, Snowball 0/10; J18: Build a tagged construct, cleave it, measure products (pipeline.tag_cleave_mass); Nemotron 3/10, Snowball 0/10" pointer-events="all">
+    <path d="M 219.672 413.1756  C 221.782911 413.1756 223.807648 412.336926 225.300287 410.844287  C 226.792926 409.351648 227.6316 407.326911 227.6316 405.216  C 227.6316 403.105089 226.792926 401.080352 225.300287 399.587713  C 223.807648 398.095074 221.782911 397.2564 219.672 397.2564  C 217.561089 397.2564 215.536352 398.095074 214.043713 399.587713  C 212.551074 401.080352 211.7124 403.105089 211.7124 405.216  C 211.7124 407.326911 212.551074 409.351648 214.043713 410.844287  C 215.536352 412.336926 217.561089 413.1756 219.672 413.1756  L 219.672 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H12: Control RNA dinucleotide counts (design.dinucleotide_counts); Nemotron 3/10, Snowball 0/10; J18: Build a tagged construct, cleave it, measure products (pipeline.tag_cleave_mass); Nemotron 3/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-8" data-scatter-point="scatter-easy-tools-8" tabindex="0" role="button" aria-label="F08: Count amino acids (protein.residue_counts); Nemotron 3/10, Snowball 1/10; F09: Digest with trypsin rules (protein.trypsin_digest); Nemotron 3/10, Snowball 1/10; H15: Build a controlled synonymous panel (design.variant_panel); Nemotron 3/10, Snowball 1/10; I03: Choose CDS-internal PCR primers (assay.primer_pair); Nemotron 3/10, Snowball 1/10" pointer-events="all">
+    <path d="M 219.672 376.9956  C 221.782911 376.9956 223.807648 376.156926 225.300287 374.664287  C 226.792926 373.171648 227.6316 371.146911 227.6316 369.036  C 227.6316 366.925089 226.792926 364.900352 225.300287 363.407713  C 223.807648 361.915074 221.782911 361.0764 219.672 361.0764  C 217.561089 361.0764 215.536352 361.915074 214.043713 363.407713  C 212.551074 364.900352 211.7124 366.925089 211.7124 369.036  C 211.7124 371.146911 212.551074 373.171648 214.043713 374.664287  C 215.536352 376.156926 217.561089 376.9956 219.672 376.9956  L 219.672 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>F08: Count amino acids (protein.residue_counts); Nemotron 3/10, Snowball 1/10; F09: Digest with trypsin rules (protein.trypsin_digest); Nemotron 3/10, Snowball 1/10; H15: Build a controlled synonymous panel (design.variant_panel); Nemotron 3/10, Snowball 1/10; I03: Choose CDS-internal PCR primers (assay.primer_pair); Nemotron 3/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-9" data-scatter-point="scatter-easy-tools-9" tabindex="0" role="button" aria-label="H09: Create a guide-escape control (design.guide_escape); Nemotron 4/10, Snowball 0/10; J11: Assemble coding modules and locate junction motifs (pipeline.fusion_junction); Nemotron 4/10, Snowball 0/10; J17: From CDS to defined protein measurements (pipeline.protein_properties); Nemotron 4/10, Snowball 0/10" pointer-events="all">
+    <path d="M 255.852 413.1756  C 257.962911 413.1756 259.987648 412.336926 261.480287 410.844287  C 262.972926 409.351648 263.8116 407.326911 263.8116 405.216  C 263.8116 403.105089 262.972926 401.080352 261.480287 399.587713  C 259.987648 398.095074 257.962911 397.2564 255.852 397.2564  C 253.741089 397.2564 251.716352 398.095074 250.223713 399.587713  C 248.731074 401.080352 247.8924 403.105089 247.8924 405.216  C 247.8924 407.326911 248.731074 409.351648 250.223713 410.844287  C 251.716352 412.336926 253.741089 413.1756 255.852 413.1756  L 255.852 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H09: Create a guide-escape control (design.guide_escape); Nemotron 4/10, Snowball 0/10; J11: Assemble coding modules and locate junction motifs (pipeline.fusion_junction); Nemotron 4/10, Snowball 0/10; J17: From CDS to defined protein measurements (pipeline.protein_properties); Nemotron 4/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-10" data-scatter-point="scatter-easy-tools-10" tabindex="0" role="button" aria-label="J14: From CDS collection to a minimal measurement panel (pipeline.rna_probe_panel); Nemotron 4/10, Snowball 1/10" pointer-events="all">
+    <path d="M 255.852 376.9956  C 257.962911 376.9956 259.987648 376.156926 261.480287 374.664287  C 262.972926 373.171648 263.8116 371.146911 263.8116 369.036  C 263.8116 366.925089 262.972926 364.900352 261.480287 363.407713  C 259.987648 361.915074 257.962911 361.0764 255.852 361.0764  C 253.741089 361.0764 251.716352 361.915074 250.223713 363.407713  C 248.731074 364.900352 247.8924 366.925089 247.8924 369.036  C 247.8924 371.146911 248.731074 373.171648 250.223713 374.664287  C 251.716352 376.156926 253.741089 376.9956 255.852 376.9956  L 255.852 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J14: From CDS collection to a minimal measurement panel (pipeline.rna_probe_panel); Nemotron 4/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-11" data-scatter-point="scatter-easy-tools-11" tabindex="0" role="button" aria-label="H04: Optimize supplied codon preferences (design.codon_preference); Nemotron 4/10, Snowball 3/10" pointer-events="all">
+    <path d="M 255.852 304.6356  C 257.962911 304.6356 259.987648 303.796926 261.480287 302.304287  C 262.972926 300.811648 263.8116 298.786911 263.8116 296.676  C 263.8116 294.565089 262.972926 292.540352 261.480287 291.047713  C 259.987648 289.555074 257.962911 288.7164 255.852 288.7164  C 253.741089 288.7164 251.716352 289.555074 250.223713 291.047713  C 248.731074 292.540352 247.8924 294.565089 247.8924 296.676  C 247.8924 298.786911 248.731074 300.811648 250.223713 302.304287  C 251.716352 303.796926 253.741089 304.6356 255.852 304.6356  L 255.852 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H04: Optimize supplied codon preferences (design.codon_preference); Nemotron 4/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-12" data-scatter-point="scatter-easy-tools-12" tabindex="0" role="button" aria-label="I01: Distinguish CDSs with a probe panel (assay.min_probe_panel); Nemotron 5/10, Snowball 0/10; J09: Design a codon library and verify its coverage (pipeline.library_and_verify); Nemotron 5/10, Snowball 0/10; J10: Balance an RNA structural constraint and codon preference (joint.structure_and_codons); Nemotron 5/10, Snowball 0/10" pointer-events="all">
+    <path d="M 292.032 413.1756  C 294.142911 413.1756 296.167648 412.336926 297.660287 410.844287  C 299.152926 409.351648 299.9916 407.326911 299.9916 405.216  C 299.9916 403.105089 299.152926 401.080352 297.660287 399.587713  C 296.167648 398.095074 294.142911 397.2564 292.032 397.2564  C 289.921089 397.2564 287.896352 398.095074 286.403713 399.587713  C 284.911074 401.080352 284.0724 403.105089 284.0724 405.216  C 284.0724 407.326911 284.911074 409.351648 286.403713 410.844287  C 287.896352 412.336926 289.921089 413.1756 292.032 413.1756  L 292.032 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>I01: Distinguish CDSs with a probe panel (assay.min_probe_panel); Nemotron 5/10, Snowball 0/10; J09: Design a codon library and verify its coverage (pipeline.library_and_verify); Nemotron 5/10, Snowball 0/10; J10: Balance an RNA structural constraint and codon preference (joint.structure_and_codons); Nemotron 5/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-13" data-scatter-point="scatter-easy-tools-13" tabindex="0" role="button" aria-label="E08: Digest coding RNA with RNase T1 rules (rna.t1_digest); Nemotron 5/10, Snowball 1/10; J07: Remove cloning sites while controlling GC (joint.clone_ready_cds); Nemotron 5/10, Snowball 1/10" pointer-events="all">
+    <path d="M 292.032 376.9956  C 294.142911 376.9956 296.167648 376.156926 297.660287 374.664287  C 299.152926 373.171648 299.9916 371.146911 299.9916 369.036  C 299.9916 366.925089 299.152926 364.900352 297.660287 363.407713  C 296.167648 361.915074 294.142911 361.0764 292.032 361.0764  C 289.921089 361.0764 287.896352 361.915074 286.403713 363.407713  C 284.911074 364.900352 284.0724 366.925089 284.0724 369.036  C 284.0724 371.146911 284.911074 373.171648 286.403713 374.664287  C 287.896352 376.156926 289.921089 376.9956 292.032 376.9956  L 292.032 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E08: Digest coding RNA with RNase T1 rules (rna.t1_digest); Nemotron 5/10, Snowball 1/10; J07: Remove cloning sites while controlling GC (joint.clone_ready_cds); Nemotron 5/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-14" data-scatter-point="scatter-easy-tools-14" tabindex="0" role="button" aria-label="B06: Map a nucleotide to its codon (coords.nt_to_codon); Nemotron 5/10, Snowball 2/10; C05: Count sense codons (stats.codon_counts); Nemotron 5/10, Snowball 2/10; G07: Design an RNA-editing-dependent product (construct.edit_aware_encoding); Nemotron 5/10, Snowball 2/10; H06: Control local GC by recoding (design.gc_windows); Nemotron 5/10, Snowball 2/10" pointer-events="all">
+    <path d="M 292.032 340.8156  C 294.142911 340.8156 296.167648 339.976926 297.660287 338.484287  C 299.152926 336.991648 299.9916 334.966911 299.9916 332.856  C 299.9916 330.745089 299.152926 328.720352 297.660287 327.227713  C 296.167648 325.735074 294.142911 324.8964 292.032 324.8964  C 289.921089 324.8964 287.896352 325.735074 286.403713 327.227713  C 284.911074 328.720352 284.0724 330.745089 284.0724 332.856  C 284.0724 334.966911 284.911074 336.991648 286.403713 338.484287  C 287.896352 339.976926 289.921089 340.8156 292.032 340.8156  L 292.032 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>B06: Map a nucleotide to its codon (coords.nt_to_codon); Nemotron 5/10, Snowball 2/10; C05: Count sense codons (stats.codon_counts); Nemotron 5/10, Snowball 2/10; G07: Design an RNA-editing-dependent product (construct.edit_aware_encoding); Nemotron 5/10, Snowball 2/10; H06: Control local GC by recoding (design.gc_windows); Nemotron 5/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-15" data-scatter-point="scatter-easy-tools-15" tabindex="0" role="button" aria-label="H08: Introduce a DNA recognition site (design.insert_dna_motif); Nemotron 6/10, Snowball 0/10; H14: Optimize a fixed RNA pairing score (design.structure_score); Nemotron 6/10, Snowball 0/10" pointer-events="all">
+    <path d="M 328.212 413.1756  C 330.322911 413.1756 332.347648 412.336926 333.840287 410.844287  C 335.332926 409.351648 336.1716 407.326911 336.1716 405.216  C 336.1716 403.105089 335.332926 401.080352 333.840287 399.587713  C 332.347648 398.095074 330.322911 397.2564 328.212 397.2564  C 326.101089 397.2564 324.076352 398.095074 322.583713 399.587713  C 321.091074 401.080352 320.2524 403.105089 320.2524 405.216  C 320.2524 407.326911 321.091074 409.351648 322.583713 410.844287  C 324.076352 412.336926 326.101089 413.1756 328.212 413.1756  L 328.212 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H08: Introduce a DNA recognition site (design.insert_dna_motif); Nemotron 6/10, Snowball 0/10; H14: Optimize a fixed RNA pairing score (design.structure_score); Nemotron 6/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-16" data-scatter-point="scatter-easy-tools-16" tabindex="0" role="button" aria-label="H07: Control coding-RNA motifs (design.rna_motif_control); Nemotron 6/10, Snowball 1/10; J05: From peptide motif to encoding DNA (pipeline.motif_to_dna); Nemotron 6/10, Snowball 1/10; J13: Design and verify an RNA-editing-dependent product (pipeline.edit_dependent_product); Nemotron 6/10, Snowball 1/10; J15: From DNA edits to changed peptide readouts (pipeline.variant_peptides); Nemotron 6/10, Snowball 1/10" pointer-events="all">
+    <path d="M 328.212 376.9956  C 330.322911 376.9956 332.347648 376.156926 333.840287 374.664287  C 335.332926 373.171648 336.1716 371.146911 336.1716 369.036  C 336.1716 366.925089 335.332926 364.900352 333.840287 363.407713  C 332.347648 361.915074 330.322911 361.0764 328.212 361.0764  C 326.101089 361.0764 324.076352 361.915074 322.583713 363.407713  C 321.091074 364.900352 320.2524 366.925089 320.2524 369.036  C 320.2524 371.146911 321.091074 373.171648 322.583713 374.664287  C 324.076352 376.156926 326.101089 376.9956 328.212 376.9956  L 328.212 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H07: Control coding-RNA motifs (design.rna_motif_control); Nemotron 6/10, Snowball 1/10; J05: From peptide motif to encoding DNA (pipeline.motif_to_dna); Nemotron 6/10, Snowball 1/10; J13: Design and verify an RNA-editing-dependent product (pipeline.edit_dependent_product); Nemotron 6/10, Snowball 1/10; J15: From DNA edits to changed peptide readouts (pipeline.variant_peptides); Nemotron 6/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-17" data-scatter-point="scatter-easy-tools-17" tabindex="0" role="button" aria-label="A06: Determine frame preservation (variant.frame_status); Nemotron 6/10, Snowball 2/10; E06: Match an RNA guide (rna.guide_hits); Nemotron 6/10, Snowball 2/10; I02: Select a CDS-specific RNA probe (assay.select_rna_probe); Nemotron 6/10, Snowball 2/10" pointer-events="all">
+    <path d="M 328.212 340.8156  C 330.322911 340.8156 332.347648 339.976926 333.840287 338.484287  C 335.332926 336.991648 336.1716 334.966911 336.1716 332.856  C 336.1716 330.745089 335.332926 328.720352 333.840287 327.227713  C 332.347648 325.735074 330.322911 324.8964 328.212 324.8964  C 326.101089 324.8964 324.076352 325.735074 322.583713 327.227713  C 321.091074 328.720352 320.2524 330.745089 320.2524 332.856  C 320.2524 334.966911 321.091074 336.991648 322.583713 338.484287  C 324.076352 339.976926 326.101089 340.8156 328.212 340.8156  L 328.212 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A06: Determine frame preservation (variant.frame_status); Nemotron 6/10, Snowball 2/10; E06: Match an RNA guide (rna.guide_hits); Nemotron 6/10, Snowball 2/10; I02: Select a CDS-specific RNA probe (assay.select_rna_probe); Nemotron 6/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-18" data-scatter-point="scatter-easy-tools-18" tabindex="0" role="button" aria-label="H13: Break homopolymers and repeats (design.break_repeats); Nemotron 6/10, Snowball 3/10" pointer-events="all">
+    <path d="M 328.212 304.6356  C 330.322911 304.6356 332.347648 303.796926 333.840287 302.304287  C 335.332926 300.811648 336.1716 298.786911 336.1716 296.676  C 336.1716 294.565089 335.332926 292.540352 333.840287 291.047713  C 332.347648 289.555074 330.322911 288.7164 328.212 288.7164  C 326.101089 288.7164 324.076352 289.555074 322.583713 291.047713  C 321.091074 292.540352 320.2524 294.565089 320.2524 296.676  C 320.2524 298.786911 321.091074 300.811648 322.583713 302.304287  C 324.076352 303.796926 326.101089 304.6356 328.212 304.6356  L 328.212 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H13: Break homopolymers and repeats (design.break_repeats); Nemotron 6/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-19" data-scatter-point="scatter-easy-tools-19" tabindex="0" role="button" aria-label="D02: Evaluate a change in two frames (overlap.compare_products); Nemotron 6/10, Snowball 5/10" pointer-events="all">
+    <path d="M 328.212 232.2756  C 330.322911 232.2756 332.347648 231.436926 333.840287 229.944287  C 335.332926 228.451648 336.1716 226.426911 336.1716 224.316  C 336.1716 222.205089 335.332926 220.180352 333.840287 218.687713  C 332.347648 217.195074 330.322911 216.3564 328.212 216.3564  C 326.101089 216.3564 324.076352 217.195074 322.583713 218.687713  C 321.091074 220.180352 320.2524 222.205089 320.2524 224.316  C 320.2524 226.426911 321.091074 228.451648 322.583713 229.944287  C 324.076352 231.436926 326.101089 232.2756 328.212 232.2756  L 328.212 232.2756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>D02: Evaluate a change in two frames (overlap.compare_products); Nemotron 6/10, Snowball 5/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-20" data-scatter-point="scatter-easy-tools-20" tabindex="0" role="button" aria-label="B01: Map residues back to DNA (coords.aa_to_nt); Nemotron 6/10, Snowball 6/10; G06: Enumerate a degenerate codon library (library.codon_products); Nemotron 6/10, Snowball 6/10" pointer-events="all">
+    <path d="M 328.212 196.0956  C 330.322911 196.0956 332.347648 195.256926 333.840287 193.764287  C 335.332926 192.271648 336.1716 190.246911 336.1716 188.136  C 336.1716 186.025089 335.332926 184.000352 333.840287 182.507713  C 332.347648 181.015074 330.322911 180.1764 328.212 180.1764  C 326.101089 180.1764 324.076352 181.015074 322.583713 182.507713  C 321.091074 184.000352 320.2524 186.025089 320.2524 188.136  C 320.2524 190.246911 321.091074 192.271648 322.583713 193.764287  C 324.076352 195.256926 326.101089 196.0956 328.212 196.0956  L 328.212 196.0956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>B01: Map residues back to DNA (coords.aa_to_nt); Nemotron 6/10, Snowball 6/10; G06: Enumerate a degenerate codon library (library.codon_products); Nemotron 6/10, Snowball 6/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-21" data-scatter-point="scatter-easy-tools-21" tabindex="0" role="button" aria-label="A04: Classify a substitution effect (variant.protein_effect); Nemotron 6/10, Snowball 8/10" pointer-events="all">
+    <path d="M 328.212 123.7356  C 330.322911 123.7356 332.347648 122.896926 333.840287 121.404287  C 335.332926 119.911648 336.1716 117.886911 336.1716 115.776  C 336.1716 113.665089 335.332926 111.640352 333.840287 110.147713  C 332.347648 108.655074 330.322911 107.8164 328.212 107.8164  C 326.101089 107.8164 324.076352 108.655074 322.583713 110.147713  C 321.091074 111.640352 320.2524 113.665089 320.2524 115.776  C 320.2524 117.886911 321.091074 119.911648 322.583713 121.404287  C 324.076352 122.896926 326.101089 123.7356 328.212 123.7356  L 328.212 123.7356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A04: Classify a substitution effect (variant.protein_effect); Nemotron 6/10, Snowball 8/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-22" data-scatter-point="scatter-easy-tools-22" tabindex="0" role="button" aria-label="H05: Match positional codon-preference ranges (design.codon_profile); Nemotron 7/10, Snowball 1/10" pointer-events="all">
+    <path d="M 364.392 376.9956  C 366.502911 376.9956 368.527648 376.156926 370.020287 374.664287  C 371.512926 373.171648 372.3516 371.146911 372.3516 369.036  C 372.3516 366.925089 371.512926 364.900352 370.020287 363.407713  C 368.527648 361.915074 366.502911 361.0764 364.392 361.0764  C 362.281089 361.0764 360.256352 361.915074 358.763713 363.407713  C 357.271074 364.900352 356.4324 366.925089 356.4324 369.036  C 356.4324 371.146911 357.271074 373.171648 358.763713 374.664287  C 360.256352 376.156926 362.281089 376.9956 364.392 376.9956  L 364.392 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H05: Match positional codon-preference ranges (design.codon_profile); Nemotron 7/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-23" data-scatter-point="scatter-easy-tools-23" tabindex="0" role="button" aria-label="H10: Rewrite with a specified number of DNA changes (design.synonymous_distance); Nemotron 7/10, Snowball 2/10; J06: Edit one frame and audit both products (pipeline.overlap_edit_verify); Nemotron 7/10, Snowball 2/10" pointer-events="all">
+    <path d="M 364.392 340.8156  C 366.502911 340.8156 368.527648 339.976926 370.020287 338.484287  C 371.512926 336.991648 372.3516 334.966911 372.3516 332.856  C 372.3516 330.745089 371.512926 328.720352 370.020287 327.227713  C 368.527648 325.735074 366.502911 324.8964 364.392 324.8964  C 362.281089 324.8964 360.256352 325.735074 358.763713 327.227713  C 357.271074 328.720352 356.4324 330.745089 356.4324 332.856  C 356.4324 334.966911 357.271074 336.991648 358.763713 338.484287  C 360.256352 339.976926 362.281089 340.8156 364.392 340.8156  L 364.392 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H10: Rewrite with a specified number of DNA changes (design.synonymous_distance); Nemotron 7/10, Snowball 2/10; J06: Edit one frame and audit both products (pipeline.overlap_edit_verify); Nemotron 7/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-24" data-scatter-point="scatter-easy-tools-24" tabindex="0" role="button" aria-label="F05: Select a distinguishing peptide (protein.diagnostic_peptide); Nemotron 7/10, Snowball 3/10; H03: Rewrite using permitted codons (design.codon_allowlist); Nemotron 7/10, Snowball 3/10" pointer-events="all">
+    <path d="M 364.392 304.6356  C 366.502911 304.6356 368.527648 303.796926 370.020287 302.304287  C 371.512926 300.811648 372.3516 298.786911 372.3516 296.676  C 372.3516 294.565089 371.512926 292.540352 370.020287 291.047713  C 368.527648 289.555074 366.502911 288.7164 364.392 288.7164  C 362.281089 288.7164 360.256352 289.555074 358.763713 291.047713  C 357.271074 292.540352 356.4324 294.565089 356.4324 296.676  C 356.4324 298.786911 357.271074 300.811648 358.763713 302.304287  C 360.256352 303.796926 362.281089 304.6356 364.392 304.6356  L 364.392 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>F05: Select a distinguishing peptide (protein.diagnostic_peptide); Nemotron 7/10, Snowball 3/10; H03: Rewrite using permitted codons (design.codon_allowlist); Nemotron 7/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-25" data-scatter-point="scatter-easy-tools-25" tabindex="0" role="button" aria-label="F02: Find a supplied peptide pattern (protein.motif_positions); Nemotron 7/10, Snowball 4/10; G05: Encode a requested amino-acid substitution (construct.minimal_aa_edit); Nemotron 7/10, Snowball 4/10" pointer-events="all">
+    <path d="M 364.392 268.4556  C 366.502911 268.4556 368.527648 267.616926 370.020287 266.124287  C 371.512926 264.631648 372.3516 262.606911 372.3516 260.496  C 372.3516 258.385089 371.512926 256.360352 370.020287 254.867713  C 368.527648 253.375074 366.502911 252.5364 364.392 252.5364  C 362.281089 252.5364 360.256352 253.375074 358.763713 254.867713  C 357.271074 256.360352 356.4324 258.385089 356.4324 260.496  C 356.4324 262.606911 357.271074 264.631648 358.763713 266.124287  C 360.256352 267.616926 362.281089 268.4556 364.392 268.4556  L 364.392 268.4556  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>F02: Find a supplied peptide pattern (protein.motif_positions); Nemotron 7/10, Snowball 4/10; G05: Encode a requested amino-acid substitution (construct.minimal_aa_edit); Nemotron 7/10, Snowball 4/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-26" data-scatter-point="scatter-easy-tools-26" tabindex="0" role="button" aria-label="F04: Calculate model charge at a pH (protein.charge_at_ph); Nemotron 8/10, Snowball 1/10; G04: Design a focused degenerate codon (library.design_codon); Nemotron 8/10, Snowball 1/10; G08: Derive TEV-cleaved products (construct.tev_products); Nemotron 8/10, Snowball 1/10" pointer-events="all">
+    <path d="M 400.572 376.9956  C 402.682911 376.9956 404.707648 376.156926 406.200287 374.664287  C 407.692926 373.171648 408.5316 371.146911 408.5316 369.036  C 408.5316 366.925089 407.692926 364.900352 406.200287 363.407713  C 404.707648 361.915074 402.682911 361.0764 400.572 361.0764  C 398.461089 361.0764 396.436352 361.915074 394.943713 363.407713  C 393.451074 364.900352 392.6124 366.925089 392.6124 369.036  C 392.6124 371.146911 393.451074 373.171648 394.943713 374.664287  C 396.436352 376.156926 398.461089 376.9956 400.572 376.9956  L 400.572 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>F04: Calculate model charge at a pH (protein.charge_at_ph); Nemotron 8/10, Snowball 1/10; G04: Design a focused degenerate codon (library.design_codon); Nemotron 8/10, Snowball 1/10; G08: Derive TEV-cleaved products (construct.tev_products); Nemotron 8/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-27" data-scatter-point="scatter-easy-tools-27" tabindex="0" role="button" aria-label="E07: Count coding-RNA patterns (rna.motif_counts); Nemotron 8/10, Snowball 2/10; J04: From CDS panel to a diagnostic peptide (pipeline.diagnostic_digest); Nemotron 8/10, Snowball 2/10" pointer-events="all">
+    <path d="M 400.572 340.8156  C 402.682911 340.8156 404.707648 339.976926 406.200287 338.484287  C 407.692926 336.991648 408.5316 334.966911 408.5316 332.856  C 408.5316 330.745089 407.692926 328.720352 406.200287 327.227713  C 404.707648 325.735074 402.682911 324.8964 400.572 324.8964  C 398.461089 324.8964 396.436352 325.735074 394.943713 327.227713  C 393.451074 328.720352 392.6124 330.745089 392.6124 332.856  C 392.6124 334.966911 393.451074 336.991648 394.943713 338.484287  C 396.436352 339.976926 398.461089 340.8156 400.572 340.8156  L 400.572 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E07: Count coding-RNA patterns (rna.motif_counts); Nemotron 8/10, Snowball 2/10; J04: From CDS panel to a diagnostic peptide (pipeline.diagnostic_digest); Nemotron 8/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-28" data-scatter-point="scatter-easy-tools-28" tabindex="0" role="button" aria-label="A03: Resolve an ambiguous codon (ambiguity.codon_set); Nemotron 8/10, Snowball 3/10; C04: Calculate codon adaptation index (stats.cai); Nemotron 8/10, Snowball 3/10; F03: Calculate the isoelectric point (pI) (protein.isoelectric_point); Nemotron 8/10, Snowball 3/10" pointer-events="all">
+    <path d="M 400.572 304.6356  C 402.682911 304.6356 404.707648 303.796926 406.200287 302.304287  C 407.692926 300.811648 408.5316 298.786911 408.5316 296.676  C 408.5316 294.565089 407.692926 292.540352 406.200287 291.047713  C 404.707648 289.555074 402.682911 288.7164 400.572 288.7164  C 398.461089 288.7164 396.436352 289.555074 394.943713 291.047713  C 393.451074 292.540352 392.6124 294.565089 392.6124 296.676  C 392.6124 298.786911 393.451074 300.811648 394.943713 302.304287  C 396.436352 303.796926 398.461089 304.6356 400.572 304.6356  L 400.572 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A03: Resolve an ambiguous codon (ambiguity.codon_set); Nemotron 8/10, Snowball 3/10; C04: Calculate codon adaptation index (stats.cai); Nemotron 8/10, Snowball 3/10; F03: Calculate the isoelectric point (pI) (protein.isoelectric_point); Nemotron 8/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-29" data-scatter-point="scatter-easy-tools-29" tabindex="0" role="button" aria-label="F07: Calculate peptide mass (protein.monoisotopic_mass); Nemotron 8/10, Snowball 4/10" pointer-events="all">
+    <path d="M 400.572 268.4556  C 402.682911 268.4556 404.707648 267.616926 406.200287 266.124287  C 407.692926 264.631648 408.5316 262.606911 408.5316 260.496  C 408.5316 258.385089 407.692926 256.360352 406.200287 254.867713  C 404.707648 253.375074 402.682911 252.5364 400.572 252.5364  C 398.461089 252.5364 396.436352 253.375074 394.943713 254.867713  C 393.451074 256.360352 392.6124 258.385089 392.6124 260.496  C 392.6124 262.606911 393.451074 264.631648 394.943713 266.124287  C 396.436352 267.616926 398.461089 268.4556 400.572 268.4556  L 400.572 268.4556  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>F07: Calculate peptide mass (protein.monoisotopic_mass); Nemotron 8/10, Snowball 4/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-30" data-scatter-point="scatter-easy-tools-30" tabindex="0" role="button" aria-label="A01: Assess an ambiguous stop (ambiguity.stop_certainty); Nemotron 8/10, Snowball 5/10; D01: Change one frame, preserve the other (overlap.constrained_edit); Nemotron 8/10, Snowball 5/10" pointer-events="all">
+    <path d="M 400.572 232.2756  C 402.682911 232.2756 404.707648 231.436926 406.200287 229.944287  C 407.692926 228.451648 408.5316 226.426911 408.5316 224.316  C 408.5316 222.205089 407.692926 220.180352 406.200287 218.687713  C 404.707648 217.195074 402.682911 216.3564 400.572 216.3564  C 398.461089 216.3564 396.436352 217.195074 394.943713 218.687713  C 393.451074 220.180352 392.6124 222.205089 392.6124 224.316  C 392.6124 226.426911 393.451074 228.451648 394.943713 229.944287  C 396.436352 231.436926 398.461089 232.2756 400.572 232.2756  L 400.572 232.2756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A01: Assess an ambiguous stop (ambiguity.stop_certainty); Nemotron 8/10, Snowball 5/10; D01: Change one frame, preserve the other (overlap.constrained_edit); Nemotron 8/10, Snowball 5/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-31" data-scatter-point="scatter-easy-tools-31" tabindex="0" role="button" aria-label="A02: Compare encoded proteins (cds.protein_equivalence); Nemotron 8/10, Snowball 6/10; H01: Disrupt a specified local hairpin (design.expose_rna_window); Nemotron 8/10, Snowball 6/10" pointer-events="all">
+    <path d="M 400.572 196.0956  C 402.682911 196.0956 404.707648 195.256926 406.200287 193.764287  C 407.692926 192.271648 408.5316 190.246911 408.5316 188.136  C 408.5316 186.025089 407.692926 184.000352 406.200287 182.507713  C 404.707648 181.015074 402.682911 180.1764 400.572 180.1764  C 398.461089 180.1764 396.436352 181.015074 394.943713 182.507713  C 393.451074 184.000352 392.6124 186.025089 392.6124 188.136  C 392.6124 190.246911 393.451074 192.271648 394.943713 193.764287  C 396.436352 195.256926 398.461089 196.0956 400.572 196.0956  L 400.572 196.0956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A02: Compare encoded proteins (cds.protein_equivalence); Nemotron 8/10, Snowball 6/10; H01: Disrupt a specified local hairpin (design.expose_rna_window); Nemotron 8/10, Snowball 6/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-32" data-scatter-point="scatter-easy-tools-32" tabindex="0" role="button" aria-label="J01: From specified RNA edits to protein (pipeline.rna_edit_translation); Nemotron 8/10, Snowball 7/10; J02: Repair RNA pairs and verify the protein (pipeline.repair_and_verify); Nemotron 8/10, Snowball 7/10" pointer-events="all">
+    <path d="M 400.572 159.9156  C 402.682911 159.9156 404.707648 159.076926 406.200287 157.584287  C 407.692926 156.091648 408.5316 154.066911 408.5316 151.956  C 408.5316 149.845089 407.692926 147.820352 406.200287 146.327713  C 404.707648 144.835074 402.682911 143.9964 400.572 143.9964  C 398.461089 143.9964 396.436352 144.835074 394.943713 146.327713  C 393.451074 147.820352 392.6124 149.845089 392.6124 151.956  C 392.6124 154.066911 393.451074 156.091648 394.943713 157.584287  C 396.436352 159.076926 398.461089 159.9156 400.572 159.9156  L 400.572 159.9156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J01: From specified RNA edits to protein (pipeline.rna_edit_translation); Nemotron 8/10, Snowball 7/10; J02: Repair RNA pairs and verify the protein (pipeline.repair_and_verify); Nemotron 8/10, Snowball 7/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-33" data-scatter-point="scatter-easy-tools-33" tabindex="0" role="button" aria-label="C01: Calculate third-position GC (stats.gc3_fraction); Nemotron 8/10, Snowball 8/10" pointer-events="all">
+    <path d="M 400.572 123.7356  C 402.682911 123.7356 404.707648 122.896926 406.200287 121.404287  C 407.692926 119.911648 408.5316 117.886911 408.5316 115.776  C 408.5316 113.665089 407.692926 111.640352 406.200287 110.147713  C 404.707648 108.655074 402.682911 107.8164 400.572 107.8164  C 398.461089 107.8164 396.436352 108.655074 394.943713 110.147713  C 393.451074 111.640352 392.6124 113.665089 392.6124 115.776  C 392.6124 117.886911 393.451074 119.911648 394.943713 121.404287  C 396.436352 122.896926 398.461089 123.7356 400.572 123.7356  L 400.572 123.7356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>C01: Calculate third-position GC (stats.gc3_fraction); Nemotron 8/10, Snowball 8/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-34" data-scatter-point="scatter-easy-tools-34" tabindex="0" role="button" aria-label="H02: Repair pairing synonymously (design.pairing_repair); Nemotron 8/10, Snowball 9/10" pointer-events="all">
+    <path d="M 400.572 87.5556  C 402.682911 87.5556 404.707648 86.716926 406.200287 85.224287  C 407.692926 83.731648 408.5316 81.706911 408.5316 79.596  C 408.5316 77.485089 407.692926 75.460352 406.200287 73.967713  C 404.707648 72.475074 402.682911 71.6364 400.572 71.6364  C 398.461089 71.6364 396.436352 72.475074 394.943713 73.967713  C 393.451074 75.460352 392.6124 77.485089 392.6124 79.596  C 392.6124 81.706911 393.451074 83.731648 394.943713 85.224287  C 396.436352 86.716926 398.461089 87.5556 400.572 87.5556  L 400.572 87.5556  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>H02: Repair pairing synonymously (design.pairing_repair); Nemotron 8/10, Snowball 9/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-35" data-scatter-point="scatter-easy-tools-35" tabindex="0" role="button" aria-label="J03: Encode a protein change and remove cloning sites (joint.protein_edit_and_cloning); Nemotron 9/10, Snowball 0/10" pointer-events="all">
+    <path d="M 436.752 413.1756  C 438.862911 413.1756 440.887648 412.336926 442.380287 410.844287  C 443.872926 409.351648 444.7116 407.326911 444.7116 405.216  C 444.7116 403.105089 443.872926 401.080352 442.380287 399.587713  C 440.887648 398.095074 438.862911 397.2564 436.752 397.2564  C 434.641089 397.2564 432.616352 398.095074 431.123713 399.587713  C 429.631074 401.080352 428.7924 403.105089 428.7924 405.216  C 428.7924 407.326911 429.631074 409.351648 431.123713 410.844287  C 432.616352 412.336926 434.641089 413.1756 436.752 413.1756  L 436.752 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>J03: Encode a protein change and remove cloning sites (joint.protein_edit_and_cloning); Nemotron 9/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-36" data-scatter-point="scatter-easy-tools-36" tabindex="0" role="button" aria-label="E05: Translate coding RNA (rna.translate); Nemotron 9/10, Snowball 1/10; F06: Calculate mean hydropathy (protein.mean_hydropathy); Nemotron 9/10, Snowball 1/10" pointer-events="all">
+    <path d="M 436.752 376.9956  C 438.862911 376.9956 440.887648 376.156926 442.380287 374.664287  C 443.872926 373.171648 444.7116 371.146911 444.7116 369.036  C 444.7116 366.925089 443.872926 364.900352 442.380287 363.407713  C 440.887648 361.915074 438.862911 361.0764 436.752 361.0764  C 434.641089 361.0764 432.616352 361.915074 431.123713 363.407713  C 429.631074 364.900352 428.7924 366.925089 428.7924 369.036  C 428.7924 371.146911 429.631074 373.171648 431.123713 374.664287  C 432.616352 376.156926 434.641089 376.9956 436.752 376.9956  L 436.752 376.9956  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E05: Translate coding RNA (rna.translate); Nemotron 9/10, Snowball 1/10; F06: Calculate mean hydropathy (protein.mean_hydropathy); Nemotron 9/10, Snowball 1/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-37" data-scatter-point="scatter-easy-tools-37" tabindex="0" role="button" aria-label="C02: Calculate total GC (stats.gc_fraction); Nemotron 9/10, Snowball 3/10; G03: Delete a protein interval (construct.inframe_deletion); Nemotron 9/10, Snowball 3/10" pointer-events="all">
+    <path d="M 436.752 304.6356  C 438.862911 304.6356 440.887648 303.796926 442.380287 302.304287  C 443.872926 300.811648 444.7116 298.786911 444.7116 296.676  C 444.7116 294.565089 443.872926 292.540352 442.380287 291.047713  C 440.887648 289.555074 438.862911 288.7164 436.752 288.7164  C 434.641089 288.7164 432.616352 289.555074 431.123713 291.047713  C 429.631074 292.540352 428.7924 294.565089 428.7924 296.676  C 428.7924 298.786911 429.631074 300.811648 431.123713 302.304287  C 432.616352 303.796926 434.641089 304.6356 436.752 304.6356  L 436.752 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>C02: Calculate total GC (stats.gc_fraction); Nemotron 9/10, Snowball 3/10; G03: Delete a protein interval (construct.inframe_deletion); Nemotron 9/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-38" data-scatter-point="scatter-easy-tools-38" tabindex="0" role="button" aria-label="E03: Decode a pairing map (rna.dotbracket_to_pairs); Nemotron 9/10, Snowball 8/10" pointer-events="all">
+    <path d="M 436.752 123.7356  C 438.862911 123.7356 440.887648 122.896926 442.380287 121.404287  C 443.872926 119.911648 444.7116 117.886911 444.7116 115.776  C 444.7116 113.665089 443.872926 111.640352 442.380287 110.147713  C 440.887648 108.655074 438.862911 107.8164 436.752 107.8164  C 434.641089 107.8164 432.616352 108.655074 431.123713 110.147713  C 429.631074 111.640352 428.7924 113.665089 428.7924 115.776  C 428.7924 117.886911 429.631074 119.911648 431.123713 121.404287  C 432.616352 122.896926 434.641089 123.7356 436.752 123.7356  L 436.752 123.7356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E03: Decode a pairing map (rna.dotbracket_to_pairs); Nemotron 9/10, Snowball 8/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-39" data-scatter-point="scatter-easy-tools-39" tabindex="0" role="button" aria-label="E04: Apply specified RNA edits (rna.apply_edits); Nemotron 10/10, Snowball 0/10" pointer-events="all">
+    <path d="M 472.932 413.1756  C 475.042911 413.1756 477.067648 412.336926 478.560287 410.844287  C 480.052926 409.351648 480.8916 407.326911 480.8916 405.216  C 480.8916 403.105089 480.052926 401.080352 478.560287 399.587713  C 477.067648 398.095074 475.042911 397.2564 472.932 397.2564  C 470.821089 397.2564 468.796352 398.095074 467.303713 399.587713  C 465.811074 401.080352 464.9724 403.105089 464.9724 405.216  C 464.9724 407.326911 465.811074 409.351648 467.303713 410.844287  C 468.796352 412.336926 470.821089 413.1756 472.932 413.1756  L 472.932 413.1756  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E04: Apply specified RNA edits (rna.apply_edits); Nemotron 10/10, Snowball 0/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-40" data-scatter-point="scatter-easy-tools-40" tabindex="0" role="button" aria-label="A05: Apply a DNA edit script (variant.apply); Nemotron 10/10, Snowball 2/10; B03: Make the coding RNA (dna.transcribe); Nemotron 10/10, Snowball 2/10" pointer-events="all">
+    <path d="M 472.932 340.8156  C 475.042911 340.8156 477.067648 339.976926 478.560287 338.484287  C 480.052926 336.991648 480.8916 334.966911 480.8916 332.856  C 480.8916 330.745089 480.052926 328.720352 478.560287 327.227713  C 477.067648 325.735074 475.042911 324.8964 472.932 324.8964  C 470.821089 324.8964 468.796352 325.735074 467.303713 327.227713  C 465.811074 328.720352 464.9724 330.745089 464.9724 332.856  C 464.9724 334.966911 465.811074 336.991648 467.303713 338.484287  C 468.796352 339.976926 470.821089 340.8156 472.932 340.8156  L 472.932 340.8156  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>A05: Apply a DNA edit script (variant.apply); Nemotron 10/10, Snowball 2/10; B03: Make the coding RNA (dna.transcribe); Nemotron 10/10, Snowball 2/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-41" data-scatter-point="scatter-easy-tools-41" tabindex="0" role="button" aria-label="B05: Translate DNA to protein (cds.translate); Nemotron 10/10, Snowball 3/10" pointer-events="all">
+    <path d="M 472.932 304.6356  C 475.042911 304.6356 477.067648 303.796926 478.560287 302.304287  C 480.052926 300.811648 480.8916 298.786911 480.8916 296.676  C 480.8916 294.565089 480.052926 292.540352 478.560287 291.047713  C 477.067648 289.555074 475.042911 288.7164 472.932 288.7164  C 470.821089 288.7164 468.796352 289.555074 467.303713 291.047713  C 465.811074 292.540352 464.9724 294.565089 464.9724 296.676  C 464.9724 298.786911 465.811074 300.811648 467.303713 302.304287  C 468.796352 303.796926 470.821089 304.6356 472.932 304.6356  L 472.932 304.6356  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>B05: Translate DNA to protein (cds.translate); Nemotron 10/10, Snowball 3/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-42" data-scatter-point="scatter-easy-tools-42" tabindex="0" role="button" aria-label="E02: Check specified RNA pairs (rna.pair_compatibility); Nemotron 10/10, Snowball 4/10; G01: Build a tagged protein CDS (construct.tag_fusion); Nemotron 10/10, Snowball 4/10; G02: Join coding modules (construct.join_modules); Nemotron 10/10, Snowball 4/10" pointer-events="all">
+    <path d="M 472.932 268.4556  C 475.042911 268.4556 477.067648 267.616926 478.560287 266.124287  C 480.052926 264.631648 480.8916 262.606911 480.8916 260.496  C 480.8916 258.385089 480.052926 256.360352 478.560287 254.867713  C 477.067648 253.375074 475.042911 252.5364 472.932 252.5364  C 470.821089 252.5364 468.796352 253.375074 467.303713 254.867713  C 465.811074 256.360352 464.9724 258.385089 464.9724 260.496  C 464.9724 262.606911 465.811074 264.631648 467.303713 266.124287  C 468.796352 267.616926 470.821089 268.4556 472.932 268.4556  L 472.932 268.4556  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>E02: Check specified RNA pairs (rna.pair_compatibility); Nemotron 10/10, Snowball 4/10; G01: Build a tagged protein CDS (construct.tag_fusion); Nemotron 10/10, Snowball 4/10; G02: Join coding modules (construct.join_modules); Nemotron 10/10, Snowball 4/10</title></g>
+   <g id="comparison-easy-tools-scatter-easy-tools-43" data-scatter-point="scatter-easy-tools-43" tabindex="0" role="button" aria-label="B02: Validate a complete CDS (cds.validate); Nemotron 10/10, Snowball 6/10; B04: Reverse-complement a CDS (dna.reverse_complement); Nemotron 10/10, Snowball 6/10; C03: Locate GC-window violations (stats.gc_windows); Nemotron 10/10, Snowball 6/10; E01: Score a specified RNA structure (rna.structure_score); Nemotron 10/10, Snowball 6/10; F01: Locate N-glycosylation sequons (protein.nglyco_sequons); Nemotron 10/10, Snowball 6/10" pointer-events="all">
+    <path d="M 472.932 196.386784  C 475.120133 196.386784 477.218941 195.517429 478.766185 193.970185  C 480.313429 192.422941 481.182784 190.324133 481.182784 188.136  C 481.182784 185.947867 480.313429 183.849059 478.766185 182.301815  C 477.218941 180.754571 475.120133 179.885216 472.932 179.885216  C 470.743867 179.885216 468.645059 180.754571 467.097815 182.301815  C 465.550571 183.849059 464.681216 185.947867 464.681216 188.136  C 464.681216 190.324133 465.550571 192.422941 467.097815 193.970185  C 468.645059 195.517429 470.743867 196.386784 472.932 196.386784  L 472.932 196.386784  z " clip-path="url(#comparison-easy-tools-p5f57a32179)" style="fill: none; opacity: 0" pointer-events="all" />
+   <title>B02: Validate a complete CDS (cds.validate); Nemotron 10/10, Snowball 6/10; B04: Reverse-complement a CDS (dna.reverse_complement); Nemotron 10/10, Snowball 6/10; C03: Locate GC-window violations (stats.gc_windows); Nemotron 10/10, Snowball 6/10; E01: Score a specified RNA structure (rna.structure_score); Nemotron 10/10, Snowball 6/10; F01: Locate N-glycosylation sequons (protein.nglyco_sequons); Nemotron 10/10, Snowball 6/10</title></g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="comparison-easy-tools-p5f57a32179">
+   <rect x="96.66" y="28.944" width="390.744" height="390.744" />
+  </clipPath>
+ </defs>
+</svg>

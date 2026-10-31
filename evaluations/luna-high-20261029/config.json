@@ -1,0 +1,113 @@
+{
+  "run_id": "luna-high-full-20261029-01",
+  "planned_attempts": 3360,
+  "tasks": 84,
+  "instances_per_task_per_condition": 10,
+  "condition_order": [
+    "easy-no-tools",
+    "hard-no-tools",
+    "easy-tools",
+    "hard-tools"
+  ],
+  "model": "openai/gpt-6-luna",
+  "parameters_no_tools": {
+    "model": "openai/gpt-6-luna",
+    "max_tokens": 32768,
+    "seed": 20261029,
+    "reasoning": {
+      "effort": "high",
+      "exclude": false
+    },
+    "tool_choice": "none",
+    "tools": [],
+    "plugins": [
+      {
+        "id": "web",
+        "enabled": false
+      },
+      {
+        "id": "response-healing",
+        "enabled": false
+      },
+      {
+        "id": "file-parser",
+        "enabled": false
+      }
+    ],
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "ignore": [
+        "openai/flex",
+        "openai/fast"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    },
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "tools_condition": {
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "python",
+          "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+          "strict": true,
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Python code to execute."
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ],
+    "tool_choice": "auto"
+  },
+  "request_timeout_seconds": 300,
+  "aggregate_completion_token_budget": 32768,
+  "max_tool_calls": 8,
+  "concurrency": 10,
+  "dataset": {
+    "repo": "open-athena/cds-bench",
+    "revision": "b48333ec757cf66fd09d758d120c4f47a0256b5d",
+    "parquet_sha256": {
+      "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+      "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+    },
+    "spec_sha256": "c70f564c3bbf4c1585d9687c0d25f532243b297b1fb46350c7be04df734e8c22"
+  },
+  "execution_environment": {
+    "python": "3.12.9",
+    "numpy": "2.5.4",
+    "biopython": false,
+    "network": "macOS sandbox deny network*; not an OpenRouter request parameter",
+    "subprocesses": "denied",
+    "fresh_interpreter_per_call": true,
+    "tool_wall_seconds": 30,
+    "stdout_stderr_limit_each": 16384,
+    "files": "Runtime files and current example workdir only; workdir persists within example"
+  },
+  "sampling": "One fresh attempt per released prompt and condition; no pilot reuse, retries, or correctness feedback",
+  "source_commit": "4abc43871cff4c76096cfe0be38625b8704fd2e7",
+  "inference_source_sha256": {
+    "settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3",
+    "sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+    "client.py": "2acc6d11311affc8fcb018cdca62b32bf43f9f96e8516065c3e8819e9c7b2c68",
+    "trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+    "score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+    "run.py": "958a9cc02e4729cee7b5cd70b7bb6a9f29cd1633b941b998ab0240139bbd144e"
+  }
+}

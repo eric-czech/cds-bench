@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "attempts": 3260,
+  "planned_per_condition": {
+    "easy-no-tools": 840,
+    "hard-no-tools": 790,
+    "easy-tools": 840,
+    "hard-tools": 790
+  },
+  "source_hashes_verified": true,
+  "all_prompts_answers_and_scores_verified": true,
+  "no_pilot_response_reuse": true,
+  "scored_retries": 0,
+  "exported_predictions_verified": true,
+  "token_budget_verified": true,
+  "sandbox_verified": true,
+  "api_requests": 3514,
+  "provenance": {
+    "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+    "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3",
+    "url": "https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3"
+  },
+  "successful_python_executions": 240,
+  "python_program_failures": 14,
+  "rejected_calls": 0,
+  "native_protocol_failures": 8,
+  "transport_failures": 17,
+  "reasoning_replayed": true,
+  "tool_results_delivered": true,
+  "cost_usd": null,
+  "operational_resumes": [
+    {
+      "at": "2026-10-31T12:57:59.746627+00:00",
+      "completed_before_resume": 477,
+      "scored_retries": 0,
+      "settings_changed": false
+    }
+  ]
+}

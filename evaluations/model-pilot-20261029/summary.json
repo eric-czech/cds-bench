@@ -1,0 +1,3457 @@
+{
+  "models": {
+    "luna": "GPT-6 Luna (high)",
+    "deepseek": "DeepSeek V4.1 Flash 1017",
+    "beam": "Beam 1.0 501B A23B",
+    "nemotron": "Nemotron 3 Ultra 550B A55B",
+    "nemotron-lightning-coreweave": "Nemotron 3.5 Lightning (CoreWeave)",
+    "qwen-flash": "Qwen 3.7 Flash (high)",
+    "north-mini-code": "North Mini Code",
+    "gpt-oss-20b": "GPT-OSS 20B",
+    "nemotron-lightning": "Nemotron 3.5 Lightning (io.net)",
+    "snowball-v01": "Snowball v0.1",
+    "gemma": "Gemma 4 31B",
+    "snowball": "Snowball RC (2026.09.21)",
+    "liquid": "LFM 2.5 24B A2B",
+    "gemma-moe": "Gemma 4 26B A4B"
+  },
+  "model_mean_task_accuracy": {
+    "luna": 0.925,
+    "beam": 0.85,
+    "deepseek": 0.9222222222222222,
+    "nemotron": 0.6611111111111111,
+    "nemotron-lightning": 0.2611111111111111,
+    "nemotron-lightning-coreweave": 0.4,
+    "qwen-flash": 0.39166666666666666,
+    "north-mini-code": 0.36666666666666664,
+    "gpt-oss-20b": 0.325,
+    "gemma": 0.20833333333333334,
+    "gemma-moe": 0.07222222222222222,
+    "liquid": 0.09166666666666666,
+    "snowball": 0.14166666666666666,
+    "snowball-v01": 0.24166666666666667
+  },
+  "model_order_metric": "Descending mean task accuracy over completed attempts, weighting each available task equally; partial subsets remain non-comparable.",
+  "planned_per_condition": {
+    "easy-no-tools": 30,
+    "hard-no-tools": 28,
+    "easy-tools": 30,
+    "hard-tools": 28
+  },
+  "omitted_duplicate_hard_tasks": [
+    "coords.nt_to_codon",
+    "variant.frame_status"
+  ],
+  "task_ids": [
+    "cds.translate",
+    "variant.frame_status",
+    "stats.cai",
+    "protein.trypsin_digest",
+    "rna.max_pair_fold",
+    "design.expose_rna_window",
+    "library.design_codon",
+    "assay.min_probe_panel",
+    "joint.structure_and_codons",
+    "pipeline.edit_dependent_product",
+    "dna.reverse_complement",
+    "cds.validate",
+    "coords.nt_to_codon",
+    "variant.protein_effect",
+    "ambiguity.codon_set",
+    "stats.gc_windows",
+    "protein.monoisotopic_mass",
+    "protein.isoelectric_point",
+    "rna.apply_edits",
+    "rna.t1_digest",
+    "rna.guide_hits",
+    "design.gc_windows",
+    "design.remove_dna_motifs",
+    "design.pairing_repair",
+    "construct.minimal_aa_edit",
+    "construct.tev_products",
+    "assay.primer_pair",
+    "overlap.constrained_edit",
+    "pipeline.motif_to_dna",
+    "pipeline.tag_cleave_mass"
+  ],
+  "totals": {
+    "luna": {
+      "attempted": 116,
+      "correct": 107,
+      "wrong": 8,
+      "format": 0,
+      "timeout": 1,
+      "token_cap": 0,
+      "error": 0,
+      "accuracy": 0.9224137931034483,
+      "median_seconds": 8.589962687459774,
+      "total_example_seconds": 1854.476223123027,
+      "examples_using_python": 39,
+      "python_calls": 56,
+      "python_failures": 2,
+      "api_requests": 172,
+      "prompt_tokens": 141308,
+      "completion_tokens": 126097,
+      "reasoning_tokens": 108812,
+      "cost_usd": 0.07804735,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 4.876840020529926,
+      "format_diagnostic_additional_exact": 0
+    },
+    "beam": {
+      "attempted": 116,
+      "correct": 99,
+      "wrong": 6,
+      "format": 6,
+      "timeout": 0,
+      "token_cap": 5,
+      "error": 0,
+      "accuracy": 0.853448275862069,
+      "median_seconds": 6.91104670803179,
+      "total_example_seconds": 1391.174263838504,
+      "examples_using_python": 56,
+      "python_calls": 118,
+      "python_failures": 43,
+      "api_requests": 234,
+      "prompt_tokens": 449061,
+      "completion_tokens": 561409,
+      "reasoning_tokens": 434174,
+      "cost_usd": 0.6224102499999999,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 2.8773922704858705,
+      "format_diagnostic_additional_exact": 6
+    },
+    "deepseek": {
+      "attempted": 101,
+      "correct": 93,
+      "wrong": 4,
+      "format": 2,
+      "timeout": 0,
+      "token_cap": 2,
+      "error": 0,
+      "accuracy": 0.9207920792079208,
+      "median_seconds": 13.495820874988567,
+      "total_example_seconds": 2470.607841750898,
+      "examples_using_python": 31,
+      "python_calls": 36,
+      "python_failures": 0,
+      "api_requests": 137,
+      "prompt_tokens": 144481,
+      "completion_tokens": 318678,
+      "reasoning_tokens": 300951,
+      "cost_usd": 0.127304918,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 7.575669832993299,
+      "format_diagnostic_additional_exact": 2
+    },
+    "nemotron": {
+      "attempted": 100,
+      "correct": 69,
+      "wrong": 6,
+      "format": 12,
+      "timeout": 12,
+      "token_cap": 0,
+      "error": 1,
+      "accuracy": 0.69,
+      "median_seconds": 130.34766475053038,
+      "total_example_seconds": 14286.349617041007,
+      "examples_using_python": 39,
+      "python_calls": 81,
+      "python_failures": 4,
+      "api_requests": 181,
+      "prompt_tokens": 376343,
+      "completion_tokens": 373312,
+      "reasoning_tokens": 219060,
+      "cost_usd": 0,
+      "unreconciled_examples": 10,
+      "median_api_request_seconds": 33.48998295899946,
+      "format_diagnostic_additional_exact": 6
+    },
+    "nemotron-lightning": {
+      "attempted": 81,
+      "correct": 21,
+      "wrong": 6,
+      "format": 8,
+      "timeout": 25,
+      "token_cap": 2,
+      "error": 19,
+      "accuracy": 0.25925925925925924,
+      "median_seconds": 154.65897674998268,
+      "total_example_seconds": 13377.608854209888,
+      "examples_using_python": 21,
+      "python_calls": 64,
+      "python_failures": 5,
+      "api_requests": 145,
+      "prompt_tokens": 400794,
+      "completion_tokens": 345800,
+      "reasoning_tokens": 223517,
+      "cost_usd": 0.120870572,
+      "unreconciled_examples": 7,
+      "median_api_request_seconds": 11.591834833030589,
+      "format_diagnostic_additional_exact": 3
+    },
+    "nemotron-lightning-coreweave": {
+      "attempted": 116,
+      "correct": 45,
+      "wrong": 15,
+      "format": 21,
+      "timeout": 0,
+      "token_cap": 35,
+      "error": 0,
+      "accuracy": 0.3879310344827586,
+      "median_seconds": 45.889742249506526,
+      "total_example_seconds": 7476.309295159008,
+      "examples_using_python": 52,
+      "python_calls": 169,
+      "python_failures": 33,
+      "api_requests": 285,
+      "prompt_tokens": 1269898,
+      "completion_tokens": 1960096,
+      "reasoning_tokens": 1831775,
+      "cost_usd": 0.46212582,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 5.4203229999984615,
+      "format_diagnostic_additional_exact": 6
+    },
+    "qwen-flash": {
+      "attempted": 116,
+      "correct": 47,
+      "wrong": 11,
+      "format": 36,
+      "timeout": 6,
+      "token_cap": 16,
+      "error": 0,
+      "accuracy": 0.4051724137931034,
+      "median_seconds": 142.9588445624977,
+      "total_example_seconds": 17455.07343182742,
+      "examples_using_python": 47,
+      "python_calls": 109,
+      "python_failures": 7,
+      "api_requests": 225,
+      "prompt_tokens": 897940,
+      "completion_tokens": 1727740,
+      "reasoning_tokens": 1615815,
+      "cost_usd": 0.300594917,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 29.73053920798702,
+      "format_diagnostic_additional_exact": 19
+    },
+    "north-mini-code": {
+      "attempted": 33,
+      "correct": 13,
+      "wrong": 2,
+      "format": 4,
+      "timeout": 13,
+      "token_cap": 1,
+      "error": 0,
+      "accuracy": 0.3939393939393939,
+      "median_seconds": 159.43700149998767,
+      "total_example_seconds": 6606.302485289925,
+      "examples_using_python": 0,
+      "python_calls": 0,
+      "python_failures": 0,
+      "api_requests": 33,
+      "prompt_tokens": 9539,
+      "completion_tokens": 227141,
+      "reasoning_tokens": 180643,
+      "cost_usd": 0,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 157.99558391596656,
+      "format_diagnostic_additional_exact": 3
+    },
+    "gpt-oss-20b": {
+      "attempted": 116,
+      "correct": 37,
+      "wrong": 14,
+      "format": 22,
+      "timeout": 0,
+      "token_cap": 19,
+      "error": 24,
+      "accuracy": 0.31896551724137934,
+      "median_seconds": 26.721269333007513,
+      "total_example_seconds": 3812.3137259541545,
+      "examples_using_python": 46,
+      "python_calls": 204,
+      "python_failures": 61,
+      "api_requests": 315,
+      "prompt_tokens": 1602460,
+      "completion_tokens": 1601046,
+      "reasoning_tokens": 1082227,
+      "cost_usd": 0.3523291,
+      "unreconciled_examples": 19,
+      "median_api_request_seconds": 2.6018312909873202,
+      "format_diagnostic_additional_exact": 6
+    },
+    "gemma": {
+      "attempted": 24,
+      "correct": 5,
+      "wrong": 0,
+      "format": 6,
+      "timeout": 13,
+      "token_cap": 0,
+      "error": 0,
+      "accuracy": 0.20833333333333334,
+      "median_seconds": 300.0093638540129,
+      "total_example_seconds": 5774.9102319150115,
+      "examples_using_python": 0,
+      "python_calls": 0,
+      "python_failures": 0,
+      "api_requests": 24,
+      "prompt_tokens": 7413,
+      "completion_tokens": 37283,
+      "reasoning_tokens": 31055,
+      "cost_usd": 0.04795316,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 300.00666212450597,
+      "format_diagnostic_additional_exact": 6
+    },
+    "gemma-moe": {
+      "attempted": 100,
+      "correct": 8,
+      "wrong": 0,
+      "format": 50,
+      "timeout": 34,
+      "token_cap": 6,
+      "error": 2,
+      "accuracy": 0.08,
+      "median_seconds": 220.21799827099312,
+      "total_example_seconds": 21438.81125908706,
+      "examples_using_python": 25,
+      "python_calls": 71,
+      "python_failures": 2,
+      "api_requests": 171,
+      "prompt_tokens": 625680,
+      "completion_tokens": 891176,
+      "reasoning_tokens": 824696,
+      "cost_usd": 0.3571136705,
+      "unreconciled_examples": 1,
+      "median_api_request_seconds": 83.1221450829762,
+      "format_diagnostic_additional_exact": 40
+    },
+    "liquid": {
+      "attempted": 116,
+      "correct": 9,
+      "wrong": 3,
+      "format": 5,
+      "timeout": 0,
+      "token_cap": 99,
+      "error": 0,
+      "accuracy": 0.07758620689655173,
+      "median_seconds": 20.776403896015836,
+      "total_example_seconds": 2331.066280461964,
+      "examples_using_python": 24,
+      "python_calls": 55,
+      "python_failures": 8,
+      "api_requests": 171,
+      "prompt_tokens": 407061,
+      "completion_tokens": 911322,
+      "reasoning_tokens": 643923,
+      "cost_usd": 0.6514778,
+      "unreconciled_examples": 0,
+      "median_api_request_seconds": 16.802097457984928,
+      "format_diagnostic_additional_exact": 2
+    },
+    "snowball": {
+      "attempted": 116,
+      "correct": 16,
+      "wrong": 3,
+      "format": 26,
+      "timeout": 0,
+      "token_cap": 61,
+      "error": 10,
+      "accuracy": 0.13793103448275862,
+      "median_seconds": 154.75088972898084,
+      "total_example_seconds": 15552.038951375056,
+      "examples_using_python": 52,
+      "python_calls": 243,
+      "python_failures": 48,
+      "api_requests": 352,
+      "prompt_tokens": 1695714,
+      "completion_tokens": 1369036,
+      "reasoning_tokens": null,
+      "cost_usd": null,
+      "unreconciled_examples": 116,
+      "median_api_request_seconds": 13.849328645475907,
+      "format_diagnostic_additional_exact": 11
+    },
+    "snowball-v01": {
+      "attempted": 116,
+      "correct": 27,
+      "wrong": 17,
+      "format": 60,
+      "timeout": 0,
+      "token_cap": 11,
+      "error": 1,
+      "accuracy": 0.23275862068965517,
+      "median_seconds": 110.26830508350395,
+      "total_example_seconds": 15618.763222877751,
+      "examples_using_python": 5,
+      "python_calls": 7,
+      "python_failures": 1,
+      "api_requests": 123,
+      "prompt_tokens": 117350,
+      "completion_tokens": 1549450,
+      "reasoning_tokens": null,
+      "cost_usd": null,
+      "unreconciled_examples": 116,
+      "median_api_request_seconds": 99.0920486249961,
+      "format_diagnostic_additional_exact": 5
+    }
+  },
+  "conditions": {
+    "luna": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 27,
+        "wrong": 3,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.9,
+        "median_seconds": 8.240968020516448,
+        "total_example_seconds": 681.5256718330784,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 19087,
+        "completion_tokens": 58905,
+        "reasoning_tokens": 57128,
+        "cost_usd": 0.031414175,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 25,
+        "wrong": 2,
+        "format": 0,
+        "timeout": 1,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.8928571428571429,
+        "median_seconds": 9.319336000015028,
+        "total_example_seconds": 635.716962541861,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 9635,
+        "completion_tokens": 29886,
+        "reasoning_tokens": 28383,
+        "cost_usd": 0.0169248,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 29,
+        "wrong": 1,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.9666666666666667,
+        "median_seconds": 7.0792988744797185,
+        "total_example_seconds": 265.345291249163,
+        "examples_using_python": 18,
+        "python_calls": 26,
+        "python_failures": 1,
+        "api_requests": 56,
+        "prompt_tokens": 62563,
+        "completion_tokens": 17924,
+        "reasoning_tokens": 11018,
+        "cost_usd": 0.014923249999999999,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 26,
+        "wrong": 2,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.9285714285714286,
+        "median_seconds": 8.454610000015236,
+        "total_example_seconds": 271.88829749892466,
+        "examples_using_python": 21,
+        "python_calls": 30,
+        "python_failures": 1,
+        "api_requests": 58,
+        "prompt_tokens": 50023,
+        "completion_tokens": 19382,
+        "reasoning_tokens": 12283,
+        "cost_usd": 0.014785125,
+        "unreconciled_examples": 0
+      }
+    },
+    "beam": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 25,
+        "wrong": 1,
+        "format": 3,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.8333333333333334,
+        "median_seconds": 6.41198858350981,
+        "total_example_seconds": 377.09205121104605,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 20386,
+        "completion_tokens": 155772,
+        "reasoning_tokens": 153294,
+        "cost_usd": 0.1608685,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 23,
+        "wrong": 3,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.8214285714285714,
+        "median_seconds": 7.370573729014723,
+        "total_example_seconds": 351.922651001194,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 11164,
+        "completion_tokens": 153308,
+        "reasoning_tokens": 150796,
+        "cost_usd": 0.15580460000000002,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 27,
+        "wrong": 1,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.9,
+        "median_seconds": 5.900080895982683,
+        "total_example_seconds": 264.60399371018866,
+        "examples_using_python": 30,
+        "python_calls": 53,
+        "python_failures": 22,
+        "api_requests": 83,
+        "prompt_tokens": 181279,
+        "completion_tokens": 103524,
+        "reasoning_tokens": 71427,
+        "cost_usd": 0.12764695,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 24,
+        "wrong": 1,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 2,
+        "error": 0,
+        "accuracy": 0.8571428571428571,
+        "median_seconds": 7.631265292002354,
+        "total_example_seconds": 397.55556791607523,
+        "examples_using_python": 26,
+        "python_calls": 65,
+        "python_failures": 21,
+        "api_requests": 93,
+        "prompt_tokens": 236232,
+        "completion_tokens": 148805,
+        "reasoning_tokens": 58657,
+        "cost_usd": 0.1780902,
+        "unreconciled_examples": 0
+      }
+    },
+    "deepseek": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 29,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.9666666666666667,
+        "median_seconds": 15.624934937484795,
+        "total_example_seconds": 891.137520207034,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 19547,
+        "completion_tokens": 136960,
+        "reasoning_tokens": 135847,
+        "cost_usd": 0.053315748,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 27,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.9642857142857143,
+        "median_seconds": 21.012979374994757,
+        "total_example_seconds": 1016.9139476669952,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10680,
+        "completion_tokens": 134512,
+        "reasoning_tokens": 133672,
+        "cost_usd": 0.051926576,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 26,
+        "wrong": 2,
+        "format": 2,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.8666666666666667,
+        "median_seconds": 8.108628395508276,
+        "total_example_seconds": 328.69712362485006,
+        "examples_using_python": 24,
+        "python_calls": 28,
+        "python_failures": 0,
+        "api_requests": 58,
+        "prompt_tokens": 92465,
+        "completion_tokens": 33527,
+        "reasoning_tokens": 21002,
+        "cost_usd": 0.016049141,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 13,
+        "correct": 11,
+        "wrong": 2,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.8461538461538461,
+        "median_seconds": 10.431483292020857,
+        "total_example_seconds": 233.85925025201868,
+        "examples_using_python": 7,
+        "python_calls": 8,
+        "python_failures": 0,
+        "api_requests": 21,
+        "prompt_tokens": 21789,
+        "completion_tokens": 13679,
+        "reasoning_tokens": 10430,
+        "cost_usd": 0.006013453,
+        "unreconciled_examples": 0
+      }
+    },
+    "nemotron": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 18,
+        "wrong": 3,
+        "format": 3,
+        "timeout": 6,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.6,
+        "median_seconds": 135.2274945625395,
+        "total_example_seconds": 4678.375949000067,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 15598,
+        "completion_tokens": 118455,
+        "reasoning_tokens": 74465,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 18,
+        "wrong": 3,
+        "format": 1,
+        "timeout": 6,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.6428571428571429,
+        "median_seconds": 157.22011152099003,
+        "total_example_seconds": 4819.756283085037,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 7336,
+        "completion_tokens": 120723,
+        "reasoning_tokens": 80258,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 22,
+        "wrong": 0,
+        "format": 7,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 1,
+        "accuracy": 0.7333333333333333,
+        "median_seconds": 102.37909766699886,
+        "total_example_seconds": 3351.3321519580204,
+        "examples_using_python": 27,
+        "python_calls": 56,
+        "python_failures": 2,
+        "api_requests": 86,
+        "prompt_tokens": 250237,
+        "completion_tokens": 91572,
+        "reasoning_tokens": 43189,
+        "cost_usd": 0,
+        "unreconciled_examples": 1
+      },
+      "hard-tools": {
+        "attempted": 12,
+        "correct": 11,
+        "wrong": 0,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.9166666666666666,
+        "median_seconds": 142.84038449949003,
+        "total_example_seconds": 1436.8852329978836,
+        "examples_using_python": 12,
+        "python_calls": 25,
+        "python_failures": 2,
+        "api_requests": 37,
+        "prompt_tokens": 103172,
+        "completion_tokens": 42562,
+        "reasoning_tokens": 21148,
+        "cost_usd": 0,
+        "unreconciled_examples": 9
+      }
+    },
+    "nemotron-lightning": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 2,
+        "format": 0,
+        "timeout": 15,
+        "token_cap": 0,
+        "error": 6,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 279.4280790000048,
+        "total_example_seconds": 6738.568617209035,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 5535,
+        "completion_tokens": 97140,
+        "reasoning_tokens": 64159,
+        "cost_usd": 0.048873762,
+        "unreconciled_examples": 1
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 0,
+        "wrong": 3,
+        "format": 1,
+        "timeout": 10,
+        "token_cap": 2,
+        "error": 12,
+        "accuracy": 0.0,
+        "median_seconds": 204.92680270850542,
+        "total_example_seconds": 5236.595298915869,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 2298,
+        "completion_tokens": 133634,
+        "reasoning_tokens": 88758,
+        "cost_usd": 0.044391190999999997,
+        "unreconciled_examples": 6
+      },
+      "easy-tools": {
+        "attempted": 23,
+        "correct": 14,
+        "wrong": 1,
+        "format": 7,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 1,
+        "accuracy": 0.6086956521739131,
+        "median_seconds": 49.15191387501545,
+        "total_example_seconds": 1402.4449380849837,
+        "examples_using_python": 21,
+        "python_calls": 64,
+        "python_failures": 5,
+        "api_requests": 87,
+        "prompt_tokens": 392961,
+        "completion_tokens": 115026,
+        "reasoning_tokens": 70600,
+        "cost_usd": 0.027605619,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      }
+    },
+    "nemotron-lightning-coreweave": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 3,
+        "format": 5,
+        "timeout": 0,
+        "token_cap": 15,
+        "error": 0,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 104.45586445846129,
+        "total_example_seconds": 2604.8930619579623,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 20246,
+        "completion_tokens": 724934,
+        "reasoning_tokens": 719710,
+        "cost_usd": 0.14640402,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 4,
+        "wrong": 3,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 20,
+        "error": 0,
+        "accuracy": 0.14285714285714285,
+        "median_seconds": 122.14991577048204,
+        "total_example_seconds": 3276.7961614129017,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10383,
+        "completion_tokens": 807260,
+        "reasoning_tokens": 791051,
+        "cost_usd": 0.16217881,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 19,
+        "wrong": 4,
+        "format": 7,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.6333333333333333,
+        "median_seconds": 19.95135333298822,
+        "total_example_seconds": 740.678612039017,
+        "examples_using_python": 24,
+        "python_calls": 64,
+        "python_failures": 8,
+        "api_requests": 94,
+        "prompt_tokens": 435827,
+        "completion_tokens": 197923,
+        "reasoning_tokens": 163039,
+        "cost_usd": 0.06429505,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 15,
+        "wrong": 5,
+        "format": 8,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.5357142857142857,
+        "median_seconds": 30.00427049997961,
+        "total_example_seconds": 853.9414597491268,
+        "examples_using_python": 28,
+        "python_calls": 105,
+        "python_failures": 25,
+        "api_requests": 133,
+        "prompt_tokens": 803442,
+        "completion_tokens": 229979,
+        "reasoning_tokens": 157975,
+        "cost_usd": 0.08924794,
+        "unreconciled_examples": 0
+      }
+    },
+    "qwen-flash": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 9,
+        "wrong": 2,
+        "format": 8,
+        "timeout": 3,
+        "token_cap": 8,
+        "error": 0,
+        "accuracy": 0.3,
+        "median_seconds": 229.52044793698587,
+        "total_example_seconds": 6413.939928787877,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 18045,
+        "completion_tokens": 631049,
+        "reasoning_tokens": 622157,
+        "cost_usd": 0.104544951,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 9,
+        "wrong": 4,
+        "format": 7,
+        "timeout": 1,
+        "token_cap": 7,
+        "error": 0,
+        "accuracy": 0.32142857142857145,
+        "median_seconds": 227.93144112449954,
+        "total_example_seconds": 5793.494313081726,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10365,
+        "completion_tokens": 624340,
+        "reasoning_tokens": 614453,
+        "cost_usd": 0.09746134299999999,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 16,
+        "wrong": 1,
+        "format": 12,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.5333333333333333,
+        "median_seconds": 53.448585021018516,
+        "total_example_seconds": 2638.365743417933,
+        "examples_using_python": 25,
+        "python_calls": 54,
+        "python_failures": 4,
+        "api_requests": 84,
+        "prompt_tokens": 475145,
+        "completion_tokens": 272242,
+        "reasoning_tokens": 224880,
+        "cost_usd": 0.051825249999999996,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 13,
+        "wrong": 4,
+        "format": 9,
+        "timeout": 2,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.4642857142857143,
+        "median_seconds": 66.77327054200578,
+        "total_example_seconds": 2609.2734465398826,
+        "examples_using_python": 22,
+        "python_calls": 55,
+        "python_failures": 3,
+        "api_requests": 83,
+        "prompt_tokens": 394385,
+        "completion_tokens": 200109,
+        "reasoning_tokens": 154325,
+        "cost_usd": 0.046763373000000004,
+        "unreconciled_examples": 0
+      }
+    },
+    "north-mini-code": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 11,
+        "wrong": 1,
+        "format": 4,
+        "timeout": 13,
+        "token_cap": 1,
+        "error": 0,
+        "accuracy": 0.36666666666666664,
+        "median_seconds": 217.51266612499603,
+        "total_example_seconds": 6207.404305373901,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 8600,
+        "completion_tokens": 197569,
+        "reasoning_tokens": 156562,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 3,
+        "correct": 2,
+        "wrong": 1,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.6666666666666666,
+        "median_seconds": 131.86379750003107,
+        "total_example_seconds": 398.8981799160247,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 3,
+        "prompt_tokens": 939,
+        "completion_tokens": 29572,
+        "reasoning_tokens": 24081,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      }
+    },
+    "gpt-oss-20b": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 15,
+        "wrong": 3,
+        "format": 3,
+        "timeout": 0,
+        "token_cap": 9,
+        "error": 0,
+        "accuracy": 0.5,
+        "median_seconds": 31.576191749511054,
+        "total_example_seconds": 1140.881331413926,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 20917,
+        "completion_tokens": 525410,
+        "reasoning_tokens": 375249,
+        "cost_usd": 0.08027569,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 11,
+        "wrong": 4,
+        "format": 4,
+        "timeout": 0,
+        "token_cap": 9,
+        "error": 0,
+        "accuracy": 0.39285714285714285,
+        "median_seconds": 44.08260902098846,
+        "total_example_seconds": 1276.0176165010198,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 11660,
+        "completion_tokens": 575023,
+        "reasoning_tokens": 418782,
+        "cost_usd": 0.08706965,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 3,
+        "format": 5,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 15,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 12.342958208493656,
+        "total_example_seconds": 513.6129049991723,
+        "examples_using_python": 23,
+        "python_calls": 102,
+        "python_failures": 33,
+        "api_requests": 128,
+        "prompt_tokens": 662197,
+        "completion_tokens": 193178,
+        "reasoning_tokens": 109553,
+        "cost_usd": 0.07533049,
+        "unreconciled_examples": 11
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 4,
+        "wrong": 4,
+        "format": 10,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 9,
+        "accuracy": 0.14285714285714285,
+        "median_seconds": 26.939117541507585,
+        "total_example_seconds": 881.8018730400363,
+        "examples_using_python": 23,
+        "python_calls": 102,
+        "python_failures": 28,
+        "api_requests": 129,
+        "prompt_tokens": 907686,
+        "completion_tokens": 307435,
+        "reasoning_tokens": 178643,
+        "cost_usd": 0.10965327,
+        "unreconciled_examples": 8
+      }
+    },
+    "gemma": {
+      "easy-no-tools": {
+        "attempted": 24,
+        "correct": 5,
+        "wrong": 0,
+        "format": 6,
+        "timeout": 13,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.20833333333333334,
+        "median_seconds": 300.0093638540129,
+        "total_example_seconds": 5774.9102319150115,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 24,
+        "prompt_tokens": 7413,
+        "completion_tokens": 37283,
+        "reasoning_tokens": 31055,
+        "cost_usd": 0.04795316,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      }
+    },
+    "gemma-moe": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 0,
+        "wrong": 0,
+        "format": 21,
+        "timeout": 9,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.0,
+        "median_seconds": 168.88517693750327,
+        "total_example_seconds": 5585.322693668073,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 14024,
+        "completion_tokens": 242614,
+        "reasoning_tokens": 227864,
+        "cost_usd": 0.092081333,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 3,
+        "wrong": 0,
+        "format": 10,
+        "timeout": 15,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": 0.10714285714285714,
+        "median_seconds": 300.02225043749786,
+        "total_example_seconds": 6353.165353460994,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 4921,
+        "completion_tokens": 130798,
+        "reasoning_tokens": 123324,
+        "cost_usd": 0.069731452,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 3,
+        "wrong": 0,
+        "format": 14,
+        "timeout": 6,
+        "token_cap": 6,
+        "error": 1,
+        "accuracy": 0.1,
+        "median_seconds": 184.86366418752004,
+        "total_example_seconds": 6501.626582872006,
+        "examples_using_python": 19,
+        "python_calls": 52,
+        "python_failures": 1,
+        "api_requests": 82,
+        "prompt_tokens": 456587,
+        "completion_tokens": 396462,
+        "reasoning_tokens": 364609,
+        "cost_usd": 0.1463028725,
+        "unreconciled_examples": 1
+      },
+      "hard-tools": {
+        "attempted": 12,
+        "correct": 2,
+        "wrong": 0,
+        "format": 5,
+        "timeout": 4,
+        "token_cap": 0,
+        "error": 1,
+        "accuracy": 0.16666666666666666,
+        "median_seconds": 239.25145554202027,
+        "total_example_seconds": 2998.6966290859855,
+        "examples_using_python": 6,
+        "python_calls": 19,
+        "python_failures": 1,
+        "api_requests": 31,
+        "prompt_tokens": 150148,
+        "completion_tokens": 121302,
+        "reasoning_tokens": 108899,
+        "cost_usd": 0.048998013,
+        "unreconciled_examples": 0
+      }
+    },
+    "liquid": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 3,
+        "wrong": 0,
+        "format": 2,
+        "timeout": 0,
+        "token_cap": 25,
+        "error": 0,
+        "accuracy": 0.1,
+        "median_seconds": 20.483433791494463,
+        "total_example_seconds": 601.051440500014,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 19232,
+        "completion_tokens": 235941,
+        "reasoning_tokens": 169791,
+        "cost_usd": 0.1661203,
+        "unreconciled_examples": 0
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 1,
+        "wrong": 1,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 25,
+        "error": 0,
+        "accuracy": 0.03571428571428571,
+        "median_seconds": 20.76099031197373,
+        "total_example_seconds": 582.2538245840115,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10256,
+        "completion_tokens": 224748,
+        "reasoning_tokens": 162340,
+        "cost_usd": 0.1578364,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 3,
+        "wrong": 2,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 24,
+        "error": 0,
+        "accuracy": 0.1,
+        "median_seconds": 20.700958916480886,
+        "total_example_seconds": 586.8896340009524,
+        "examples_using_python": 15,
+        "python_calls": 35,
+        "python_failures": 4,
+        "api_requests": 65,
+        "prompt_tokens": 245851,
+        "completion_tokens": 226428,
+        "reasoning_tokens": 154728,
+        "cost_usd": 0.1661948,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 2,
+        "wrong": 0,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 25,
+        "error": 0,
+        "accuracy": 0.07142857142857142,
+        "median_seconds": 21.2085193124949,
+        "total_example_seconds": 560.8713813769864,
+        "examples_using_python": 9,
+        "python_calls": 20,
+        "python_failures": 4,
+        "api_requests": 48,
+        "prompt_tokens": 131722,
+        "completion_tokens": 224205,
+        "reasoning_tokens": 157064,
+        "cost_usd": 0.1613263,
+        "unreconciled_examples": 0
+      }
+    },
+    "snowball": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 1,
+        "wrong": 1,
+        "format": 2,
+        "timeout": 0,
+        "token_cap": 26,
+        "error": 0,
+        "accuracy": 0.03333333333333333,
+        "median_seconds": 190.45694343702053,
+        "total_example_seconds": 5088.91355508304,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 19281,
+        "completion_tokens": 457465,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 30
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 3,
+        "wrong": 0,
+        "format": 1,
+        "timeout": 0,
+        "token_cap": 24,
+        "error": 0,
+        "accuracy": 0.10714285714285714,
+        "median_seconds": 193.13679583300836,
+        "total_example_seconds": 4820.701838706969,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10364,
+        "completion_tokens": 426222,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 28
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 1,
+        "format": 13,
+        "timeout": 0,
+        "token_cap": 6,
+        "error": 3,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 79.16226168701542,
+        "total_example_seconds": 2796.4579069591127,
+        "examples_using_python": 27,
+        "python_calls": 122,
+        "python_failures": 19,
+        "api_requests": 149,
+        "prompt_tokens": 899944,
+        "completion_tokens": 242132,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 30
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 5,
+        "wrong": 1,
+        "format": 10,
+        "timeout": 0,
+        "token_cap": 5,
+        "error": 7,
+        "accuracy": 0.17857142857142858,
+        "median_seconds": 97.35433747898787,
+        "total_example_seconds": 2845.9656506259344,
+        "examples_using_python": 25,
+        "python_calls": 121,
+        "python_failures": 29,
+        "api_requests": 145,
+        "prompt_tokens": 766125,
+        "completion_tokens": 243217,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 28
+      }
+    },
+    "snowball-v01": {
+      "easy-no-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 3,
+        "format": 16,
+        "timeout": 0,
+        "token_cap": 4,
+        "error": 0,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 104.97832768748049,
+        "total_example_seconds": 3898.643654457992,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 30,
+        "prompt_tokens": 19281,
+        "completion_tokens": 392805,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 30
+      },
+      "hard-no-tools": {
+        "attempted": 28,
+        "correct": 5,
+        "wrong": 5,
+        "format": 15,
+        "timeout": 0,
+        "token_cap": 3,
+        "error": 0,
+        "accuracy": 0.17857142857142858,
+        "median_seconds": 113.01693572950899,
+        "total_example_seconds": 3973.1508498739568,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 28,
+        "prompt_tokens": 10364,
+        "completion_tokens": 400180,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 28
+      },
+      "easy-tools": {
+        "attempted": 30,
+        "correct": 7,
+        "wrong": 5,
+        "format": 16,
+        "timeout": 0,
+        "token_cap": 1,
+        "error": 1,
+        "accuracy": 0.23333333333333334,
+        "median_seconds": 109.70219716647989,
+        "total_example_seconds": 3959.44824020972,
+        "examples_using_python": 3,
+        "python_calls": 3,
+        "python_failures": 0,
+        "api_requests": 33,
+        "prompt_tokens": 45660,
+        "completion_tokens": 380311,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 30
+      },
+      "hard-tools": {
+        "attempted": 28,
+        "correct": 8,
+        "wrong": 4,
+        "format": 13,
+        "timeout": 0,
+        "token_cap": 3,
+        "error": 0,
+        "accuracy": 0.2857142857142857,
+        "median_seconds": 99.06264706299407,
+        "total_example_seconds": 3787.5204783360823,
+        "examples_using_python": 2,
+        "python_calls": 4,
+        "python_failures": 1,
+        "api_requests": 32,
+        "prompt_tokens": 42045,
+        "completion_tokens": 376154,
+        "reasoning_tokens": null,
+        "cost_usd": null,
+        "unreconciled_examples": 28
+      }
+    }
+  },
+  "configurations": {
+    "luna": {
+      "name": "GPT-6 Luna (high)",
+      "model": "openai/gpt-6-luna",
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "openai/gpt-6-luna",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "openai"
+          ],
+          "ignore": [
+            "openai/flex",
+            "openai/fast"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": null,
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+      },
+      "minimum_request_spacing_seconds": 0,
+      "state": "prior pilot",
+      "stop_reason": null,
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 176,
+        "billing_records": 176,
+        "total_cost_usd": 0.07849975,
+        "prompt_tokens": 143635,
+        "completion_tokens": 128573,
+        "reasoning_tokens": 111055,
+        "providers": [
+          "OpenAI"
+        ],
+        "models": [
+          "openai/gpt-6-luna-20260922"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete": true
+      }
+    },
+    "beam": {
+      "name": "Beam 1.0 501B A23B",
+      "model": "reflection/beam-1.0-501b-a23b",
+      "provider": {
+        "only": [
+          "nebius/fp4"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp4"
+        ]
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "reflection/beam-1.0-501b-a23b",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "nebius/fp4"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "fp4"
+          ]
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": null,
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+      },
+      "minimum_request_spacing_seconds": 0,
+      "state": "complete",
+      "stop_reason": null,
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 244,
+        "billing_records": 244,
+        "total_cost_usd": 0.62784525,
+        "providers": [
+          "Nebius"
+        ],
+        "models": [
+          "reflection/beam-1.0-501b-a23b-20261016"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "deepseek": {
+      "name": "DeepSeek V4.1 Flash 1017",
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "provider": {
+        "only": [
+          "morph/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp8"
+        ]
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "morph/fp8"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "fp8"
+          ]
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": null,
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+      },
+      "minimum_request_spacing_seconds": 0,
+      "state": "stopped",
+      "stop_reason": "Replaced by Beam pilot",
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 14,
+      "source_billing_summary": {
+        "generations": 153,
+        "billing_records": 153,
+        "total_cost_usd": 0.131651301,
+        "providers": [
+          "Morph"
+        ],
+        "models": [
+          "deepseek/deepseek-v4.1-flash-20261017"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 9
+      }
+    },
+    "nemotron": {
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider": {
+        "only": [
+          "nvidia"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "nvidia"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "minimum_request_spacing_seconds": 4.0,
+      "state": "stopped",
+      "stop_reason": "Stopped at user request because the free endpoint was too slow.",
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 10,
+      "source_billing_summary": {
+        "generations": 195,
+        "billing_records": 177,
+        "total_cost_usd": 0,
+        "providers": [
+          "Nvidia"
+        ],
+        "models": [
+          "nvidia/nemotron-3-ultra-550b-a55b-20260604:free"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": false,
+        "responses_without_generation_id": 1
+      }
+    },
+    "nemotron-lightning": {
+      "name": "Nemotron 3.5 Lightning (io.net)",
+      "model": "nvidia/nemotron-3.5-lightning",
+      "provider": {
+        "only": [
+          "io-net"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "nvidia/nemotron-3.5-lightning",
+        "max_tokens": 32768,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "io-net"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": null,
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "stopped",
+      "stop_reason": "Stopped at user request because io.net was too slow; switching to a separate CoreWeave run. Completed results retained; interrupted requests excluded from scoring and timing.",
+      "settings_difference": "io.net does not advertise seed, so it is omitted. Model metadata does not advertise effort selection; reasoning is enabled. The original JSON Python function, sandbox, prompts and scoring are unchanged. The streaming collector detects nested provider errors and preserves raw reasoning strings when reasoning_details is absent.",
+      "scheduling_continuation": {
+        "initial_completed": 56,
+        "concurrency": 3,
+        "minimum_request_spacing_seconds": 5.0,
+        "reason": "Five consecutive provider errors tripped the initial circuit breaker. Only unissued cases continue; all 56 initial results remain unchanged."
+      },
+      "interrupted_original_attempts": 3,
+      "source_billing_summary": {
+        "generations": 139,
+        "billing_records": 139,
+        "total_cost_usd": 0.121457659,
+        "providers": [
+          "Io Net"
+        ],
+        "models": [
+          "nvidia/nemotron-3.5-lightning-20260807"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 7
+      }
+    },
+    "nemotron-lightning-coreweave": {
+      "name": "Nemotron 3.5 Lightning (CoreWeave)",
+      "model": "nvidia/nemotron-3.5-lightning",
+      "provider": {
+        "only": [
+          "coreweave/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "nvidia/nemotron-3.5-lightning",
+        "max_tokens": 32768,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "coreweave/bf16"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": null,
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "complete",
+      "stop_reason": null,
+      "settings_difference": "Seed is omitted to match the io.net run. Model metadata does not advertise effort selection; reasoning is enabled. CoreWeave BF16 only, no fallback. The original JSON Python function, sandbox, prompts and scoring are unchanged. The streaming collector detects nested provider errors and preserves raw reasoning strings when reasoning_details is absent.",
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 285,
+        "billing_records": 285,
+        "total_cost_usd": 0.46212582,
+        "providers": [
+          "CoreWeave"
+        ],
+        "models": [
+          "nvidia/nemotron-3.5-lightning-20260807"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "qwen-flash": {
+      "name": "Qwen 3.7 Flash (high)",
+      "model": "qwen/qwen3.7-flash",
+      "provider": {
+        "only": [
+          "alibaba/us-east-1"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "qwen/qwen3.7-flash",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "alibaba/us-east-1"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "complete",
+      "stop_reason": null,
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 225,
+        "billing_records": 225,
+        "total_cost_usd": 0.300594917,
+        "providers": [
+          "Alibaba"
+        ],
+        "models": [
+          "qwen/qwen3.7-flash-20260727"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "north-mini-code": {
+      "name": "North Mini Code",
+      "model": "cohere/north-mini-code:free",
+      "provider": {
+        "only": [
+          "cohere"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "cohere/north-mini-code:free",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "cohere"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": null,
+      "minimum_request_spacing_seconds": 4.0,
+      "state": "stopped",
+      "stop_reason": "Stopped at the user’s request because it was too slow. Completed results retained; interrupted requests excluded from scoring and timing.",
+      "settings_difference": "Bedrock does not advertise seed, so it is omitted. North uses reasoning.enabled because no effort-level selector is advertised.",
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 10,
+      "source_billing_summary": {
+        "generations": 33,
+        "billing_records": 33,
+        "total_cost_usd": 0,
+        "providers": [
+          "Cohere"
+        ],
+        "models": [
+          "cohere/north-mini-code-20260617:free"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "gpt-oss-20b": {
+      "name": "GPT-OSS 20B",
+      "model": "openai/gpt-oss-20b",
+      "provider": {
+        "only": [
+          "amazon-bedrock"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "openai/gpt-oss-20b",
+        "max_tokens": 32768,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "amazon-bedrock"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": null,
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "complete",
+      "stop_reason": null,
+      "settings_difference": "Bedrock does not advertise seed, so it is omitted. North uses reasoning.enabled because no effort-level selector is advertised.",
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 296,
+        "billing_records": 296,
+        "total_cost_usd": 0.3523291,
+        "providers": [
+          "Amazon Bedrock"
+        ],
+        "models": [
+          "openai/gpt-oss-20b"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 19
+      }
+    },
+    "gemma": {
+      "name": "Gemma 4 31B",
+      "model": "google/gemma-4-31b-it",
+      "provider": {
+        "only": [
+          "novita/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "bf16"
+        ]
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "google/gemma-4-31b-it",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "novita/bf16"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "bf16"
+          ]
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": null,
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+      },
+      "minimum_request_spacing_seconds": 0,
+      "state": "stopped",
+      "stop_reason": "Replaced by Beam pilot",
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 5,
+      "source_billing_summary": {
+        "generations": 30,
+        "billing_records": 30,
+        "total_cost_usd": 0.0520976,
+        "providers": [
+          "Novita"
+        ],
+        "models": [
+          "google/gemma-4-31b-it-20260402"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "gemma-moe": {
+      "name": "Gemma 4 26B A4B",
+      "model": "google/gemma-4-26b-a4b-it",
+      "provider": {
+        "only": [
+          "nextbit/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "bf16"
+        ]
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "google/gemma-4-26b-a4b-it",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "nextbit/bf16"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "bf16"
+          ]
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "stopped",
+      "stop_reason": "Stopped at the user’s request because Gemma MoE was too slow.",
+      "settings_difference": null,
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 10,
+      "source_billing_summary": {
+        "generations": 179,
+        "billing_records": 179,
+        "total_cost_usd": 0.365594798,
+        "providers": [
+          "NextBit"
+        ],
+        "models": [
+          "google/gemma-4-26b-a4b-it-20260403"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 1
+      }
+    },
+    "liquid": {
+      "name": "LFM 2.5 24B A2B",
+      "model": "liquid/lfm-2.5-24b-a2b",
+      "provider": {
+        "only": [
+          "liquid/fp8"
+        ],
+        "quantizations": [
+          "fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "parameters_no_tools": {
+        "model": "liquid/lfm-2.5-24b-a2b",
+        "max_tokens": 8192,
+        "seed": 20261029,
+        "reasoning": {
+          "enabled": true,
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "liquid/fp8"
+          ],
+          "quantizations": [
+            "fp8"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "aggregate_completion_token_budget": 8192,
+      "request_timeout_seconds": 300,
+      "concurrency": 10,
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "dataset_parquet_sha256": null,
+      "minimum_request_spacing_seconds": 0.0,
+      "state": "complete",
+      "stop_reason": null,
+      "settings_difference": "The only Liquid endpoint caps output at 8192 tokens/request. The user approved an 8192-token aggregate budget per example. Reasoning is enabled, with no effort-level selector. The original Python function, sandbox and prompts are unchanged.",
+      "scheduling_continuation": null,
+      "interrupted_original_attempts": 0,
+      "source_billing_summary": {
+        "generations": 171,
+        "billing_records": 171,
+        "total_cost_usd": 0.6514778,
+        "providers": [
+          "Liquid"
+        ],
+        "models": [
+          "liquid/lfm-2.5-24b-a2b-20261012"
+        ],
+        "web_search_results": 0,
+        "web_fetches": 0,
+        "complete_for_identified_requests": true,
+        "responses_without_generation_id": 0
+      }
+    },
+    "snowball": {
+      "name": "Snowball RC (2026.09.21)",
+      "model": "open-athena/Grug-67B-A2B-Datakit-SFT-262K-2026.09.21",
+      "full_name": "Grug-67B-A2B-Datakit-SFT-262K-2026.09.21",
+      "provenance": {
+        "repo": "open-athena/Grug-67B-A2B-Datakit-SFT-262K-2026.09.21",
+        "revision": "b8c07f7df1df65525abbfdbcd1572318ba11c42f",
+        "url": "https://huggingface.co/open-athena/Grug-67B-A2B-Datakit-SFT-262K-2026.09.21/tree/b8c07f7df1df65525abbfdbcd1572318ba11c42f"
+      },
+      "provider": {
+        "only": [
+          "Marin internal API"
+        ],
+        "allow_fallbacks": false
+      },
+      "reasoning": {
+        "enabled": true,
+        "effort": null,
+        "mechanism": "chat_template_kwargs.enable_thinking=true"
+      },
+      "parameters_no_tools": {
+        "model": "[private serving model ID]",
+        "max_tokens": 16384,
+        "temperature": 0.7,
+        "seed": 20261029,
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        },
+        "skip_special_tokens": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "native_request_fields": {
+        "skip_special_tokens": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true,
+          "xml_tools": [
+            {
+              "type": "function",
+              "function": {
+                "name": "python",
+                "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+                "strict": true,
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "description": "Python code to execute."
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          ]
+        },
+        "stop": [
+          "</tool_call>"
+        ],
+        "include_stop_str_in_output": true
+      },
+      "transport": "Native Delphi thinking and XML tool tags; no server-side automatic tool parser",
+      "backend": "Marin/vLLM BF16 on H100x8, data-parallel size 8 with expert parallelism",
+      "aggregate_completion_token_budget": 16384,
+      "request_timeout_seconds": 1800,
+      "concurrency": 60,
+      "schedule": "All four conditions interleaved across one concurrency pool",
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "state": "complete",
+      "stop_reason": null,
+      "cost_note": "API exposes tokens but no monetary charges. Server allocation cost is not attributed to individual requests.",
+      "token_count_note": "Completion tokens include native thinking; reasoning-only counts are not separately reported.",
+      "tool_audit": {
+        "preflight_passed": true,
+        "successful_executions": 195,
+        "program_errors": 32,
+        "invalid_calls": 16,
+        "native_protocol_failures": 3,
+        "http_failures": 0,
+        "native_reasoning_replayed": true,
+        "tool_results_returned_to_model": true,
+        "call_limit_failures": 7
+      }
+    },
+    "snowball-v01": {
+      "name": "Snowball v0.1",
+      "model": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+      "full_name": "Marin-Snowball-67B-A2B-v0.1",
+      "provenance": {
+        "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+        "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3",
+        "url": "https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3"
+      },
+      "provider": {
+        "only": [
+          "Marin internal API"
+        ],
+        "allow_fallbacks": false
+      },
+      "reasoning": {
+        "enabled": true,
+        "effort": null,
+        "mechanism": "chat_template_kwargs.enable_thinking=true"
+      },
+      "parameters_no_tools": {
+        "model": "[private serving model ID]",
+        "max_tokens": 32768,
+        "temperature": 0.7,
+        "seed": 20261029,
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        },
+        "skip_special_tokens": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "native_request_fields": {
+        "skip_special_tokens": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true,
+          "xml_tools": [
+            {
+              "type": "function",
+              "function": {
+                "name": "python",
+                "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+                "strict": true,
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "description": "Python code to execute."
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          ]
+        },
+        "stop": [
+          "</tool_call>"
+        ],
+        "include_stop_str_in_output": true
+      },
+      "transport": "Native Delphi thinking and XML tool tags; no server-side automatic tool parser",
+      "backend": "Marin/vLLM BF16 on H100x8, data-parallel size 8 with expert parallelism",
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 1800,
+      "concurrency": 60,
+      "schedule": "All four conditions interleaved across one concurrency pool",
+      "dataset_revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "state": "complete",
+      "stop_reason": null,
+      "cost_note": "API exposes tokens but no monetary charges. Server allocation cost is not attributed to individual requests.",
+      "token_count_note": "Completion tokens include native thinking; reasoning-only counts are not separately reported.",
+      "tool_audit": {
+        "preflight_passed": true,
+        "successful_executions": 6,
+        "program_errors": 1,
+        "invalid_calls": 0,
+        "native_protocol_failures": 0,
+        "http_failures": 0,
+        "native_reasoning_replayed": true,
+        "tool_results_returned_to_model": true,
+        "call_limit_failures": 0,
+        "strict_preflight_answer_passed": false,
+        "incomplete_streams": 1
+      },
+      "preflight_note": "The real tool round trip passed. The unscored preflight answer has a trailing Markdown fence and remains a strict formatting failure. No answer repair or inference retry was performed."
+    }
+  },
+  "earlier_ten_example_checks": [
+    {
+      "name": "GLM 5.3 / Morph FP8",
+      "attempted": 10,
+      "correct": 7,
+      "cost_usd": 0.155608158,
+      "median_seconds": 148.42171447895817,
+      "token_caps": 1,
+      "parameters": {
+        "model": "z-ai/glm-5.3",
+        "max_tokens": 32768,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "max",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "morph/fp8"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      }
+    },
+    {
+      "name": "GLM 5.3 / Wafer US",
+      "attempted": 10,
+      "correct": 4,
+      "cost_usd": 0.1807102215,
+      "median_seconds": 47.475483500020346,
+      "token_caps": 2,
+      "parameters": {
+        "model": "z-ai/glm-5.3",
+        "max_tokens": 32768,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "max",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "wafer/us"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      }
+    },
+    {
+      "name": "GPT-6 Luna (high) / OpenAI",
+      "attempted": 10,
+      "correct": 9,
+      "cost_usd": 0.023747875,
+      "median_seconds": 9.736504832981154,
+      "token_caps": 1,
+      "parameters": {
+        "model": "openai/gpt-6-luna",
+        "max_tokens": 32768,
+        "seed": 20261029,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        },
+        "tool_choice": "none",
+        "tools": [],
+        "plugins": [
+          {
+            "id": "web",
+            "enabled": false
+          },
+          {
+            "id": "response-healing",
+            "enabled": false
+          },
+          {
+            "id": "file-parser",
+            "enabled": false
+          }
+        ],
+        "provider": {
+          "only": [
+            "openai"
+          ],
+          "ignore": [
+            "openai/flex",
+            "openai/fast"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        }
+      }
+    }
+  ],
+  "cost_scope": "Completed retained pilot attempts only; capability checks, discarded duplicate-hard cases, interrupted requests and GPT-OSS follow-ups are excluded. Missing charges are not zero.",
+  "timing_scope": "Median wall time per completed attempt, including failed attempts, API timeouts, tool round trips and any request pacing. User-interrupted requests are excluded.",
+  "validation": {
+    "original_scores_and_aggregates_verified": true,
+    "prompts_and_answers_verified": true,
+    "no_inference_or_retries": true,
+    "raw_reasoning_and_tool_traces_excluded": true,
+    "input_sha256": {
+      "scratch/open-weights-pilot-20261029-01/summary.json": "248210a64ac5bec6805bc1ec8209f9749278d502d911707d12c312fffb49c5d3",
+      "scratch/open-weights-pilot-20261029-01/results.json": "2a5d1292a89ee9ff460381fd34b2f430ebf0b21339ef253ba867193b69aced69",
+      "scratch/open-weights-pilot-20261029-01/gpt-oss-reliability-summary.json": "e83924cc7e51145684965856ef59c4aed6c08bd0596e0706ad1c4bbd9f59180f",
+      "scratch/luna-baseline-pilot/selected.json": "f165a8bf362e4176672d130493f2f6c83e340b5d9be6069ebb4df9fddf8aa03f"
+    },
+    "configuration_sha256": {
+      "scratch/luna-baseline-pilot/config.json": "0c858bfb173e33cff6b9b3f6dade066e8567d5f21d19179d7be8e7143b519e61",
+      "scratch/open-weights-pilot-20261029-01/models/beam/config.json": "96094cad3ce41937741741a7022ed377bcc95a4d27bcdbf653874b1199f1e3e4",
+      "scratch/open-weights-pilot-20261029-01/models/deepseek/config.json": "a1903f8c1be7734d30e2a4be8c5ae6eddf925fd131d1a589cc3399d742dab6b7",
+      "scratch/open-weights-pilot-20261029-01/models/nemotron/config.json": "3517735e79ffe7b4543f527658ec0699a9158b8c5bcb394fc4fdea023f37b1cc",
+      "scratch/open-weights-pilot-20261029-01/models/nemotron-lightning/config.json": "ea83b1d15e631c2b6f5f5d3f6ef8ac0b01a7d5414828f6f69fc91f7f50961a7e",
+      "scratch/open-weights-pilot-20261029-01/models/nemotron-lightning-coreweave/config.json": "f522309950db71907a9b6611281997939f998c97ba9701f83ed8c36420ce3fbd",
+      "scratch/open-weights-pilot-20261029-01/models/qwen-flash/config.json": "17f4d3304f761642a60b35956565af162be4c206505f3e35cabce85ca237ab49",
+      "scratch/open-weights-pilot-20261029-01/models/north-mini-code/config.json": "88867778451017921be3c70fcf2c0c8aac52d1c5c093156d83168abcc775a654",
+      "scratch/open-weights-pilot-20261029-01/models/gpt-oss-20b/config.json": "4190d1348b371746ee5b7e63ef367a96ea3165c754df4bc22cfea879f0583f2f",
+      "scratch/open-weights-pilot-20261029-01/models/gemma/config.json": "a5570d4711f6cd6fc8f8f2ca6ff3034efaab17518efcd4c1f0316f6c23851823",
+      "scratch/open-weights-pilot-20261029-01/models/gemma-moe/config.json": "c640b73937a3cc9b28098c624f19274d963d10a6b85b67ab7cb1f49ad278f088",
+      "scratch/open-weights-pilot-20261029-01/models/liquid/config.json": "4fad4a19697174956763e27ee4f5a6a6da2f2de857cf209a7be47b9657d42672"
+    }
+  },
+  "provider_reported_budget_overruns": [
+    {
+      "model": "north-mini-code",
+      "instance_id": "rna.guide_hits/01",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 32791
+    }
+  ],
+  "coreweave_extension": {
+    "name": "Nemotron 3.5 Lightning / CoreWeave: additional samples",
+    "state": "stopped",
+    "totals": {
+      "attempted": 353,
+      "correct": 75,
+      "wrong": 75,
+      "format": 59,
+      "timeout": 0,
+      "token_cap": 134,
+      "error": 10,
+      "accuracy": 0.21246458923512748,
+      "median_seconds": 95.54579000000376,
+      "total_example_seconds": 32745.354399749485,
+      "examples_using_python": 0,
+      "python_calls": 0,
+      "python_failures": 0,
+      "api_requests": 353,
+      "prompt_tokens": 237809,
+      "completion_tokens": 7458681,
+      "reasoning_tokens": 7380364,
+      "cost_usd": 1.50838283,
+      "unreconciled_examples": 10
+    },
+    "conditions": {
+      "easy-no-tools": {
+        "attempted": 353,
+        "correct": 75,
+        "wrong": 75,
+        "format": 59,
+        "timeout": 0,
+        "token_cap": 134,
+        "error": 10,
+        "accuracy": 0.21246458923512748,
+        "median_seconds": 95.54579000000376,
+        "total_example_seconds": 32745.354399749485,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 353,
+        "prompt_tokens": 237809,
+        "completion_tokens": 7458681,
+        "reasoning_tokens": 7380364,
+        "cost_usd": 1.50838283,
+        "unreconciled_examples": 10
+      },
+      "hard-no-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "easy-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      },
+      "hard-tools": {
+        "attempted": 0,
+        "correct": 0,
+        "wrong": 0,
+        "format": 0,
+        "timeout": 0,
+        "token_cap": 0,
+        "error": 0,
+        "accuracy": null,
+        "median_seconds": null,
+        "total_example_seconds": 0,
+        "examples_using_python": 0,
+        "python_calls": 0,
+        "python_failures": 0,
+        "api_requests": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "reasoning_tokens": 0,
+        "cost_usd": 0,
+        "unreconciled_examples": 0
+      }
+    },
+    "task_count": 46,
+    "interrupted_excluded": 10,
+    "repeated_pilot_case_conditions": 12,
+    "parameters_no_tools": {
+      "model": "nvidia/nemotron-3.5-lightning",
+      "max_tokens": 32768,
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "tool_choice": "none",
+      "tools": [],
+      "plugins": [
+        {
+          "id": "web",
+          "enabled": false
+        },
+        {
+          "id": "response-healing",
+          "enabled": false
+        },
+        {
+          "id": "file-parser",
+          "enabled": false
+        }
+      ],
+      "provider": {
+        "only": [
+          "coreweave/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    },
+    "concurrency": 10,
+    "request_timeout_seconds": 300,
+    "aggregate_completion_token_budget": 32768,
+    "dataset": {
+      "repo": "open-athena/cds-bench",
+      "revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "rows_per_split": {
+        "easy": 840,
+        "hard": 790
+      },
+      "removed_hard_tasks": [
+        "construct.inframe_deletion",
+        "coords.nt_to_codon",
+        "rna.dotbracket_to_pairs",
+        "variant.apply",
+        "variant.frame_status"
+      ]
+    },
+    "pooled_with_original_pilot": false,
+    "validation": {
+      "original_scores_verified": true,
+      "aggregate_metrics_verified": true,
+      "no_inference_or_retries": true
+    }
+  }
+}

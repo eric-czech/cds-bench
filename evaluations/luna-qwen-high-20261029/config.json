@@ -1,0 +1,561 @@
+{
+  "qwen": {
+    "run_id": "qwen37-flash-high-full-20261029-01",
+    "planned_attempts": 3260,
+    "planned_per_condition": {
+      "easy-no-tools": 840,
+      "hard-no-tools": 790,
+      "easy-tools": 840,
+      "hard-tools": 790
+    },
+    "condition_order": [
+      "easy-no-tools",
+      "hard-no-tools",
+      "easy-tools",
+      "hard-tools"
+    ],
+    "model": "qwen/qwen3.7-flash",
+    "parameters_no_tools": {
+      "model": "qwen/qwen3.7-flash",
+      "max_tokens": 32768,
+      "seed": 20261029,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "tool_choice": "none",
+      "tools": [],
+      "plugins": [
+        {
+          "id": "web",
+          "enabled": false
+        },
+        {
+          "id": "response-healing",
+          "enabled": false
+        },
+        {
+          "id": "file-parser",
+          "enabled": false
+        }
+      ],
+      "provider": {
+        "only": [
+          "alibaba/us-east-1"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    },
+    "tools_condition": {
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    },
+    "request_timeout_seconds": 300,
+    "aggregate_completion_token_budget": 32768,
+    "max_tool_calls": 8,
+    "concurrency": 10,
+    "dataset": {
+      "repo": "open-athena/cds-bench",
+      "revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "rows_per_split": {
+        "easy": 840,
+        "hard": 790
+      },
+      "removed_hard_tasks": [
+        "construct.inframe_deletion",
+        "coords.nt_to_codon",
+        "rna.dotbracket_to_pairs",
+        "variant.apply",
+        "variant.frame_status"
+      ]
+    },
+    "luna_comparison": {
+      "original_attempts": 3360,
+      "retained_attempts": 3260,
+      "excluded_duplicate_hard_attempts": 100,
+      "every_retained_case_verified": true,
+      "published_results_sha256": "393dbc70c2df343b8dc169c96e041d980753a40be32699d2c106adaee196b30b"
+    },
+    "execution_environment": {
+      "python": "3.12.9",
+      "numpy": "2.5.4",
+      "biopython": false,
+      "network": "macOS sandbox deny network*; not an OpenRouter request parameter",
+      "subprocesses": "denied",
+      "fresh_interpreter_per_call": true,
+      "tool_wall_seconds": 30,
+      "stdout_stderr_limit_each": 16384,
+      "files": "Runtime files and current example workdir only; workdir persists within example"
+    },
+    "sampling": "One fresh request sequence per released case/condition; no pilot reuse, inference retries, or correctness feedback. Model chosen after the earlier pilot.",
+    "source_commit": "c74c51932e334bcefe7a75972b2f6785e76e193a",
+    "inference_source_sha256": {
+      "src/cds_bench/eval_compare/run.py": "71bf498f8bcd237b2e8bf58f0dd0bd15de413470b68df0f37b2be9b05ece80b6",
+      "src/cds_bench/eval_compare/client.py": "4d2824d07a65520e1afd640c65c0976d33962fa732750da9ee9f6d515ebaacc7",
+      "src/cds_bench/eval_luna/settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3",
+      "src/cds_bench/eval_luna/sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+      "src/cds_bench/eval_luna/trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+      "src/cds_bench/eval_luna/score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+      "src/cds_bench/eval_luna/billing.py": "2e79c374ac6332ce3352c4a2655246ab7ac1a6a2e53f52b5d4b7c0be745ddf4b",
+      "src/cds_bench/eval_luna/io.py": "1bc8ad24b1a316f9af110916a0cf7d5a59f2b9c571c8d4d7cc6c4c52d8ad7706",
+      "src/cds_bench/eval_luna/run.py": "958a9cc02e4729cee7b5cd70b7bb6a9f29cd1633b941b998ab0240139bbd144e"
+    }
+  },
+  "luna_original": {
+    "run_id": "luna-high-full-20261029-01",
+    "planned_attempts": 3360,
+    "tasks": 84,
+    "instances_per_task_per_condition": 10,
+    "condition_order": [
+      "easy-no-tools",
+      "hard-no-tools",
+      "easy-tools",
+      "hard-tools"
+    ],
+    "model": "openai/gpt-6-luna",
+    "parameters_no_tools": {
+      "model": "openai/gpt-6-luna",
+      "max_tokens": 32768,
+      "seed": 20261029,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      },
+      "tool_choice": "none",
+      "tools": [],
+      "plugins": [
+        {
+          "id": "web",
+          "enabled": false
+        },
+        {
+          "id": "response-healing",
+          "enabled": false
+        },
+        {
+          "id": "file-parser",
+          "enabled": false
+        }
+      ],
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    },
+    "tools_condition": {
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    },
+    "request_timeout_seconds": 300,
+    "aggregate_completion_token_budget": 32768,
+    "max_tool_calls": 8,
+    "concurrency": 10,
+    "dataset": {
+      "repo": "open-athena/cds-bench",
+      "revision": "b48333ec757cf66fd09d758d120c4f47a0256b5d",
+      "parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "e3a5745782a4ffe564c55c798d6098f15b233fd4466df35014e973c6800705d8"
+      },
+      "spec_sha256": "c70f564c3bbf4c1585d9687c0d25f532243b297b1fb46350c7be04df734e8c22"
+    },
+    "execution_environment": {
+      "python": "3.12.9",
+      "numpy": "2.5.4",
+      "biopython": false,
+      "network": "macOS sandbox deny network*; not an OpenRouter request parameter",
+      "subprocesses": "denied",
+      "fresh_interpreter_per_call": true,
+      "tool_wall_seconds": 30,
+      "stdout_stderr_limit_each": 16384,
+      "files": "Runtime files and current example workdir only; workdir persists within example"
+    },
+    "sampling": "One fresh attempt per released prompt and condition; no pilot reuse, retries, or correctness feedback",
+    "source_commit": "4abc43871cff4c76096cfe0be38625b8704fd2e7",
+    "inference_source_sha256": {
+      "settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3",
+      "sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+      "client.py": "2acc6d11311affc8fcb018cdca62b32bf43f9f96e8516065c3e8819e9c7b2c68",
+      "trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+      "score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+      "run.py": "958a9cc02e4729cee7b5cd70b7bb6a9f29cd1633b941b998ab0240139bbd144e"
+    }
+  },
+  "deepinfra": {
+    "run_id": "nemotron-lightning-deepinfra-full-20261030-01",
+    "planned_attempts": 3260,
+    "planned_per_condition": {
+      "easy-no-tools": 840,
+      "hard-no-tools": 790,
+      "easy-tools": 840,
+      "hard-tools": 790
+    },
+    "condition_order": [
+      "easy-no-tools",
+      "hard-no-tools",
+      "easy-tools",
+      "hard-tools"
+    ],
+    "model": "nvidia/nemotron-3.5-lightning",
+    "provider_quantization": "bf16",
+    "parameters_no_tools": {
+      "model": "nvidia/nemotron-3.5-lightning",
+      "max_tokens": 32768,
+      "reasoning": {
+        "enabled": true,
+        "exclude": false
+      },
+      "tool_choice": "none",
+      "tools": [],
+      "plugins": [
+        {
+          "id": "web",
+          "enabled": false
+        },
+        {
+          "id": "response-healing",
+          "enabled": false
+        },
+        {
+          "id": "file-parser",
+          "enabled": false
+        }
+      ],
+      "provider": {
+        "only": [
+          "deepinfra/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      }
+    },
+    "tools_condition": {
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    },
+    "request_timeout_seconds": 300,
+    "aggregate_completion_token_budget": 32768,
+    "max_tool_calls": 8,
+    "concurrency": 10,
+    "minimum_request_spacing_seconds": 0,
+    "dataset": {
+      "repo": "open-athena/cds-bench",
+      "revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "rows_per_split": {
+        "easy": 840,
+        "hard": 790
+      },
+      "removed_hard_tasks": [
+        "construct.inframe_deletion",
+        "coords.nt_to_codon",
+        "rna.dotbracket_to_pairs",
+        "variant.apply",
+        "variant.frame_status"
+      ]
+    },
+    "luna_comparison": {
+      "original_attempts": 3360,
+      "retained_attempts": 3260,
+      "excluded_duplicate_hard_attempts": 100,
+      "every_retained_case_verified": true,
+      "published_results_sha256": "393dbc70c2df343b8dc169c96e041d980753a40be32699d2c106adaee196b30b"
+    },
+    "qwen_comparison": {
+      "retained_attempts": 3260,
+      "every_retained_case_verified": true,
+      "source_config_sha256": "cf08e6eb6233d9c654741612697a31e286d87d44f44d3dd8fb3db4872aca1885"
+    },
+    "execution_environment": {
+      "python": "3.12.9",
+      "numpy": "2.5.4",
+      "biopython": false,
+      "network": "macOS sandbox deny network*; not an OpenRouter request parameter",
+      "subprocesses": "denied",
+      "fresh_interpreter_per_call": true,
+      "tool_wall_seconds": 30,
+      "stdout_stderr_limit_each": 16384,
+      "files": "Runtime files and current example workdir only; workdir persists within example"
+    },
+    "sampling": "One fresh request sequence per released case/condition. No pilot response reuse, inference retries or correctness feedback. Model/provider selected after the pilot.",
+    "settings_difference": "Reasoning enabled without an advertised effort selector; seed omitted, matching the CoreWeave pilot except for the provider. Same prompts, scorer, original JSON Python function, budgets and sandbox as prior full evaluations.",
+    "pilot_config_sha256": "f522309950db71907a9b6611281997939f998c97ba9701f83ed8c36420ce3fbd",
+    "source_commit": "385df8ae7e836ff5994046b8fa156ba0ab8dc886",
+    "inference_source_sha256": {
+      "src/cds_bench/eval_compare/deepinfra_run.py": "718d651991adb1d8e2d72d74236f7d2f8be64dfd7dac21533857b9053d529f2f",
+      "src/cds_bench/eval_compare/lightning_client.py": "9872e04bb53fb2c9cab300243478c16212605abe02db28f81a6bf449ae1a6e68",
+      "src/cds_bench/eval_compare/run.py": "71bf498f8bcd237b2e8bf58f0dd0bd15de413470b68df0f37b2be9b05ece80b6",
+      "src/cds_bench/eval_luna/settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3",
+      "src/cds_bench/eval_luna/sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+      "src/cds_bench/eval_luna/trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+      "src/cds_bench/eval_luna/score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+      "src/cds_bench/eval_luna/billing.py": "2e79c374ac6332ce3352c4a2655246ab7ac1a6a2e53f52b5d4b7c0be745ddf4b",
+      "src/cds_bench/eval_luna/io.py": "1bc8ad24b1a316f9af110916a0cf7d5a59f2b9c571c8d4d7cc6c4c52d8ad7706",
+      "src/cds_bench/eval_luna/run.py": "958a9cc02e4729cee7b5cd70b7bb6a9f29cd1633b941b998ab0240139bbd144e"
+    }
+  },
+  "snowball-v01": {
+    "run_id": "snowball-v01-full-20261031-01",
+    "model_key": "snowball-v01",
+    "name": "Snowball v0.1",
+    "full_name": "Marin-Snowball-67B-A2B-v0.1",
+    "provenance": {
+      "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+      "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3",
+      "url": "https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3"
+    },
+    "total_parameters": 67000000000,
+    "active_parameters_per_token": 2000000000,
+    "planned_attempts": 3260,
+    "planned_per_condition": {
+      "easy-no-tools": 840,
+      "hard-no-tools": 790,
+      "easy-tools": 840,
+      "hard-tools": 790
+    },
+    "condition_order": [
+      "easy-no-tools",
+      "hard-no-tools",
+      "easy-tools",
+      "hard-tools"
+    ],
+    "tools_condition": {
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "python",
+            "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+            "strict": true,
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "Python code to execute."
+                }
+              },
+              "required": [
+                "code"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    },
+    "native_request_fields": {
+      "skip_special_tokens": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true,
+        "xml_tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "python",
+              "description": "Execute Python 3.12.9 code with the standard library and NumPy 2.5.4. Biopython is not installed. Networking and subprocesses are disabled; only runtime files and this example's working directory are readable. Use print() to return results. Each call starts a fresh interpreter; files in the working directory persist within this example. Limits: 30 seconds per call, 16384 characters each of stdout/stderr, and at most 8 calls per example. Returns stdout, stderr, exit_code, timed_out, and output_truncated.",
+              "strict": true,
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "description": "Python code to execute."
+                  }
+                },
+                "required": [
+                  "code"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "stop": [
+        "</tool_call>"
+      ],
+      "include_stop_str_in_output": true
+    },
+    "transport": "Native Delphi thinking and XML tool tags; no server-side automatic tool parser",
+    "reasoning": {
+      "enabled": true,
+      "effort": null,
+      "mechanism": "chat_template_kwargs.enable_thinking=true"
+    },
+    "request_timeout_seconds": 1800,
+    "aggregate_completion_token_budget": 32768,
+    "max_tool_calls": 8,
+    "concurrency": 60,
+    "dataset": {
+      "repo": "open-athena/cds-bench",
+      "revision": "26f63e8e488022bed14e12af0f1e44d87a28e14f",
+      "parquet_sha256": {
+        "easy": "d756b2655e4242812045def8ff4e4485f945280e5e6af2b4a845223102b7460e",
+        "hard": "aa724480707b2132abbe8c4f21e979701866a5ada36812476e2b7bb89b6cc1fa"
+      },
+      "rows_per_split": {
+        "easy": 840,
+        "hard": 790
+      },
+      "removed_hard_tasks": [
+        "construct.inframe_deletion",
+        "coords.nt_to_codon",
+        "rna.dotbracket_to_pairs",
+        "variant.apply",
+        "variant.frame_status"
+      ]
+    },
+    "luna_comparison": {
+      "original_attempts": 3360,
+      "retained_attempts": 3260,
+      "excluded_duplicate_hard_attempts": 100,
+      "every_retained_case_verified": true,
+      "published_results_sha256": "393dbc70c2df343b8dc169c96e041d980753a40be32699d2c106adaee196b30b"
+    },
+    "execution_environment": {
+      "python": "3.12.9",
+      "numpy": "2.5.4",
+      "biopython": false,
+      "network": "macOS sandbox deny network*; not an OpenRouter request parameter",
+      "subprocesses": "denied",
+      "fresh_interpreter_per_call": true,
+      "tool_wall_seconds": 30,
+      "stdout_stderr_limit_each": 16384,
+      "files": "Runtime files and current example workdir only; workdir persists within example"
+    },
+    "sampling": "One fresh attempt per case/condition; pilot responses are not reused. No scored inference retries, prompt changes, answer repair or correctness feedback.",
+    "settings_difference": "Native Marin thinking/tool transport, explicit temperature 0.7 and seed 20261029, concurrency 60 and a 1800-second API wall deadline. Same 32768 aggregate generated tokens, exact Python function, sandbox and scorer as the validated v0.1 pilot.",
+    "pilot_config_sha256": "7bd4d8e02e3324aadf35dad006abce9b90f2f68896696d1c974d9e6936bb9f50",
+    "source_commit": "88f5c11c6544fd929e06552717817dafc8cd205b",
+    "inference_source_sha256": {
+      "src/cds_bench/eval_compare/snowball_run.py": "f9450670f15e6ef48a4a2607aac60f8f3afa28670fed2d6f3746b7ff93272082",
+      "src/cds_bench/eval_compare/snowball_client.py": "e335bdf3fb9a48b064a33f61b7115642c6649d700f9aa68a6dd10f372696ee61",
+      "src/cds_bench/eval_luna/trial.py": "ddd914abdb6f264a6724e659ad237a817dbf97f2a4329f3d12616c964d4759fe",
+      "src/cds_bench/eval_luna/sandbox.py": "565faaf168df286eccb756579188d472d442ac3d38f5068716b3d61b780d6263",
+      "src/cds_bench/eval_luna/score.py": "fa7a1eb935a8937272b6a23d75d3874747b0ae58544a00afb15b0102c1e8bfec",
+      "src/cds_bench/eval_luna/settings.py": "41f577e8a3fa14ccb8ec4c020458a922d861ee11d592c0a1940be8f3782b5dd3",
+      "src/cds_bench/eval_luna/io.py": "1bc8ad24b1a316f9af110916a0cf7d5a59f2b9c571c8d4d7cc6c4c52d8ad7706",
+      "src/cds_bench/eval_luna/run.py": "958a9cc02e4729cee7b5cd70b7bb6a9f29cd1633b941b998ab0240139bbd144e"
+    },
+    "cost_note": "No per-request monetary price is exposed. Token usage is recorded; server allocation cost is not attributed to requests.",
+    "parameters_no_tools": {
+      "model": "[private serving model ID]",
+      "max_tokens": 32768,
+      "temperature": 0.7,
+      "seed": 20261029,
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "skip_special_tokens": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    },
+    "token_count_note": "Completion tokens include thinking; reasoning-only counts are not separately exposed.",
+    "connection_setup_timeout_seconds": 15,
+    "operational_resumes": [
+      {
+        "at": "2026-10-31T12:57:59.746627+00:00",
+        "completed_before_resume": 477,
+        "scored_retries": 0,
+        "settings_changed": false
+      }
+    ]
+  }
+}

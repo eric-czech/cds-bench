@@ -1,0 +1,173 @@
+{
+  "complete": true,
+  "attempts_audited": 3260,
+  "conditions": {
+    "easy-no-tools": 840,
+    "easy-tools": 840,
+    "hard-no-tools": 790,
+    "hard-tools": 790
+  },
+  "api_requests": 6644,
+  "reasoning_replays": 3384,
+  "python_calls": 3384,
+  "recovered_failed_request_metadata": 124,
+  "correct": 1144,
+  "matched_luna_cases_verified": 3260,
+  "historical_luna_results_unchanged": true,
+  "source_hashes_verified": true,
+  "prompt_and_answer_identity_verified": true,
+  "request_settings_verified": true,
+  "reasoning_replay_verified": true,
+  "requested_token_budgets_verified": true,
+  "token_budgets_verified": false,
+  "provider_reported_budget_overruns": [
+    {
+      "instance_id": "rna.apply_edits/07",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 61080
+    },
+    {
+      "instance_id": "rna.apply_edits/09",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 49176
+    },
+    {
+      "instance_id": "design.codon_preference/05",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 34906
+    },
+    {
+      "instance_id": "design.dinucleotide_counts/03",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 53619
+    },
+    {
+      "instance_id": "design.dinucleotide_counts/08",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 36446
+    },
+    {
+      "instance_id": "design.structure_score/04",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 61062
+    },
+    {
+      "instance_id": "construct.inframe_deletion/05",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 46512
+    },
+    {
+      "instance_id": "assay.select_rna_probe/08",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 37034
+    },
+    {
+      "instance_id": "assay.min_probe_panel/02",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 43014
+    },
+    {
+      "instance_id": "pipeline.structure_gated_digest/04",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 63098
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/10",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 46693
+    },
+    {
+      "instance_id": "pipeline.rna_probe_panel/10",
+      "condition": "easy-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 52289
+    },
+    {
+      "instance_id": "protein.monoisotopic_mass/02",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 62659
+    },
+    {
+      "instance_id": "rna.t1_digest/02",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 46141
+    },
+    {
+      "instance_id": "rna.t1_digest/08",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 41460
+    },
+    {
+      "instance_id": "design.insert_dna_motif/02",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 63525
+    },
+    {
+      "instance_id": "design.insert_dna_motif/07",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 61257
+    },
+    {
+      "instance_id": "construct.tag_fusion/08",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 64923
+    },
+    {
+      "instance_id": "assay.min_probe_panel/01",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 59404
+    },
+    {
+      "instance_id": "pipeline.variant_peptides/03",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 44203
+    },
+    {
+      "instance_id": "pipeline.rna_edit_digest/06",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 40324
+    },
+    {
+      "instance_id": "joint.clone_ready_cds/03",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 64675
+    },
+    {
+      "instance_id": "pipeline.controlled_panel/03",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 64161
+    },
+    {
+      "instance_id": "pipeline.rna_probe_panel/10",
+      "condition": "hard-no-tools",
+      "requested_tokens": 32768,
+      "reported_tokens": 46282
+    }
+  ],
+  "scores_verified": true,
+  "sandbox_restrictions_verified": true,
+  "web_usage": 0,
+  "credential_scan_passed": true
+}

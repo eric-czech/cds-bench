@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "attempts": 116,
+  "prompts_answers_and_scoring_verified": true,
+  "tools_and_thinking_verified": true,
+  "scored_retries": 0,
+  "source_hashes_verified": true,
+  "raw_traces_excluded": true,
+  "provenance": {
+    "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+    "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3",
+    "url": "https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3"
+  },
+  "tool_execution": {
+    "preflight_passed": true,
+    "successful_executions": 6,
+    "program_errors": 1,
+    "invalid_calls": 0,
+    "native_protocol_failures": 0,
+    "http_failures": 0,
+    "native_reasoning_replayed": true,
+    "tool_results_returned_to_model": true,
+    "call_limit_failures": 0,
+    "strict_preflight_answer_passed": false,
+    "incomplete_streams": 1
+  }
+}

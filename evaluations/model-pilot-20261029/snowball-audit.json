@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "attempts": 116,
+  "prompts_answers_and_scoring_verified": true,
+  "tools_and_thinking_verified": true,
+  "scored_retries": 0,
+  "source_hashes_verified": true,
+  "raw_traces_excluded": true,
+  "provenance": {
+    "repo": "open-athena/Grug-67B-A2B-Datakit-SFT-262K-2026.09.21",
+    "revision": "b8c07f7df1df65525abbfdbcd1572318ba11c42f",
+    "url": "https://huggingface.co/open-athena/Grug-67B-A2B-Datakit-SFT-262K-2026.09.21/tree/b8c07f7df1df65525abbfdbcd1572318ba11c42f"
+  },
+  "tool_execution": {
+    "preflight_passed": true,
+    "successful_executions": 195,
+    "program_errors": 32,
+    "invalid_calls": 16,
+    "native_protocol_failures": 3,
+    "http_failures": 0,
+    "native_reasoning_replayed": true,
+    "tool_results_returned_to_model": true,
+    "call_limit_failures": 7
+  }
+}

@@ -1,0 +1,998 @@
+{
+  "complete": true,
+  "attempts_audited": 3260,
+  "conditions": {
+    "easy-no-tools": 840,
+    "easy-tools": 840,
+    "hard-no-tools": 790,
+    "hard-tools": 790
+  },
+  "api_requests": 8865,
+  "reasoning_replays": 5605,
+  "python_calls": 5605,
+  "correct": 1322,
+  "source_hashes_verified": true,
+  "matched_luna_qwen_cases_verified": 3260,
+  "pilot_settings_verified_except_declared_provider": true,
+  "provider": "deepinfra/bf16",
+  "no_pilot_response_reuse_or_inference_retries": true,
+  "request_settings_verified": true,
+  "reasoning_and_tool_result_replay_verified": true,
+  "requested_token_budgets_verified": true,
+  "token_budgets_verified": true,
+  "provider_reported_budget_overruns": [],
+  "requests_without_usage": [
+    {
+      "instance_id": "dna.reverse_complement/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "dna.reverse_complement/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "dna.reverse_complement/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.translate/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.validate/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.validate/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.validate/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "variant.protein_effect/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "ambiguity.stop_certainty/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.gc3_fraction/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.gc_windows/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.cai/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.motif_positions/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.motif_positions/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.mean_hydropathy/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.mean_hydropathy/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.mean_hydropathy/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.trypsin_digest/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.trypsin_digest/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.apply_edits/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.apply_edits/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.t1_digest/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.motif_counts/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.structure_score/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.max_pair_fold/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.max_pair_fold/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.max_pair_fold/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_allowlist/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_profile/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_profile/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.insert_dna_motif/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.insert_dna_motif/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.insert_dna_motif/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.insert_dna_motif/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.insert_dna_motif/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.break_repeats/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.break_repeats/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.break_repeats/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.break_repeats/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.break_repeats/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.rna_motif_control/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.pairing_repair/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.structure_score/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.expose_rna_window/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.variant_panel/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tag_fusion/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.tev_products/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "library.codon_products/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "library.codon_products/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "library.codon_products/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "library.codon_products/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.join_modules/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.join_modules/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.join_modules/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.primer_pair/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.primer_pair/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.primer_pair/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.primer_pair/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.primer_pair/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "overlap.constrained_edit/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "overlap.constrained_edit/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.motif_to_dna/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.diagnostic_digest/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.diagnostic_digest/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.structure_gated_digest/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.structure_gated_digest/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.clone_ready_cds/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.repair_and_verify/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/03",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/04",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/08",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.protein_edit_and_cloning/09",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.library_and_verify/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.library_and_verify/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.library_and_verify/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/06",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/07",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/02",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.overlap_edit_verify/05",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.overlap_edit_verify/10",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.controlled_panel/01",
+      "condition": "easy-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "coords.aa_to_nt/09",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.cai/03",
+      "condition": "easy-tools",
+      "request": "request-05.json"
+    },
+    {
+      "instance_id": "stats.cai/04",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.monoisotopic_mass/05",
+      "condition": "easy-tools",
+      "request": "request-07.json"
+    },
+    {
+      "instance_id": "protein.monoisotopic_mass/07",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.mean_hydropathy/09",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.guide_hits/02",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.guide_hits/03",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.remove_dna_motifs/04",
+      "condition": "easy-tools",
+      "request": "request-02.json"
+    },
+    {
+      "instance_id": "design.structure_score/10",
+      "condition": "easy-tools",
+      "request": "request-02.json"
+    },
+    {
+      "instance_id": "design.expose_rna_window/01",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.rna_edit_translation/02",
+      "condition": "easy-tools",
+      "request": "request-03.json"
+    },
+    {
+      "instance_id": "pipeline.rna_edit_translation/03",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/05",
+      "condition": "easy-tools",
+      "request": "request-02.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/06",
+      "condition": "easy-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/06",
+      "condition": "easy-tools",
+      "request": "request-09.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/07",
+      "condition": "easy-tools",
+      "request": "request-05.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/08",
+      "condition": "easy-tools",
+      "request": "request-02.json"
+    },
+    {
+      "instance_id": "cds.protein_equivalence/03",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.protein_equivalence/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.protein_equivalence/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "cds.protein_equivalence/10",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.codon_counts/10",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.gc3_fraction/07",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.gc_windows/02",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "stats.gc_windows/03",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.trypsin_digest/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.diagnostic_peptide/07",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.diagnostic_peptide/08",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "protein.charge_at_ph/08",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.max_pair_fold/02",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.max_pair_fold/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/08",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.synonymous_distance/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_allowlist/03",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_allowlist/04",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.codon_allowlist/05",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.dinucleotide_counts/07",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.dinucleotide_counts/08",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.structure_score/05",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.structure_score/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.structure_score/10",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "design.expose_rna_window/01",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "library.design_codon/03",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/05",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "construct.edit_aware_encoding/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "assay.min_probe_panel/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "overlap.constrained_edit/04",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "overlap.constrained_edit/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.repair_and_verify/02",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/04",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "joint.structure_and_codons/10",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.target_and_escape/01",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.target_and_escape/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.library_and_verify/05",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.fusion_junction/07",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/01",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/02",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/03",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/06",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/07",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/08",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "pipeline.edit_dependent_product/09",
+      "condition": "hard-no-tools",
+      "request": "request-01.json"
+    },
+    {
+      "instance_id": "rna.translate/07",
+      "condition": "hard-tools",
+      "request": "request-07.json"
+    },
+    {
+      "instance_id": "construct.tev_products/02",
+      "condition": "hard-tools",
+      "request": "request-05.json"
+    },
+    {
+      "instance_id": "library.design_codon/03",
+      "condition": "hard-tools",
+      "request": "request-01.json"
+    }
+  ],
+  "malformed_calls_rejected_without_execution": [],
+  "scores_verified": true,
+  "sandbox_restrictions_verified": true,
+  "web_usage": 0,
+  "credential_scan_passed": true,
+  "totals": {
+    "attempted": 3260,
+    "correct": 1322,
+    "wrong": 744,
+    "format": 707,
+    "timeout": 135,
+    "token_cap": 298,
+    "error": 54,
+    "accuracy": 0.405521472392638,
+    "median_seconds": 70.77776308299508,
+    "total_example_seconds": 329283.01934563555,
+    "examples_using_python": 1544,
+    "python_calls": 5605,
+    "python_failures": 900,
+    "api_requests": 8865,
+    "prompt_tokens": 41073702,
+    "completion_tokens": 46285291,
+    "reasoning_tokens": 29559299,
+    "cost_usd": 10.24786894,
+    "unreconciled_examples": 53
+  },
+  "no_coreweave_full_response_reuse": true
+}

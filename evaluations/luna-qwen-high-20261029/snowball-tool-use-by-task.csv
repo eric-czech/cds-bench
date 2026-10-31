@@ -1,0 +1,34 @@
+task_id,name,called_correct,called_n,uncalled_correct,uncalled_n,called_accuracy,uncalled_accuracy,difference
+ambiguity.stop_certainty,Assess an ambiguous stop,1,2,4,8,0.5,0.5,0.0
+cds.protein_equivalence,Compare encoded proteins,3,4,3,6,0.75,0.5,0.25
+cds.translate,Translate DNA to protein,1,3,2,7,0.3333333333333333,0.2857142857142857,0.047619047619047616
+cds.validate,Validate a complete CDS,1,2,5,8,0.5,0.625,-0.125
+construct.inframe_deletion,Delete a protein interval,2,2,1,8,1,0.125,0.875
+construct.join_modules,Join coding modules,1,3,3,7,0.3333333333333333,0.42857142857142855,-0.09523809523809523
+construct.minimal_aa_edit,Encode a requested amino-acid substitution,2,2,2,8,1,0.25,0.75
+construct.tag_fusion,Build a tagged protein CDS,1,3,3,7,0.3333333333333333,0.42857142857142855,-0.09523809523809523
+construct.tev_products,Derive TEV-cleaved products,1,5,0,5,0.2,0,0.2
+coords.aa_to_nt,Map residues back to DNA,3,6,3,4,0.5,0.75,-0.25
+design.guide_escape,Create a guide-escape control,0,2,0,8,0,0,0
+design.structure_score,Optimize a fixed RNA pairing score,0,2,0,8,0,0,0
+dna.motif_positions,Find nucleotide patterns,2,2,0,8,1,0,1
+dna.reverse_complement,Reverse-complement a CDS,6,7,0,3,0.8571428571428571,0,0.8571428571428571
+dna.transcribe,Make the coding RNA,1,3,1,7,0.3333333333333333,0.14285714285714285,0.19047619047619047
+joint.clone_ready_cds,Remove cloning sites while controlling GC,0,2,1,8,0,0.125,-0.125
+pipeline.rna_edit_digest,From specified RNA edits to RNA fragments,1,2,0,8,0.5,0,0.5
+pipeline.structure_gated_digest,From a pairing annotation to eligible cuts,3,3,0,7,1,0,1
+pipeline.variant_peptides,From DNA edits to changed peptide readouts,1,2,0,8,0.5,0,0.5
+protein.isoelectric_point,Calculate the isoelectric point (pI),2,2,1,8,1,0.125,0.875
+protein.monoisotopic_mass,Calculate peptide mass,3,4,1,6,0.75,0.16666666666666666,0.5833333333333334
+protein.motif_positions,Find a supplied peptide pattern,2,3,2,7,0.6666666666666666,0.2857142857142857,0.38095238095238093
+protein.nglyco_sequons,Locate N-glycosylation sequons,1,2,5,8,0.5,0.625,-0.125
+rna.dotbracket_to_pairs,Decode a pairing map,2,2,6,8,1,0.75,0.25
+rna.max_pair_fold,Find a maximum-pair RNA fold,0,2,0,8,0,0,0
+rna.t1_digest,Digest coding RNA with RNase T1 rules,1,3,0,7,0.3333333333333333,0,0.3333333333333333
+rna.translate,Translate coding RNA,1,3,0,7,0.3333333333333333,0,0.3333333333333333
+stats.cai,Calculate codon adaptation index,3,4,0,6,0.75,0,0.75
+stats.codon_counts,Count sense codons,1,3,1,7,0.3333333333333333,0.14285714285714285,0.19047619047619047
+stats.gc3_fraction,Calculate third-position GC,2,2,6,8,1,0.75,0.25
+stats.gc_fraction,Calculate total GC,3,7,0,3,0.42857142857142855,0,0.42857142857142855
+stats.gc_windows,Locate GC-window violations,2,2,4,8,1,0.5,0.5
+variant.apply,Apply a DNA edit script,1,3,1,7,0.3333333333333333,0.14285714285714285,0.19047619047619047

@@ -1,0 +1,212 @@
+{
+  "conclusion": "No sufficiently reliable OpenRouter tool configuration was established in these diagnostic checks. Do not interpret the original Bedrock Python score as a clean measure of model capability with working tools.",
+  "diagnostic_subsets_only": true,
+  "configurations": [
+    {
+      "configuration": "CoreWeave, renamed function, strict JSON",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-no-tools",
+          "attempted": 10,
+          "correct": 3,
+          "recorded_outcomes": {
+            "correct": 3,
+            "timeout": 6,
+            "format": 1
+          },
+          "additional_provider_finish_error_cases": []
+        },
+        {
+          "condition": "easy-tools",
+          "attempted": 10,
+          "correct": 5,
+          "recorded_outcomes": {
+            "correct": 5,
+            "error": 4,
+            "format": 1
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 62,
+      "successful_python_executions": 36,
+      "rejected_calls": 25
+    },
+    {
+      "configuration": "CoreWeave, raw-source adapter",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 10,
+          "correct": 4,
+          "recorded_outcomes": {
+            "correct": 4,
+            "error": 6
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 76,
+      "successful_python_executions": 56,
+      "rejected_calls": 19
+    },
+    {
+      "configuration": "CoreWeave, explicit script instructions",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-no-tools",
+          "attempted": 10,
+          "correct": 2,
+          "recorded_outcomes": {
+            "format": 7,
+            "correct": 2,
+            "wrong": 1
+          },
+          "additional_provider_finish_error_cases": []
+        },
+        {
+          "condition": "easy-tools",
+          "attempted": 10,
+          "correct": 3,
+          "recorded_outcomes": {
+            "correct": 3,
+            "error": 6,
+            "wrong": 1
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 70,
+      "successful_python_executions": 45,
+      "rejected_calls": 21
+    },
+    {
+      "configuration": "CoreWeave, nonstreaming, T=0",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 0,
+          "recorded_outcomes": {
+            "timeout": 1,
+            "format": 1,
+            "token_cap": 1
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 10,
+      "successful_python_executions": 8,
+      "rejected_calls": 2
+    },
+    {
+      "configuration": "Groq, nonstreaming, T=0",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 1,
+          "recorded_outcomes": {
+            "token_cap": 1,
+            "correct": 1,
+            "format": 1
+          },
+          "additional_provider_finish_error_cases": [
+            "rna.max_pair_fold/01"
+          ]
+        }
+      ],
+      "tool_calls": 7,
+      "successful_python_executions": 7,
+      "rejected_calls": 0
+    },
+    {
+      "configuration": "DeepInfra, nonstreaming, T=0",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 0,
+          "recorded_outcomes": {
+            "error": 3
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 0,
+      "successful_python_executions": 0,
+      "rejected_calls": 0
+    },
+    {
+      "configuration": "Groq, high, first call forced, T=0.5",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 1,
+          "recorded_outcomes": {
+            "error": 2,
+            "correct": 1
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 13,
+      "successful_python_executions": 13,
+      "rejected_calls": 0
+    },
+    {
+      "configuration": "Groq, medium, first call forced, T=0.5",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 1,
+          "recorded_outcomes": {
+            "correct": 1,
+            "error": 2
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 5,
+      "successful_python_executions": 4,
+      "rejected_calls": 0
+    },
+    {
+      "configuration": "CoreWeave, medium, first call forced, T=0.5",
+      "state": "complete",
+      "conditions": [
+        {
+          "condition": "easy-tools",
+          "attempted": 3,
+          "correct": 2,
+          "recorded_outcomes": {
+            "correct": 2,
+            "format": 1
+          },
+          "additional_provider_finish_error_cases": []
+        }
+      ],
+      "tool_calls": 14,
+      "successful_python_executions": 12,
+      "rejected_calls": 2
+    }
+  ],
+  "responses_api_checks": {
+    "coreweave": "Failed: provider content validation error during message replay.",
+    "groq": "Failed: provider reported a required tool call was not made."
+  },
+  "references": {
+    "native_harmony": "https://developers.openai.com/cookbook/articles/openai-harmony",
+    "harmony_harness_paper": "https://arxiv.org/html/2604.00362v1"
+  }
+}

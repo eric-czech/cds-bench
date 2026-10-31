@@ -1,0 +1,615 @@
+{
+  "tool_invocation": {
+    "luna": {
+      "name": "GPT-6 Luna (high)",
+      "available": 1630,
+      "called": 1067
+    },
+    "deepinfra": {
+      "name": "Nemotron 3.5 Lightning",
+      "available": 1630,
+      "called": 1544
+    },
+    "qwen": {
+      "name": "Qwen 3.7 Flash (high)",
+      "available": 1630,
+      "called": 1470
+    },
+    "snowball-v01": {
+      "name": "Snowball v0.1",
+      "available": 1630,
+      "called": 177
+    }
+  },
+  "easy_python_within_tasks": {
+    "condition": "easy-tools",
+    "minimum_examples_per_group_per_task": 2,
+    "eligible_tasks": 33,
+    "tasks": [
+      {
+        "task_id": "ambiguity.stop_certainty",
+        "name": "Assess an ambiguous stop",
+        "called_correct": 1,
+        "called_n": 2,
+        "uncalled_correct": 4,
+        "uncalled_n": 8,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0.5,
+        "difference": 0.0
+      },
+      {
+        "task_id": "cds.protein_equivalence",
+        "name": "Compare encoded proteins",
+        "called_correct": 3,
+        "called_n": 4,
+        "uncalled_correct": 3,
+        "uncalled_n": 6,
+        "called_accuracy": 0.75,
+        "uncalled_accuracy": 0.5,
+        "difference": 0.25
+      },
+      {
+        "task_id": "cds.translate",
+        "name": "Translate DNA to protein",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 2,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.2857142857142857,
+        "difference": 0.047619047619047616
+      },
+      {
+        "task_id": "cds.validate",
+        "name": "Validate a complete CDS",
+        "called_correct": 1,
+        "called_n": 2,
+        "uncalled_correct": 5,
+        "uncalled_n": 8,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0.625,
+        "difference": -0.125
+      },
+      {
+        "task_id": "construct.inframe_deletion",
+        "name": "Delete a protein interval",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 1,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.125,
+        "difference": 0.875
+      },
+      {
+        "task_id": "construct.join_modules",
+        "name": "Join coding modules",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 3,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.42857142857142855,
+        "difference": -0.09523809523809523
+      },
+      {
+        "task_id": "construct.minimal_aa_edit",
+        "name": "Encode a requested amino-acid substitution",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 2,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.25,
+        "difference": 0.75
+      },
+      {
+        "task_id": "construct.tag_fusion",
+        "name": "Build a tagged protein CDS",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 3,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.42857142857142855,
+        "difference": -0.09523809523809523
+      },
+      {
+        "task_id": "construct.tev_products",
+        "name": "Derive TEV-cleaved products",
+        "called_correct": 1,
+        "called_n": 5,
+        "uncalled_correct": 0,
+        "uncalled_n": 5,
+        "called_accuracy": 0.2,
+        "uncalled_accuracy": 0,
+        "difference": 0.2
+      },
+      {
+        "task_id": "coords.aa_to_nt",
+        "name": "Map residues back to DNA",
+        "called_correct": 3,
+        "called_n": 6,
+        "uncalled_correct": 3,
+        "uncalled_n": 4,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0.75,
+        "difference": -0.25
+      },
+      {
+        "task_id": "design.guide_escape",
+        "name": "Create a guide-escape control",
+        "called_correct": 0,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 0,
+        "uncalled_accuracy": 0,
+        "difference": 0
+      },
+      {
+        "task_id": "design.structure_score",
+        "name": "Optimize a fixed RNA pairing score",
+        "called_correct": 0,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 0,
+        "uncalled_accuracy": 0,
+        "difference": 0
+      },
+      {
+        "task_id": "dna.motif_positions",
+        "name": "Find nucleotide patterns",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0,
+        "difference": 1
+      },
+      {
+        "task_id": "dna.reverse_complement",
+        "name": "Reverse-complement a CDS",
+        "called_correct": 6,
+        "called_n": 7,
+        "uncalled_correct": 0,
+        "uncalled_n": 3,
+        "called_accuracy": 0.8571428571428571,
+        "uncalled_accuracy": 0,
+        "difference": 0.8571428571428571
+      },
+      {
+        "task_id": "dna.transcribe",
+        "name": "Make the coding RNA",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 1,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.14285714285714285,
+        "difference": 0.19047619047619047
+      },
+      {
+        "task_id": "joint.clone_ready_cds",
+        "name": "Remove cloning sites while controlling GC",
+        "called_correct": 0,
+        "called_n": 2,
+        "uncalled_correct": 1,
+        "uncalled_n": 8,
+        "called_accuracy": 0,
+        "uncalled_accuracy": 0.125,
+        "difference": -0.125
+      },
+      {
+        "task_id": "pipeline.rna_edit_digest",
+        "name": "From specified RNA edits to RNA fragments",
+        "called_correct": 1,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0,
+        "difference": 0.5
+      },
+      {
+        "task_id": "pipeline.structure_gated_digest",
+        "name": "From a pairing annotation to eligible cuts",
+        "called_correct": 3,
+        "called_n": 3,
+        "uncalled_correct": 0,
+        "uncalled_n": 7,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0,
+        "difference": 1
+      },
+      {
+        "task_id": "pipeline.variant_peptides",
+        "name": "From DNA edits to changed peptide readouts",
+        "called_correct": 1,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0,
+        "difference": 0.5
+      },
+      {
+        "task_id": "protein.isoelectric_point",
+        "name": "Calculate the isoelectric point (pI)",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 1,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.125,
+        "difference": 0.875
+      },
+      {
+        "task_id": "protein.monoisotopic_mass",
+        "name": "Calculate peptide mass",
+        "called_correct": 3,
+        "called_n": 4,
+        "uncalled_correct": 1,
+        "uncalled_n": 6,
+        "called_accuracy": 0.75,
+        "uncalled_accuracy": 0.16666666666666666,
+        "difference": 0.5833333333333334
+      },
+      {
+        "task_id": "protein.motif_positions",
+        "name": "Find a supplied peptide pattern",
+        "called_correct": 2,
+        "called_n": 3,
+        "uncalled_correct": 2,
+        "uncalled_n": 7,
+        "called_accuracy": 0.6666666666666666,
+        "uncalled_accuracy": 0.2857142857142857,
+        "difference": 0.38095238095238093
+      },
+      {
+        "task_id": "protein.nglyco_sequons",
+        "name": "Locate N-glycosylation sequons",
+        "called_correct": 1,
+        "called_n": 2,
+        "uncalled_correct": 5,
+        "uncalled_n": 8,
+        "called_accuracy": 0.5,
+        "uncalled_accuracy": 0.625,
+        "difference": -0.125
+      },
+      {
+        "task_id": "rna.dotbracket_to_pairs",
+        "name": "Decode a pairing map",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 6,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.75,
+        "difference": 0.25
+      },
+      {
+        "task_id": "rna.max_pair_fold",
+        "name": "Find a maximum-pair RNA fold",
+        "called_correct": 0,
+        "called_n": 2,
+        "uncalled_correct": 0,
+        "uncalled_n": 8,
+        "called_accuracy": 0,
+        "uncalled_accuracy": 0,
+        "difference": 0
+      },
+      {
+        "task_id": "rna.t1_digest",
+        "name": "Digest coding RNA with RNase T1 rules",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 0,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task_id": "rna.translate",
+        "name": "Translate coding RNA",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 0,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task_id": "stats.cai",
+        "name": "Calculate codon adaptation index",
+        "called_correct": 3,
+        "called_n": 4,
+        "uncalled_correct": 0,
+        "uncalled_n": 6,
+        "called_accuracy": 0.75,
+        "uncalled_accuracy": 0,
+        "difference": 0.75
+      },
+      {
+        "task_id": "stats.codon_counts",
+        "name": "Count sense codons",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 1,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.14285714285714285,
+        "difference": 0.19047619047619047
+      },
+      {
+        "task_id": "stats.gc3_fraction",
+        "name": "Calculate third-position GC",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 6,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.75,
+        "difference": 0.25
+      },
+      {
+        "task_id": "stats.gc_fraction",
+        "name": "Calculate total GC",
+        "called_correct": 3,
+        "called_n": 7,
+        "uncalled_correct": 0,
+        "uncalled_n": 3,
+        "called_accuracy": 0.42857142857142855,
+        "uncalled_accuracy": 0,
+        "difference": 0.42857142857142855
+      },
+      {
+        "task_id": "stats.gc_windows",
+        "name": "Locate GC-window violations",
+        "called_correct": 2,
+        "called_n": 2,
+        "uncalled_correct": 4,
+        "uncalled_n": 8,
+        "called_accuracy": 1,
+        "uncalled_accuracy": 0.5,
+        "difference": 0.5
+      },
+      {
+        "task_id": "variant.apply",
+        "name": "Apply a DNA edit script",
+        "called_correct": 1,
+        "called_n": 3,
+        "uncalled_correct": 1,
+        "uncalled_n": 7,
+        "called_accuracy": 0.3333333333333333,
+        "uncalled_accuracy": 0.14285714285714285,
+        "difference": 0.19047619047619047
+      }
+    ],
+    "called_mean_task_accuracy": 0.5475468975468976,
+    "uncalled_mean_task_accuracy": 0.23178210678210678,
+    "mean_within_task_difference": 0.31576479076479075,
+    "called_correct": 54,
+    "called_n": 99,
+    "uncalled_correct": 55,
+    "uncalled_n": 231,
+    "interpretation": "Observational comparison of different examples within the same task types, not a causal tool effect. All failures count. Call means at least one recorded Python invocation, including program failures."
+  },
+  "successful_program_executions": 240,
+  "program_failures": 14,
+  "missed_complete_json_handoffs": [
+    {
+      "instance_id": "ambiguity.stop_certainty/10",
+      "condition": "easy-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "stats.gc_fraction/02",
+      "condition": "easy-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "stats.gc_fraction/06",
+      "condition": "easy-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "stats.gc_windows/06",
+      "condition": "easy-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "dna.reverse_complement/02",
+      "condition": "hard-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "dna.transcribe/05",
+      "condition": "hard-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "rna.apply_edits/03",
+      "condition": "hard-tools",
+      "request_number": 1,
+      "valid_python_syntax": true
+    },
+    {
+      "instance_id": "pipeline.variant_peptides/01",
+      "condition": "hard-tools",
+      "request_number": 1,
+      "valid_python_syntax": false
+    },
+    {
+      "instance_id": "pipeline.rna_probe_panel/08",
+      "condition": "hard-tools",
+      "request_number": 1,
+      "valid_python_syntax": false
+    }
+  ],
+  "missed_handoff_note": "The original parser returned no calls for these complete JSON calls inside unfinished thinking. Seven contain syntactically valid Python; two are placeholder programs. No programs were executed again and no scores were changed.",
+  "one_shot_pilot": {
+    "attempts": 58,
+    "original_conditions": {
+      "easy-tools": {
+        "n": 30,
+        "correct": 7,
+        "accuracy": 0.23333333333333334,
+        "tool_users": 3,
+        "tool_calls": 3,
+        "tool_failures": 0,
+        "outcomes": {
+          "correct": 7,
+          "format": 16,
+          "wrong": 5,
+          "error": 1,
+          "token_cap": 1
+        },
+        "median_seconds": 109.70219716647989,
+        "completion_tokens": 380311,
+        "cost_usd": null
+      },
+      "hard-tools": {
+        "n": 28,
+        "correct": 8,
+        "accuracy": 0.2857142857142857,
+        "tool_users": 2,
+        "tool_calls": 4,
+        "tool_failures": 1,
+        "outcomes": {
+          "correct": 8,
+          "format": 13,
+          "wrong": 4,
+          "token_cap": 3
+        },
+        "median_seconds": 99.06264706299407,
+        "completion_tokens": 376154,
+        "cost_usd": null
+      }
+    },
+    "conditions": {
+      "easy-tools": {
+        "n": 30,
+        "correct": 8,
+        "accuracy": 0.26666666666666666,
+        "tool_users": 7,
+        "tool_calls": 8,
+        "tool_failures": 0,
+        "outcomes": {
+          "format": 12,
+          "correct": 8,
+          "wrong": 4,
+          "error": 1,
+          "token_cap": 5
+        },
+        "median_seconds": 106.20063545892481,
+        "completion_tokens": 412892,
+        "cost_usd": null
+      },
+      "hard-tools": {
+        "n": 28,
+        "correct": 4,
+        "accuracy": 0.14285714285714285,
+        "tool_users": 3,
+        "tool_calls": 5,
+        "tool_failures": 0,
+        "outcomes": {
+          "format": 16,
+          "correct": 4,
+          "wrong": 8
+        },
+        "median_seconds": 91.37188106251415,
+        "completion_tokens": 300757,
+        "cost_usd": null
+      }
+    },
+    "paired_comparison": {
+      "easy-tools": {
+        "matched": 30,
+        "both_correct": 4,
+        "new_only_correct": 4,
+        "old_only_correct": 3,
+        "both_failed": 19
+      },
+      "hard-tools": {
+        "matched": 28,
+        "both_correct": 2,
+        "new_only_correct": 2,
+        "old_only_correct": 6,
+        "both_failed": 18
+      }
+    },
+    "demonstration": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Calculate 123456789 * 987654321. You may explain your work. End with Final answer: on its own line, followed by the integer result on the next line."
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "reasoning_content": "Use Python to calculate the exact product.",
+          "tool_calls": [
+            {
+              "id": "demo_python_01",
+              "type": "function",
+              "function": {
+                "name": "python",
+                "arguments": "{\"code\": \"print(123456789 * 987654321)\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "demo_python_01",
+          "content": "{\"stdout\": \"121932631112635269\\n\", \"stderr\": \"\", \"exit_code\": 0, \"timed_out\": false, \"output_truncated\": false}"
+        },
+        {
+          "role": "assistant",
+          "content": "Final answer:\n121932631112635269"
+        }
+      ],
+      "construction": "Hand-authored arithmetic demonstration. Tool result independently generated by the same sandbox; no biological or scored example is used."
+    },
+    "provenance": {
+      "repo": "open-athena/Marin-Snowball-67B-A2B-v0.1",
+      "revision": "adc0078a19a4383bc998fcdb43867b3360baf5f3"
+    },
+    "settings": {
+      "concurrency": 60,
+      "aggregate_completion_token_budget": 32768,
+      "request_timeout_seconds": 1800,
+      "connection_timeout_seconds": 15,
+      "max_tool_calls": 8,
+      "adapter": "Unchanged original XML adapter, including its known unfinished-thinking handoff limitation.",
+      "sampling": "One fresh attempt per retained original pilot prompt, tools available. No scored retries. Only one generic arithmetic tool round trip is prepended. It also demonstrates final-answer formatting. Demonstration calls do not count as generated tool use.",
+      "cost_note": "Internal service exposes no per-request price. Cost is unknown, not zero."
+    },
+    "transport_note": "Uses the full-run client with the identical native request transformation and response parser. Relative to the original pilot, it adds error-stage metadata and a 15-second connection-setup timeout instead of the generic 1,800-second timeout. No connection failures occurred in this follow-up.",
+    "preflight": {
+      "real_tool_round_trip": true,
+      "strict_answer_passed": false
+    },
+    "audit": {
+      "passed": true,
+      "attempts": 58,
+      "demonstration_present_in_every_request": true,
+      "scored_prompts_answers_scoring_unchanged": true,
+      "original_adapter_unchanged": true,
+      "scored_retries": 0,
+      "sources_and_token_budget_verified": true
+    },
+    "interpretation": "Fresh attempts on the original 30 easy and 28 hard pilot questions. Each benchmark user message is unchanged byte for byte, but the full API message history differs: an arithmetic question, assistant Python call, tool result and assistant example answer are prepended before it. The demonstration shows both tool use and final-answer formatting. Baseline request transformation, response parser and scorer are unchanged. One draw per question; no causal isolation of formatting versus tool-selection effects."
+  }
+}

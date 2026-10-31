@@ -1,0 +1,10 @@
+{
+  "timing": "Applied after all 3360 attempts completed",
+  "module": "client.py",
+  "before_sha256": "2acc6d11311affc8fcb018cdca62b32bf43f9f96e8516065c3e8819e9c7b2c68",
+  "after_sha256": "a39227e0f40705fabc6ed736bc1a7854b1e398f37117d0a59f709fb6e7ca4f28",
+  "change": "Preserve exception class and treat an empty exception message as a failure. Successful request handling is unchanged.",
+  "affected_recorded_cases": 16,
+  "inference_retries": 0,
+  "historical_results": "Original traces and scores retained; connection failures are shown as operational errors."
+}
