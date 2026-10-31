@@ -1,62 +1,22 @@
-Full CDS-bench baselines for **GPT-6 Luna (high)**, **Nemotron 3.5 Lightning**, **Qwen 3.7 Flash (high)** and **Snowball v0.1**, with and without offline Python. The dataset has ten examples per task: 84 easy task types and 79 hard task types, or 3,260 planned attempts per model. Retained prompts and reference answers are identical across these four original baselines.
-
-**Snowball v0.1: 3,260/3,260 finished (complete).** The other three models each have 3,260 completed matching attempts. **13,040 original baseline attempts**; pilot responses are not reused. The main chart also includes a separate 1,630-attempt Snowball tools-only follow-up with modified prompting and execution control.
+Full CDS-bench baselines for **GPT-6 Luna (high)**, **Nemotron 3.5 Lightning**, **Qwen 3.7 Flash (high)** and **Snowball v0.1**, with and without offline Python.
 
 Evaluation-only PR. **Do not merge.**
 
-[Full report (HTML)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html) · [Per-task results (CSV)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/by-task.csv) · [Final predictions (JSON)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/results.json)
+## Full evaluation
 
-[Public request, reasoning and tool traces (HF)](https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces) cover full runs, pilots, retries, interrupted attempts and provider diagnostics. Credentials and private endpoints are redacted.
+The dataset has ten examples per task: **84 easy task types and 79 hard task types**. Each original baseline has 3,260 matching completed attempts, or **13,040 attempts** across the four models. Retained prompts and reference answers are identical; pilot responses are not reused. The main chart also includes a separate 1,630-attempt Snowball tools-only follow-up with modified prompting and execution control.
 
-[Snowball completion audit passed](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-full-audit.json): all 3,260 cases verified, with no scored retries or pilot-response reuse.
+[Full report (HTML)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html) · [Per-task results (CSV)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/by-task.csv) · [Final predictions (JSON)](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/results.json) · [Traces (HF)](https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces)
 
 The HTML reports are self-contained; download and open them in a browser.
 
-With Python available, Snowball invoked it on 177/1,630 examples (10.9%), versus 1,544/1,630 (94.7%) for Nemotron. These are optional tool-use conditions; supplying a tool does not require the model to call it. In the one-shot pilot, 7 of 22 final responses missing the required final-answer marker still ended with the correct answer; two also prefixed it with the demonstration's arithmetic result.
-
-For Easy/Python, 33 task types have at least two examples with a Python call and two without one. Averaging accuracy equally across these same task types gives 54.8% with calls versus 23.2% without (+31.6 percentage points). This compares different examples within each task and is observational, not a causal estimate of tool benefit. [Per-task breakdown](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#snowball-tools).
-
-<details>
-<summary>Snowball follow-up: one tool-use demonstration on the matched pilot</summary>
-
-The one-demonstration Snowball pilot used Python on 10/58 examples versus 5/58 originally. Correct answers: 12/58 (20.7%) versus 15/58 (25.9%). This small matched repeat does not show an accuracy benefit.
-
-Fresh attempts on the original 30 easy and 28 hard pilot questions. Each benchmark user message is unchanged byte for byte, but the full API message history differs: an arithmetic question, assistant Python call, tool result and assistant example answer are prepended before it. The demonstration shows both tool use and final-answer formatting. Baseline request transformation, response parser and scorer are unchanged. One draw per question; no causal isolation of formatting versus tool-selection effects.
-
-| Condition | Original correct | With demo | Original tool users | With demo |
-|---|---:|---:|---:|---:|
-| Easy, Python | 7/30 (23.3%) | 8/30 (26.7%) | 3/30 | 7/30 |
-| Hard, Python | 8/28 (28.6%) | 4/28 (14.3%) | 2/28 | 3/28 |
-
-Same native XML transformation/parser, optional Python tool, 32,768 aggregate generated tokens, temperature 0.7, seed 20261029, concurrency 60 and 1,800-second API deadline. The demonstration is the only change to model-facing context/settings. Its call is excluded from measured tool use. Cost is unavailable. The full baselines and pilot model-ranking table are unchanged.
-
-Uses the full-run client with the identical native request transformation and response parser. Relative to the original pilot, it adds error-stage metadata and a 15-second connection-setup timeout instead of the generic 1,800-second timeout. No connection failures occurred in this follow-up.
-
-[Follow-up results and exact demonstration](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#snowball-oneshot). No scored retries; all 58 attempts passed the source/prompt/budget/scoring audit.
-
-</details>
-
-**Accuracy by condition**
+### Accuracy by condition
 
 ![CDS-bench accuracy by model and evaluation condition](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/overall.png?v=3a2bb17e2722)
 
 Exports: [PNG](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/overall.png?v=3a2bb17e2722) · [SVG](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/overall.svg)
 
-Hatched bars show Snowball v0.1 (1-shot tools): 316/840 (37.6%) on Easy/Python and 254/790 (32.2%) on Hard/Python. The same weights receive one arithmetic tool-use demonstration plus instructions requiring a complete Python solution. Initial code generation is schema constrained with thinking disabled; thinking resumes after successful execution. The model writes execution-error repairs within the same eight-execution limit. Python was invoked on 1,563/1,630 examples (95.9%); the sandbox, 32,768-token budget and final scorer are unchanged. This is directed tool use, so the improvement cannot be attributed to the demonstration alone. No no-tools cases were run for this variant. It appears only in this chart; the tables, radars and scatter plots retain the four original baselines.
-
-<details>
-<summary>Snowball v0.1 (1-shot tools): prompt and execution changes</summary>
-
-
-[Exact example request](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-example.txt) · [Aggregates, prompt instructions and schema](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools.json) · [Completion audit](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-audit.json)
-
-An arithmetic question, assistant Python call, tool result and assistant answer precede each current question. Generic instructions are added before and after the original benchmark prompt. The original sequence inputs, references, answer and scoring rules are unchanged. The first response must contain exactly one `code` string; the controller executes it verbatim and returns the result. Failed executions prompt model-written complete repair programs; no gold-answer feedback or controller repair is supplied. After successful execution, native thinking and optional XML Python calls resume. The final answer has no decoding grammar and is scored as originally specified.
-
-The full run contains 1,630 fresh attempts, separate from calibration, with no scored retries. Temperature 0.7, seed 20261029, concurrency 60 and a 1,800-second request deadline match the original Snowball setup. Only the main chart includes this follow-up. Its raw traces remain local and are not yet in the linked HF archive.
-
-Same 67B total / 2B active checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1](https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3), revision `adc0078a19a4383bc998fcdb43867b3360baf5f3`.
-
-</details>
+Hatched bars show the separate **Snowball v0.1 (1-shot tools)** follow-up in the two Python conditions. Its prompt and execution changes are explained under [Snowball tool use](#snowball-tool-use).
 
 <details>
 <summary>Full results: accuracy, median time, cost and truncation</summary>
@@ -84,22 +44,6 @@ Same 67B total / 2B active checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1]
 Models are ordered by pooled mean task accuracy, giving each task equal weight; the order stays fixed across conditions. All failures remain in the denominator. Median time includes tool round trips and failures. **Truncated** counts token-cap failures; costs cover scored attempts and exclude the pilot.
 
 </details>
-
-**Task performance: All conditions (pooled)**
-
-![CDS-bench pooled task accuracy for all 84 task types, with one radar panel per model](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.png?v=89fc0b242a9d)
-
-Exports: [PNG](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.png?v=89fc0b242a9d) · [SVG](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.svg)
-
-Each spoke pools completed attempts for one task. Subtitles average available task accuracies equally; five tasks have only easy variants. Missing results are unscored, not zero. Groups and tasks share the same order across models. The [report’s condition selector and task key](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#task-radar) show the four separate conditions and map codes to full task names and IDs.
-
-**Nemotron versus Snowball: Easy examples**
-
-![Task accuracy for Nemotron and Snowball: Easy without tools and Easy with Python](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.png?v=6a10f0fd7a02)
-
-Exports: [PNG](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.png?v=6a10f0fd7a02) · [SVG](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.svg)
-
-Each point is a task, colored by the same groups as the radars. Both axes use identical completed cases. Above the dashed equality line Snowball scores higher; below it Nemotron does. Numbered markers combine overlapping tasks. The [interactive report](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#task-scatter) shows task names, IDs and scores when you select a point.
 
 Scores count incorrect answers, formatting failures, timeouts, token caps and API errors as failures. Their counts and billing caveats are below.
 
@@ -133,7 +77,69 @@ Qwen reports usage beyond the requested 32,768-token budget for 24 attempts, up 
 
 </details>
 
-**30-task pilot**
+### Task performance: All conditions (pooled)
+
+![CDS-bench pooled task accuracy for all 84 task types, with one radar panel per model](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.png?v=89fc0b242a9d)
+
+Exports: [PNG](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.png?v=89fc0b242a9d) · [SVG](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/task-radar.svg)
+
+Each spoke pools completed attempts for one task. Subtitles average available task accuracies equally; five tasks have only easy variants. Missing results are unscored, not zero. Groups and tasks share the same order across models. The [report’s condition selector and task key](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#task-radar) show the four separate conditions and map codes to full task names and IDs.
+
+### Nemotron versus Snowball: Easy examples
+
+![Task accuracy for Nemotron and Snowball: Easy without tools and Easy with Python](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.png?v=6a10f0fd7a02)
+
+Exports: [PNG](https://raw.githubusercontent.com/Open-Athena/cds-bench/refs/heads/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.png?v=6a10f0fd7a02) · [SVG](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/nemotron-snowball-easy.svg)
+
+Each point is a task, colored by the same groups as the radars. Both axes use identical completed cases. Above the dashed equality line Snowball scores higher; below it Nemotron does. Numbered markers combine overlapping tasks. The [interactive report](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#task-scatter) shows task names, IDs and scores when you select a point.
+
+## Snowball tool use
+
+### Optional tool use
+
+With Python available, Snowball invoked it on 177/1,630 examples (10.9%), versus 1,544/1,630 (94.7%) for Nemotron. These are optional tool-use conditions; supplying a tool does not require the model to call it. In the one-shot pilot, 7 of 22 final responses missing the required final-answer marker still ended with the correct answer; two also prefixed it with the demonstration's arithmetic result.
+
+For Easy/Python, 33 task types have at least two examples with a Python call and two without one. Averaging accuracy equally across these same task types gives 54.8% with calls versus 23.2% without (+31.6 percentage points). This compares different examples within each task and is observational, not a causal estimate of tool benefit. [Per-task breakdown](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#snowball-tools).
+
+<details>
+<summary>Snowball follow-up: one tool-use demonstration on the matched pilot</summary>
+
+The one-demonstration Snowball pilot used Python on 10/58 examples versus 5/58 originally. Correct answers: 12/58 (20.7%) versus 15/58 (25.9%). This small matched repeat does not show an accuracy benefit.
+
+Fresh attempts on the original 30 easy and 28 hard pilot questions. Each benchmark user message is unchanged byte for byte, but the full API message history differs: an arithmetic question, assistant Python call, tool result and assistant example answer are prepended before it. The demonstration shows both tool use and final-answer formatting. Baseline request transformation, response parser and scorer are unchanged. One draw per question; no causal isolation of formatting versus tool-selection effects.
+
+| Condition | Original correct | With demo | Original tool users | With demo |
+|---|---:|---:|---:|---:|
+| Easy, Python | 7/30 (23.3%) | 8/30 (26.7%) | 3/30 | 7/30 |
+| Hard, Python | 8/28 (28.6%) | 4/28 (14.3%) | 2/28 | 3/28 |
+
+Same native XML transformation/parser, optional Python tool, 32,768 aggregate generated tokens, temperature 0.7, seed 20261029, concurrency 60 and 1,800-second API deadline. The demonstration is the only change to model-facing context/settings. Its call is excluded from measured tool use. Cost is unavailable. The full baselines and pilot model-ranking table are unchanged.
+
+Uses the full-run client with the identical native request transformation and response parser. Relative to the original pilot, it adds error-stage metadata and a 15-second connection-setup timeout instead of the generic 1,800-second timeout. No connection failures occurred in this follow-up.
+
+[Follow-up results and exact demonstration](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/report.html#snowball-oneshot). No scored retries; all 58 attempts passed the source/prompt/budget/scoring audit.
+
+</details>
+
+### Required Python execution follow-up
+
+Hatched bars show Snowball v0.1 (1-shot tools): 316/840 (37.6%) on Easy/Python and 254/790 (32.2%) on Hard/Python. The same weights receive one arithmetic tool-use demonstration plus instructions requiring a complete Python solution. Initial code generation is schema constrained with thinking disabled; thinking resumes after successful execution. The model writes execution-error repairs within the same eight-execution limit. Python was invoked on 1,563/1,630 examples (95.9%); the sandbox, 32,768-token budget and final scorer are unchanged. This is directed tool use, so the improvement cannot be attributed to the demonstration alone. No no-tools cases were run for this variant. It appears only in this chart; the tables, radars and scatter plots retain the four original baselines.
+
+<details>
+<summary>Snowball v0.1 (1-shot tools): prompt and execution changes</summary>
+
+
+[Exact example request](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-example.txt) · [Aggregates, prompt instructions and schema](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools.json) · [Completion audit](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-one-shot-tools-audit.json)
+
+An arithmetic question, assistant Python call, tool result and assistant answer precede each current question. Generic instructions are added before and after the original benchmark prompt. The original sequence inputs, references, answer and scoring rules are unchanged. The first response must contain exactly one `code` string; the controller executes it verbatim and returns the result. Failed executions prompt model-written complete repair programs; no gold-answer feedback or controller repair is supplied. After successful execution, native thinking and optional XML Python calls resume. The final answer has no decoding grammar and is scored as originally specified.
+
+The full run contains 1,630 fresh attempts, separate from calibration, with no scored retries. Temperature 0.7, seed 20261029, concurrency 60 and a 1,800-second request deadline match the original Snowball setup. Only the main chart includes this follow-up. Its raw traces remain local and are not yet in the linked HF archive.
+
+Same 67B total / 2B active checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1](https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3), revision `adc0078a19a4383bc998fcdb43867b3360baf5f3`.
+
+</details>
+
+## 30-task pilot
 
 One judgment-selected instance per task, each in easy/hard form and with/without Python. Two duplicate hard variants are omitted, leaving **30 easy + 28 hard prompts and 116 attempts per complete model**. The pilot checks accuracy, cost, latency and tool compatibility. It is too small for a definitive model ranking.
 
@@ -174,7 +180,7 @@ Costs cover these scored subsets, excluding compatibility checks, removed duplic
 
 </details>
 
-**Request and execution settings**
+## Settings and validation
 
 Snowball v0.1 is a 67B MoE model with 2B active parameters per token. Full checkpoint: [open-athena/Marin-Snowball-67B-A2B-v0.1](https://huggingface.co/open-athena/Marin-Snowball-67B-A2B-v0.1/tree/adc0078a19a4383bc998fcdb43867b3360baf5f3), revision `adc0078a19a4383bc998fcdb43867b3360baf5f3`. Its full run uses the validated native API setup; no new deployment or pilot-response reuse.
 
@@ -373,13 +379,17 @@ The policy denies `network*` and `process-fork`, restricts reads to runtime/syst
 </details>
 
 <details>
-<summary>Dataset matching, scoring and saved artifacts</summary>
+<summary>Dataset matching, scoring, validation and saved artifacts</summary>
 
 Full-evaluation dataset revision: `26f63e8e488022bed14e12af0f1e44d87a28e14f`. Five duplicated hard variants were removed after the original Luna run. Its original 3,360-attempt artifacts remain intact; the combined comparison excludes only those 100 historical attempts. Retained prompts and reference answers match byte for byte. The pilot’s 30 task types contain two of those duplicated hard variants, so its comparison retains 116 attempts/model.
 
 The deterministic scorer and benchmark definitions are unchanged. No scored inference requests are retried. A separate formatting diagnostic accepts an inline final-answer marker and removes one outer JSON fence; it never changes primary scores. GPT-OSS exploratory compatibility checks are separate from scored pilot attempts.
 
+[Snowball completion audit passed](https://github.com/Open-Athena/cds-bench/blob/eval/luna-high-baseline/evaluations/luna-qwen-high-20261029/snowball-v01-full-audit.json): all 3,260 cases verified, with no scored retries or pilot-response reuse.
+
 Failed Qwen request metadata omitted by the legacy trial is reconstructed from saved response and billing files for reporting. Original traces, final answers and scores are unchanged. Public artifacts include prompts, final predictions, settings and metrics. Sanitized API requests, reasoning and tool programs/results are archived on HF; originals remain untracked locally.
+
+[Public request, reasoning and tool traces (HF)](https://huggingface.co/datasets/eczech/cds-bench-pr-2-traces) cover the original full runs, pilots, retries, interrupted attempts and provider diagnostics. Credentials and private endpoints are redacted. The required-execution follow-up’s traces remain local, as noted above.
 
 </details>
 
